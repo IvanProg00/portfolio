@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Ivan Gavrilov",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "author": "Ivan Gavrilov <gavrilovivan2000@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
