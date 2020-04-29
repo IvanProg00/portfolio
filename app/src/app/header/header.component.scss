@@ -1,28 +1,32 @@
 @import "../variables.scss";
-
-div.nav {
-	padding: 15px 0;
+header {
 	background-color: $color1;
-	position: flex;
-	nav {
-		max-width: 700px;
-		width: 95%;
-		margin: 0 auto;
-		ul {
-			display: flex;
-			justify-content: stretch;
-			> li {
-				width: 100%;
-				> a {
-					text-align: center;
-					display: block;
-					color: $color2;
-					font-weight: 400;
-					font-size: 18px;
-					padding: 10px 3px;
-					transition: color 0.15s ease-in;
-					&:hover {
-						color: $color3;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	div.nav {
+		padding: 15px 0;
+		nav {
+			max-width: 700px;
+			width: 95%;
+			margin: 0 auto;
+			ul {
+				display: flex;
+				justify-content: stretch;
+				> li {
+					width: 100%;
+					> a {
+						text-align: center;
+						display: block;
+						color: $color2;
+						font-weight: 400;
+						font-size: 18px;
+						padding: 10px 3px;
+						transition: color 0.15s ease-in;
+						&:hover {
+							color: $color3;
+						}
 					}
 				}
 			}
