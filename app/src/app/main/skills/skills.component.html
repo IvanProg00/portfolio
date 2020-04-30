@@ -1,0 +1,16 @@
+<section>
+	<h2>My Skills</h2>
+	<div class="skills" *ngFor="let item1 of skills">
+		<h3>{{ item1["title"] }}</h3>
+		<div class="container">
+			<div class="elem" *ngFor="let item2 of item1['elems']">
+				<h4>{{ item2["name"] }}</h4>
+				<div class="progress" [ngStyle]="{'width': item2['progress'] + '%'}">
+					<div class="circle">
+						<span>{{ item2["progress"] }}%</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

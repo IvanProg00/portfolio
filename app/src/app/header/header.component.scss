@@ -6,12 +6,13 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 999;
 	div.nav {
 		padding: 15px 0;
+		max-width: $maxWidthHeader;
+		width: 95%;
+		margin: 0 auto;
 		nav {
-			max-width: 700px;
-			width: 95%;
-			margin: 0 auto;
 			ul {
 				display: flex;
 				justify-content: stretch;
