@@ -1,6 +1,7 @@
 @import "../variables.scss";
+
 header {
-	background-color: $color1;
+	background-color: $bgHeader;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -19,13 +20,13 @@ header {
 					> a {
 						text-align: center;
 						display: block;
-						color: $color2;
+						color: $colorHeader;
 						font-weight: 400;
 						font-size: 18px;
 						padding: 10px 3px;
 						transition: color 0.15s ease-in;
 						&:hover {
-							color: $color3;
+							color: $hoverColorHeader;
 						}
 					}
 				}
