@@ -29,6 +29,9 @@ header {
 						&:hover {
 							color: $hoverColorHeader;
 						}
+						&.selected {
+							color: $hoverColorHeader;
+						}
 					}
 				}
 			}

@@ -36,7 +36,7 @@ export class SkillsComponent {
 					},
 					{
 						name: 'TypeScript',
-						progress: 70,
+						progress: 40,
 					},
 					{
 						name: 'Angular',
