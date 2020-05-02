@@ -16,23 +16,29 @@ export class AboutComponent implements OnInit {
 	constructor() {
 		this.info = [
 			{
-				key: "Name",
-				value: "Ivan Gavrilov"
+				key: 'Name',
+				value: 'Ivan Gavrilov',
 			},
 			{
-				key: "Age",
-				value: 19
+				key: 'Date Of Birth',
+				value: '30/10/2000',
 			},
 			{
-				key: "Address",
-				value: "Spain, Barcelona, Vall d'Hebron, 128"
-			}, {
-				key: "Number",
-				value: "+34 690-235-078"
-			}, {
-				key: "Email",
-				value: "gavrilovivan2000@gmail.com"
-			}
+				key: 'Address',
+				value: "Spain, Barcelona, Vall d'Hebron, 128, 7A",
+			},
+			{
+				key: 'Nationality',
+				value: 'Russia',
+			},
+			{
+				key: 'Phone',
+				value: '+34 (690) 235 078',
+			},
+			{
+				key: 'Email',
+				value: 'gavrilovivan2000@gmail.com',
+			},
 		];
 	}
 

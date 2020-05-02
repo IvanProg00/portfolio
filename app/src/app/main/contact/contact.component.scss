@@ -1,0 +1,42 @@
+@import "../../variables.scss";
+
+section {
+	h2 {
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	address {
+		ul {
+			li {
+				> a,
+				> span {
+					color: $colorMain;
+					font-size: 22px;
+					margin: 15px 0;
+					display: block;
+					display: flex;
+					align-items: center;
+					> i {
+						font-size: 28px;
+						transition: color 0.2s ease-in-out;
+						margin-right: 10px;
+					}
+					> span {
+						font-weight: 300;
+					}
+					&.linkedin > i {
+						color: #0074af;
+					}
+					&.whatsapp > i {
+						color: #0ab426;
+					}
+				}
+				> a:hover > span {
+					color: $hoverColorContact;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
