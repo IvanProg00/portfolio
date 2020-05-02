@@ -1,41 +1,46 @@
 @import "../../variables.scss";
 
 section {
-	padding: 80px 0;
-	display: grid;
-	align-items: flex-start;
-	grid-template-columns: repeat(2, 1fr);
-	column-gap: 20px;
+	max-width: $maxWidthMain;
+	width: 95%;
+	margin: 0 auto;
 	@media screen and (max-width: $screenMaxWidth1) {
 		grid-template-columns: 1fr;
 		row-gap: 50px;
 		column-gap: 0;
 	}
-	div.image {
-		img {
-			display: block;
-			width: 95%;
-			max-width: 500px;
-			margin: 0 auto;
-			box-shadow: 0 4px 8px 6px rgb(133, 133, 133);
+	> div.container {
+		padding: 80px 0;
+		display: grid;
+		align-items: flex-start;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 20px;
+		div.image {
+			img {
+				display: block;
+				width: 95%;
+				max-width: 500px;
+				margin: 0 auto;
+				box-shadow: 0 4px 8px 6px rgb(133, 133, 133);
+			}
 		}
-	}
-	div.text {
-		h3 {
-			text-transform: uppercase;
-		}
-		div.info {
-			margin: 20px 0 30px;
-			li {
-				display: grid;
-				grid-template-columns: 70px 1fr;
-				column-gap: 20px;
-				margin: 10px 0;
-				@media screen and (max-width: $screenMaxWidth3) {
-					grid-template-columns: 1fr;
-				}
-				span.label {
-					text-decoration: underline;
+		div.text {
+			h3 {
+				text-transform: uppercase;
+			}
+			div.info {
+				margin: 20px 0 30px;
+				li {
+					display: grid;
+					grid-template-columns: 70px 1fr;
+					column-gap: 20px;
+					margin: 10px 0;
+					@media screen and (max-width: $screenMaxWidth3) {
+						grid-template-columns: 1fr;
+					}
+					span.label {
+						text-decoration: underline;
+					}
 				}
 			}
 		}

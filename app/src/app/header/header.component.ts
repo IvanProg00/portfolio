@@ -21,8 +21,10 @@ export class HeaderComponent implements OnInit {
 		this.header = document.querySelector('header');
 		this.main = document.querySelector('main');
 		this.sections = document.querySelectorAll('section');
-		this.hamburger = document.querySelector("header > div.nav > div.hamburger");
-		this.nav = document.querySelector("header > div.nav");
+		this.hamburger = document.querySelector(
+			'header > div.nav > div.hamburger'
+		);
+		this.nav = document.querySelector('header > div.nav');
 
 		this.headerSize = this.header.offsetHeight;
 		this.main.style.marginTop = `${this.headerSize}px`;
@@ -32,8 +34,8 @@ export class HeaderComponent implements OnInit {
 	}
 
 	hamburgerNavigation(): void {
-		this.hamburger.addEventListener("click", event => {
-			this.nav.classList.toggle("selected");
+		this.hamburger.addEventListener('click', () => {
+			this.nav.classList.toggle('selected');
 		});
 	}
 
@@ -55,7 +57,7 @@ export class HeaderComponent implements OnInit {
 	}
 
 	closeHamburger(): void {
-		this.nav.classList.remove("selected");
+		this.nav.classList.remove('selected');
 	}
 
 	getPositionElement(elem: any): number {
@@ -75,7 +77,7 @@ export class HeaderComponent implements OnInit {
 		let pos = this.getPosition();
 		this.clearHeaderElems();
 
-		this.sections.forEach((item, i) => {
+		this.sections.forEach((item: any) => {
 			let top = this.getPositionElement(item);
 			let bottom = top + item.offsetHeight;
 			if (top <= pos && bottom > pos) {

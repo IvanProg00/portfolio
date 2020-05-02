@@ -43,7 +43,7 @@ export class SkillsComponent {
 						progress: 60,
 					},
 					{
-						name: 'Vue',
+						name: 'Vue.js',
 						progress: 60,
 					},
 					{
@@ -80,7 +80,7 @@ export class SkillsComponent {
 					},
 					{
 						name: 'Linux',
-						progress: 40,
+						progress: 30,
 					},
 					{
 						name: 'SQL',
