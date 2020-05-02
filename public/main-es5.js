@@ -379,11 +379,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.sections = document.querySelectorAll('section');
           this.hamburger = document.querySelector('header > div.nav > div.hamburger');
           this.nav = document.querySelector('header > div.nav');
-          this.headerSize = this.header.offsetHeight;
-          this.main.style.marginTop = "".concat(this.headerSize, "px");
+          this.setMainMargin();
           this.hamburgerNavigation();
           this.navigation();
           this.position();
+        }
+      }, {
+        key: "setMainMargin",
+        value: function setMainMargin() {
+          this.headerSize = this.header.offsetHeight;
+          this.main.style.marginTop = "".concat(this.headerSize, "px");
         }
       }, {
         key: "hamburgerNavigation",
@@ -435,9 +440,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.animatePos();
           window.addEventListener('scroll', function () {
             _this3.animatePos();
+
+            _this3.setMainMargin();
           });
           window.addEventListener('resize', function () {
             _this3.animatePos();
+
+            _this3.setMainMargin();
           });
         }
       }, {

@@ -26,11 +26,15 @@ export class HeaderComponent implements OnInit {
 		);
 		this.nav = document.querySelector('header > div.nav');
 
-		this.headerSize = this.header.offsetHeight;
-		this.main.style.marginTop = `${this.headerSize}px`;
+		this.setMainMargin();
 		this.hamburgerNavigation();
 		this.navigation();
 		this.position();
+	}
+
+	setMainMargin(): void {
+		this.headerSize = this.header.offsetHeight;
+		this.main.style.marginTop = `${this.headerSize}px`;
 	}
 
 	hamburgerNavigation(): void {
@@ -68,9 +72,11 @@ export class HeaderComponent implements OnInit {
 		this.animatePos();
 		window.addEventListener('scroll', () => {
 			this.animatePos();
+			this.setMainMargin();
 		});
 		window.addEventListener('resize', () => {
 			this.animatePos();
+			this.setMainMargin();
 		});
 	}
 	animatePos(): void {
