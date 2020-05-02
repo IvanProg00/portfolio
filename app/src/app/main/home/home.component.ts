@@ -10,7 +10,12 @@ export class HomeComponent implements OnInit {
 	private readonly words: string[];
 
 	constructor() {
-		this.words = ['Web Developer', 'Full Stack Developer', 'Programmer'];
+		this.words = [
+			'Web Developer',
+			'Full Stack Developer',
+			'Backend Developer',
+			'Frontend Developer',
+		];
 	}
 
 	ngOnInit(): void {
