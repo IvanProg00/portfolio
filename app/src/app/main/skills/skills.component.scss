@@ -16,6 +16,9 @@ section {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			column-gap: 20px;
+			@media screen and (max-width: $screenMaxWidth2) {
+				grid-template-columns: 1fr;
+			}
 			div.elem {
 				margin-bottom: 20px;
 				display: grid;
@@ -31,7 +34,7 @@ section {
 						width: 18px;
 						border-radius: 100%;
 						background-color: #fff;
-						transform: translate(50%, -50%);
+						transform: translate(0%, -50%);
 						border: 3px solid $skilsColorCircle;
 						top: 50%;
 						right: 0;
