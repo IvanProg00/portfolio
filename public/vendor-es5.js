@@ -48,7 +48,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck2(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendor"], {
   /***/
@@ -687,7 +687,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var DomAdapter = function DomAdapter() {
-      _classCallCheck(this, DomAdapter);
+      _classCallCheck2(this, DomAdapter);
     };
 
     if (false) {}
@@ -740,7 +740,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
     var PlatformLocation = function PlatformLocation() {
-      _classCallCheck(this, PlatformLocation);
+      _classCallCheck2(this, PlatformLocation);
     };
 
     PlatformLocation.ɵfac = function PlatformLocation_Factory(t) {
@@ -820,16 +820,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _doc
        */
       function BrowserPlatformLocation(_doc) {
-        var _this;
+        var _this7;
 
-        _classCallCheck(this, BrowserPlatformLocation);
+        _classCallCheck2(this, BrowserPlatformLocation);
 
-        _this = _super.call(this);
-        _this._doc = _doc;
+        _this7 = _super.call(this);
+        _this7._doc = _doc;
 
-        _this._init();
+        _this7._init();
 
-        return _this;
+        return _this7;
       } // This is moved to its own method so that `MockPlatformLocationStrategy` can overwrite it
 
       /**
@@ -1196,7 +1196,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var LocationStrategy = function LocationStrategy() {
-      _classCallCheck(this, LocationStrategy);
+      _classCallCheck2(this, LocationStrategy);
     };
 
     LocationStrategy.ɵfac = function LocationStrategy_Factory(t) {
@@ -1303,23 +1303,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} href
        */
       function PathLocationStrategy(_platformLocation, href) {
-        var _this2;
+        var _this8;
 
-        _classCallCheck(this, PathLocationStrategy);
+        _classCallCheck2(this, PathLocationStrategy);
 
-        _this2 = _super2.call(this);
-        _this2._platformLocation = _platformLocation;
+        _this8 = _super2.call(this);
+        _this8._platformLocation = _platformLocation;
 
         if (href == null) {
-          href = _this2._platformLocation.getBaseHrefFromDOM();
+          href = _this8._platformLocation.getBaseHrefFromDOM();
         }
 
         if (href == null) {
           throw new Error("No base href set. Please provide a value for the APP_BASE_HREF token or add a base element to the document.");
         }
 
-        _this2._baseHref = href;
-        return _this2;
+        _this8._baseHref = href;
+        return _this8;
       }
       /**
        * @param {?} fn
@@ -1506,19 +1506,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} _baseHref
        */
       function HashLocationStrategy(_platformLocation, _baseHref) {
-        var _this3;
+        var _this9;
 
-        _classCallCheck(this, HashLocationStrategy);
+        _classCallCheck2(this, HashLocationStrategy);
 
-        _this3 = _super3.call(this);
-        _this3._platformLocation = _platformLocation;
-        _this3._baseHref = '';
+        _this9 = _super3.call(this);
+        _this9._platformLocation = _platformLocation;
+        _this9._baseHref = '';
 
         if (_baseHref != null) {
-          _this3._baseHref = _baseHref;
+          _this9._baseHref = _baseHref;
         }
 
-        return _this3;
+        return _this9;
       }
       /**
        * @param {?} fn
@@ -1730,9 +1730,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} platformLocation
        */
       function Location(platformStrategy, platformLocation) {
-        var _this4 = this;
+        var _this10 = this;
 
-        _classCallCheck(this, Location);
+        _classCallCheck2(this, Location);
 
         /**
          * \@internal
@@ -1757,8 +1757,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (ev) {
-          _this4._subject.emit({
-            'url': _this4.path(true),
+          _this10._subject.emit({
+            'url': _this10.path(true),
             'pop': true,
             'state': ev.state,
             'type': ev.type
@@ -1914,7 +1914,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onUrlChange",
         value: function onUrlChange(fn) {
-          var _this5 = this;
+          var _this11 = this;
 
           this._urlChangeListeners.push(fn);
 
@@ -1924,7 +1924,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (v) {
-            _this5._notifyUrlChangeListeners(v.url, v.state);
+            _this11._notifyUrlChangeListeners(v.url, v.state);
           });
         }
         /**
@@ -4721,7 +4721,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var NgLocalization = function NgLocalization() {
-      _classCallCheck(this, NgLocalization);
+      _classCallCheck2(this, NgLocalization);
     };
 
     if (false) {}
@@ -4773,13 +4773,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} locale
        */
       function NgLocaleLocalization(locale) {
-        var _this6;
+        var _this12;
 
-        _classCallCheck(this, NgLocaleLocalization);
+        _classCallCheck2(this, NgLocaleLocalization);
 
-        _this6 = _super4.call(this);
-        _this6.locale = locale;
-        return _this6;
+        _this12 = _super4.call(this);
+        _this12.locale = locale;
+        return _this12;
       }
       /**
        * @param {?} value
@@ -4974,7 +4974,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _renderer
        */
       function NgClass(_iterableDiffers, _keyValueDiffers, _ngEl, _renderer) {
-        _classCallCheck(this, NgClass);
+        _classCallCheck2(this, NgClass);
 
         this._iterableDiffers = _iterableDiffers;
         this._keyValueDiffers = _keyValueDiffers;
@@ -5027,7 +5027,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyKeyValueChanges",
         value: function _applyKeyValueChanges(changes) {
-          var _this7 = this;
+          var _this13 = this;
 
           changes.forEachAddedItem(
           /**
@@ -5035,7 +5035,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this7._toggleClass(record.key, record.currentValue);
+            return _this13._toggleClass(record.key, record.currentValue);
           });
           changes.forEachChangedItem(
           /**
@@ -5043,7 +5043,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this7._toggleClass(record.key, record.currentValue);
+            return _this13._toggleClass(record.key, record.currentValue);
           });
           changes.forEachRemovedItem(
           /**
@@ -5052,7 +5052,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (record) {
             if (record.previousValue) {
-              _this7._toggleClass(record.key, false);
+              _this13._toggleClass(record.key, false);
             }
           });
         }
@@ -5065,7 +5065,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyIterableChanges",
         value: function _applyIterableChanges(changes) {
-          var _this8 = this;
+          var _this14 = this;
 
           changes.forEachAddedItem(
           /**
@@ -5074,7 +5074,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (record) {
             if (typeof record.item === 'string') {
-              _this8._toggleClass(record.item, true);
+              _this14._toggleClass(record.item, true);
             } else {
               throw new Error("NgClass can only toggle CSS classes expressed as strings, got ".concat(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵstringify"])(record.item)));
             }
@@ -5085,7 +5085,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this8._toggleClass(record.item, false);
+            return _this14._toggleClass(record.item, false);
           });
         }
         /**
@@ -5103,7 +5103,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyClasses",
         value: function _applyClasses(rawClassVal) {
-          var _this9 = this;
+          var _this15 = this;
 
           if (rawClassVal) {
             if (Array.isArray(rawClassVal) || rawClassVal instanceof Set) {
@@ -5114,7 +5114,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this9._toggleClass(klass, true);
+                return _this15._toggleClass(klass, true);
               });
             } else {
               Object.keys(rawClassVal).forEach(
@@ -5123,7 +5123,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this9._toggleClass(klass, !!rawClassVal[klass]);
+                return _this15._toggleClass(klass, !!rawClassVal[klass]);
               });
             }
           }
@@ -5139,7 +5139,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_removeClasses",
         value: function _removeClasses(rawClassVal) {
-          var _this10 = this;
+          var _this16 = this;
 
           if (rawClassVal) {
             if (Array.isArray(rawClassVal) || rawClassVal instanceof Set) {
@@ -5150,7 +5150,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this10._toggleClass(klass, false);
+                return _this16._toggleClass(klass, false);
               });
             } else {
               Object.keys(rawClassVal).forEach(
@@ -5159,7 +5159,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (klass) {
-                return _this10._toggleClass(klass, false);
+                return _this16._toggleClass(klass, false);
               });
             }
           }
@@ -5174,7 +5174,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_toggleClass",
         value: function _toggleClass(klass, enabled) {
-          var _this11 = this;
+          var _this17 = this;
 
           klass = klass.trim();
 
@@ -5186,9 +5186,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function (klass) {
               if (enabled) {
-                _this11._renderer.addClass(_this11._ngEl.nativeElement, klass);
+                _this17._renderer.addClass(_this17._ngEl.nativeElement, klass);
               } else {
-                _this11._renderer.removeClass(_this11._ngEl.nativeElement, klass);
+                _this17._renderer.removeClass(_this17._ngEl.nativeElement, klass);
               }
             });
           }
@@ -5368,7 +5368,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _viewContainerRef
        */
       function NgComponentOutlet(_viewContainerRef) {
-        _classCallCheck(this, NgComponentOutlet);
+        _classCallCheck2(this, NgComponentOutlet);
 
         this._viewContainerRef = _viewContainerRef;
         this._componentRef = null;
@@ -5512,7 +5512,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} count
        */
       function NgForOfContext($implicit, ngForOf, index, count) {
-        _classCallCheck(this, NgForOfContext);
+        _classCallCheck2(this, NgForOfContext);
 
         this.$implicit = $implicit;
         this.ngForOf = ngForOf;
@@ -5670,7 +5670,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _differs
        */
       function NgForOf(_viewContainer, _template, _differs) {
-        _classCallCheck(this, NgForOf);
+        _classCallCheck2(this, NgForOf);
 
         this._viewContainer = _viewContainer;
         this._template = _template;
@@ -5727,7 +5727,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyChanges",
         value: function _applyChanges(changes) {
-          var _this12 = this;
+          var _this18 = this;
 
           /** @type {?} */
           var insertTuples = [];
@@ -5745,25 +5745,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               // there is an iterable value for "_ngForOf".
 
               /** @type {?} */
-              var view = _this12._viewContainer.createEmbeddedView(_this12._template, new NgForOfContext(
+              var view = _this18._viewContainer.createEmbeddedView(_this18._template, new NgForOfContext(
               /** @type {?} */
               null,
               /** @type {?} */
-              _this12._ngForOf, -1, -1), currentIndex === null ? undefined : currentIndex);
+              _this18._ngForOf, -1, -1), currentIndex === null ? undefined : currentIndex);
               /** @type {?} */
 
 
               var tuple = new RecordViewTuple(item, view);
               insertTuples.push(tuple);
             } else if (currentIndex == null) {
-              _this12._viewContainer.remove(adjustedPreviousIndex === null ? undefined : adjustedPreviousIndex);
+              _this18._viewContainer.remove(adjustedPreviousIndex === null ? undefined : adjustedPreviousIndex);
             } else if (adjustedPreviousIndex !== null) {
               /** @type {?} */
               var _view2 =
               /** @type {?} */
-              _this12._viewContainer.get(adjustedPreviousIndex);
+              _this18._viewContainer.get(adjustedPreviousIndex);
 
-              _this12._viewContainer.move(_view2, currentIndex);
+              _this18._viewContainer.move(_view2, currentIndex);
               /** @type {?} */
 
 
@@ -5801,7 +5801,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
             var viewRef =
             /** @type {?} */
-            _this12._viewContainer.get(record.currentIndex);
+            _this18._viewContainer.get(record.currentIndex);
 
             viewRef.context.$implicit = record.item;
           });
@@ -5982,7 +5982,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} view
      */
     function RecordViewTuple(record, view) {
-      _classCallCheck(this, RecordViewTuple);
+      _classCallCheck2(this, RecordViewTuple);
 
       this.record = record;
       this.view = view;
@@ -6152,7 +6152,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} templateRef
        */
       function NgIf(_viewContainer, templateRef) {
-        _classCallCheck(this, NgIf);
+        _classCallCheck2(this, NgIf);
 
         this._viewContainer = _viewContainer;
         this._context = new NgIfContext();
@@ -6326,7 +6326,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var NgIfContext = function NgIfContext() {
-      _classCallCheck(this, NgIfContext);
+      _classCallCheck2(this, NgIfContext);
 
       this.$implicit =
       /** @type {?} */
@@ -6365,7 +6365,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _templateRef
        */
       function SwitchView(_viewContainerRef, _templateRef) {
-        _classCallCheck(this, SwitchView);
+        _classCallCheck2(this, SwitchView);
 
         this._viewContainerRef = _viewContainerRef;
         this._templateRef = _templateRef;
@@ -6486,7 +6486,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var NgSwitch = /*#__PURE__*/function () {
       function NgSwitch() {
-        _classCallCheck(this, NgSwitch);
+        _classCallCheck2(this, NgSwitch);
 
         this._defaultUsed = false;
         this._caseCount = 0;
@@ -6656,7 +6656,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} ngSwitch
        */
       function NgSwitchCase(viewContainer, templateRef, ngSwitch) {
-        _classCallCheck(this, NgSwitchCase);
+        _classCallCheck2(this, NgSwitchCase);
 
         this.ngSwitch = ngSwitch;
 
@@ -6761,7 +6761,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} ngSwitch
      */
     function NgSwitchDefault(viewContainer, templateRef, ngSwitch) {
-      _classCallCheck(this, NgSwitchDefault);
+      _classCallCheck2(this, NgSwitchDefault);
 
       ngSwitch._addDefault(new SwitchView(viewContainer, templateRef));
     };
@@ -6854,7 +6854,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _localization
        */
       function NgPlural(_localization) {
-        _classCallCheck(this, NgPlural);
+        _classCallCheck2(this, NgPlural);
 
         this._localization = _localization;
         this._caseViews = {};
@@ -7006,7 +7006,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} ngPlural
      */
     function NgPluralCase(value, template, viewContainer, ngPlural) {
-      _classCallCheck(this, NgPluralCase);
+      _classCallCheck2(this, NgPluralCase);
 
       this.value = value;
       /** @type {?} */
@@ -7124,7 +7124,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _renderer
        */
       function NgStyle(_ngEl, _differs, _renderer) {
-        _classCallCheck(this, NgStyle);
+        _classCallCheck2(this, NgStyle);
 
         this._ngEl = _ngEl;
         this._differs = _differs;
@@ -7190,7 +7190,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_applyChanges",
         value: function _applyChanges(changes) {
-          var _this13 = this;
+          var _this19 = this;
 
           changes.forEachRemovedItem(
           /**
@@ -7198,7 +7198,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this13._setStyle(record.key, null);
+            return _this19._setStyle(record.key, null);
           });
           changes.forEachAddedItem(
           /**
@@ -7206,7 +7206,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this13._setStyle(record.key, record.currentValue);
+            return _this19._setStyle(record.key, record.currentValue);
           });
           changes.forEachChangedItem(
           /**
@@ -7214,7 +7214,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (record) {
-            return _this13._setStyle(record.key, record.currentValue);
+            return _this19._setStyle(record.key, record.currentValue);
           });
         }
       }, {
@@ -7322,7 +7322,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _viewContainerRef
        */
       function NgTemplateOutlet(_viewContainerRef) {
-        _classCallCheck(this, NgTemplateOutlet);
+        _classCallCheck2(this, NgTemplateOutlet);
 
         this._viewContainerRef = _viewContainerRef;
         this._viewRef = null;
@@ -7547,7 +7547,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ObservableStrategy = /*#__PURE__*/function () {
       function ObservableStrategy() {
-        _classCallCheck(this, ObservableStrategy);
+        _classCallCheck2(this, ObservableStrategy);
       }
 
       _createClass2(ObservableStrategy, [{
@@ -7598,7 +7598,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var PromiseStrategy = /*#__PURE__*/function () {
       function PromiseStrategy() {
-        _classCallCheck(this, PromiseStrategy);
+        _classCallCheck2(this, PromiseStrategy);
       }
 
       _createClass2(PromiseStrategy, [{
@@ -7681,7 +7681,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _ref
        */
       function AsyncPipe(_ref) {
-        _classCallCheck(this, AsyncPipe);
+        _classCallCheck2(this, AsyncPipe);
 
         this._ref = _ref;
         this._latestValue = null;
@@ -7745,7 +7745,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_subscribe",
         value: function _subscribe(obj) {
-          var _this14 = this;
+          var _this20 = this;
 
           this._obj = obj;
           this._strategy = this._selectStrategy(obj);
@@ -7755,7 +7755,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (value) {
-            return _this14._updateLatestValue(obj, value);
+            return _this20._updateLatestValue(obj, value);
           });
         }
         /**
@@ -7874,7 +7874,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var LowerCasePipe = /*#__PURE__*/function () {
       function LowerCasePipe() {
-        _classCallCheck(this, LowerCasePipe);
+        _classCallCheck2(this, LowerCasePipe);
       }
 
       _createClass2(LowerCasePipe, [{
@@ -7949,7 +7949,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var TitleCasePipe = /*#__PURE__*/function () {
       function TitleCasePipe() {
-        _classCallCheck(this, TitleCasePipe);
+        _classCallCheck2(this, TitleCasePipe);
       }
 
       _createClass2(TitleCasePipe, [{
@@ -8011,7 +8011,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var UpperCasePipe = /*#__PURE__*/function () {
       function UpperCasePipe() {
-        _classCallCheck(this, UpperCasePipe);
+        _classCallCheck2(this, UpperCasePipe);
       }
 
       _createClass2(UpperCasePipe, [{
@@ -8207,7 +8207,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} locale
        */
       function DatePipe(locale) {
-        _classCallCheck(this, DatePipe);
+        _classCallCheck2(this, DatePipe);
 
         this.locale = locale;
       }
@@ -8317,7 +8317,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _localization
        */
       function I18nPluralPipe(_localization) {
-        _classCallCheck(this, I18nPluralPipe);
+        _classCallCheck2(this, I18nPluralPipe);
 
         this._localization = _localization;
       }
@@ -8411,7 +8411,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var I18nSelectPipe = /*#__PURE__*/function () {
       function I18nSelectPipe() {
-        _classCallCheck(this, I18nSelectPipe);
+        _classCallCheck2(this, I18nSelectPipe);
       }
 
       _createClass2(I18nSelectPipe, [{
@@ -8490,7 +8490,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var JsonPipe = /*#__PURE__*/function () {
       function JsonPipe() {
-        _classCallCheck(this, JsonPipe);
+        _classCallCheck2(this, JsonPipe);
       }
 
       _createClass2(JsonPipe, [{
@@ -8588,7 +8588,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} differs
        */
       function KeyValuePipe(differs) {
-        _classCallCheck(this, KeyValuePipe);
+        _classCallCheck2(this, KeyValuePipe);
 
         this.differs = differs;
         this.keyValues = [];
@@ -8604,7 +8604,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(KeyValuePipe, [{
         key: "transform",
         value: function transform(input) {
-          var _this15 = this;
+          var _this21 = this;
 
           var compareFn = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultComparator;
 
@@ -8631,7 +8631,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (r) {
-              _this15.keyValues.push(makeKeyValuePair(r.key,
+              _this21.keyValues.push(makeKeyValuePair(r.key,
               /** @type {?} */
               r.currentValue));
             });
@@ -8771,7 +8771,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _locale
        */
       function DecimalPipe(_locale) {
-        _classCallCheck(this, DecimalPipe);
+        _classCallCheck2(this, DecimalPipe);
 
         this._locale = _locale;
       }
@@ -8880,7 +8880,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _locale
        */
       function PercentPipe(_locale) {
-        _classCallCheck(this, PercentPipe);
+        _classCallCheck2(this, PercentPipe);
 
         this._locale = _locale;
       }
@@ -9013,7 +9013,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function CurrencyPipe(_locale) {
         var _defaultCurrencyCode = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'USD';
 
-        _classCallCheck(this, CurrencyPipe);
+        _classCallCheck2(this, CurrencyPipe);
 
         this._locale = _locale;
         this._defaultCurrencyCode = _defaultCurrencyCode;
@@ -9226,7 +9226,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SlicePipe = /*#__PURE__*/function () {
       function SlicePipe() {
-        _classCallCheck(this, SlicePipe);
+        _classCallCheck2(this, SlicePipe);
       }
 
       _createClass2(SlicePipe, [{
@@ -9319,7 +9319,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
     var CommonModule = function CommonModule() {
-      _classCallCheck(this, CommonModule);
+      _classCallCheck2(this, CommonModule);
     };
 
     CommonModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
@@ -9454,7 +9454,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
     var ViewportScroller = function ViewportScroller() {
-      _classCallCheck(this, ViewportScroller);
+      _classCallCheck2(this, ViewportScroller);
     }; // De-sugared tree-shakable injection
     // See #23917
 
@@ -9486,7 +9486,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} errorHandler
        */
       function BrowserViewportScroller(document, window, errorHandler) {
-        _classCallCheck(this, BrowserViewportScroller);
+        _classCallCheck2(this, BrowserViewportScroller);
 
         this.document = document;
         this.window = window;
@@ -9665,7 +9665,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var NullViewportScroller = /*#__PURE__*/function () {
       function NullViewportScroller() {
-        _classCallCheck(this, NullViewportScroller);
+        _classCallCheck2(this, NullViewportScroller);
       }
 
       _createClass2(NullViewportScroller, [{
@@ -13317,7 +13317,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} options
        */
       function InjectionToken(_desc, options) {
-        _classCallCheck(this, InjectionToken);
+        _classCallCheck2(this, InjectionToken);
 
         this._desc = _desc;
         /**
@@ -13622,7 +13622,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var NullInjector = /*#__PURE__*/function () {
       function NullInjector() {
-        _classCallCheck(this, NullInjector);
+        _classCallCheck2(this, NullInjector);
       }
 
       _createClass2(NullInjector, [{
@@ -13798,7 +13798,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var NgModuleRef = function NgModuleRef() {
-      _classCallCheck(this, NgModuleRef);
+      _classCallCheck2(this, NgModuleRef);
     };
 
     if (false) {}
@@ -13819,7 +13819,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var NgModuleFactory = function NgModuleFactory() {
-      _classCallCheck(this, NgModuleFactory);
+      _classCallCheck2(this, NgModuleFactory);
     };
 
     if (false) {}
@@ -17295,7 +17295,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * Set to `true` if the token is declared in `viewProviders` (or if it is component).
      */
     isViewProvider, injectImplementation) {
-      _classCallCheck(this, NodeInjectorFactory);
+      _classCallCheck2(this, NodeInjectorFactory);
 
       this.factory = factory;
       /**
@@ -18701,7 +18701,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _lView
        */
       function NodeInjector(_tNode, _lView) {
-        _classCallCheck(this, NodeInjector);
+        _classCallCheck2(this, NodeInjector);
 
         this._tNode = _tNode;
         this._lView = _lView;
@@ -18932,7 +18932,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ErrorHandler = /*#__PURE__*/function () {
       function ErrorHandler() {
-        _classCallCheck(this, ErrorHandler);
+        _classCallCheck2(this, ErrorHandler);
 
         /**
          * \@internal
@@ -19148,7 +19148,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} changingThisBreaksApplicationSecurity
        */
       function SafeValueImpl(changingThisBreaksApplicationSecurity) {
-        _classCallCheck(this, SafeValueImpl);
+        _classCallCheck2(this, SafeValueImpl);
 
         this.changingThisBreaksApplicationSecurity = changingThisBreaksApplicationSecurity;
       }
@@ -19175,7 +19175,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super5 = _createSuper(SafeHtmlImpl);
 
       function SafeHtmlImpl() {
-        _classCallCheck(this, SafeHtmlImpl);
+        _classCallCheck2(this, SafeHtmlImpl);
 
         return _super5.apply(this, arguments);
       }
@@ -19202,7 +19202,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super6 = _createSuper(SafeStyleImpl);
 
       function SafeStyleImpl() {
-        _classCallCheck(this, SafeStyleImpl);
+        _classCallCheck2(this, SafeStyleImpl);
 
         return _super6.apply(this, arguments);
       }
@@ -19229,7 +19229,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super7 = _createSuper(SafeScriptImpl);
 
       function SafeScriptImpl() {
-        _classCallCheck(this, SafeScriptImpl);
+        _classCallCheck2(this, SafeScriptImpl);
 
         return _super7.apply(this, arguments);
       }
@@ -19256,7 +19256,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super8 = _createSuper(SafeUrlImpl);
 
       function SafeUrlImpl() {
-        _classCallCheck(this, SafeUrlImpl);
+        _classCallCheck2(this, SafeUrlImpl);
 
         return _super8.apply(this, arguments);
       }
@@ -19283,7 +19283,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super9 = _createSuper(SafeResourceUrlImpl);
 
       function SafeResourceUrlImpl() {
-        _classCallCheck(this, SafeResourceUrlImpl);
+        _classCallCheck2(this, SafeResourceUrlImpl);
 
         return _super9.apply(this, arguments);
       }
@@ -19504,7 +19504,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} defaultDoc
        */
       function InertBodyHelper(defaultDoc) {
-        _classCallCheck(this, InertBodyHelper);
+        _classCallCheck2(this, InertBodyHelper);
 
         this.defaultDoc = defaultDoc;
         this.inertDocument = this.defaultDoc.implementation.createHTMLDocument('sanitization-inert');
@@ -19937,7 +19937,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SanitizingHtmlSerializer = /*#__PURE__*/function () {
       function SanitizingHtmlSerializer() {
-        _classCallCheck(this, SanitizingHtmlSerializer);
+        _classCallCheck2(this, SanitizingHtmlSerializer);
 
         // Explicitly track if something was stripped, to avoid accidentally warning of sanitization just
         // because characters were re-encoded.
@@ -23585,7 +23585,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       firstChild, //
       schemas, //
       consts) {
-        _classCallCheck(this, TView);
+        _classCallCheck2(this, TView);
 
         this.type = type;
         this.id = id;
@@ -23697,7 +23697,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       residualClasses, //
       classBindings, //
       styleBindings) {
-        _classCallCheck(this, TNode$1);
+        _classCallCheck2(this, TNode$1);
 
         this.tView_ = tView_;
         this.type = type;
@@ -24124,7 +24124,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _raw_lView
        */
       function LViewDebug(_raw_lView) {
-        _classCallCheck(this, LViewDebug);
+        _classCallCheck2(this, LViewDebug);
 
         this._raw_lView = _raw_lView;
       }
@@ -24433,7 +24433,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _raw_lContainer
        */
       function LContainerDebug(_raw_lContainer) {
-        _classCallCheck(this, LContainerDebug);
+        _classCallCheck2(this, LContainerDebug);
 
         this._raw_lContainer = _raw_lContainer;
       }
@@ -24552,7 +24552,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} type
        */
       function I18NDebugItem(__raw_opCode, _lView, nodeIndex, type) {
-        _classCallCheck(this, I18NDebugItem);
+        _classCallCheck2(this, I18NDebugItem);
 
         this.__raw_opCode = __raw_opCode;
         this._lView = _lView;
@@ -24623,7 +24623,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} __lView
        */
       function I18nMutateOpCodesDebug(__raw_opCodes, __lView) {
-        _classCallCheck(this, I18nMutateOpCodesDebug);
+        _classCallCheck2(this, I18nMutateOpCodesDebug);
 
         this.__raw_opCodes = __raw_opCodes;
         this.__lView = __lView;
@@ -24753,7 +24753,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} __lView
        */
       function I18nUpdateOpCodesDebug(__raw_opCodes, icus, __lView) {
-        _classCallCheck(this, I18nUpdateOpCodesDebug);
+        _classCallCheck2(this, I18nUpdateOpCodesDebug);
 
         this.__raw_opCodes = __raw_opCodes;
         this.icus = icus;
@@ -29356,7 +29356,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} _cdRefInjectingView
        */
       function ViewRef(_lView, _cdRefInjectingView) {
-        _classCallCheck(this, ViewRef);
+        _classCallCheck2(this, ViewRef);
 
         this._lView = _lView;
         this._cdRefInjectingView = _cdRefInjectingView;
@@ -29712,13 +29712,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _view
        */
       function RootViewRef(_view) {
-        var _this16;
+        var _this22;
 
-        _classCallCheck(this, RootViewRef);
+        _classCallCheck2(this, RootViewRef);
 
-        _this16 = _super10.call(this, _view);
-        _this16._view = _view;
-        return _this16;
+        _this22 = _super10.call(this, _view);
+        _this22._view = _view;
+        return _this22;
       }
       /**
        * @return {?}
@@ -29886,7 +29886,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _super11 = _createSuper(ElementRef);
 
           function ElementRef() {
-            _classCallCheck(this, ElementRef);
+            _classCallCheck2(this, ElementRef);
 
             return _super11.apply(this, arguments);
           }
@@ -29940,15 +29940,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
            * @param {?} elementRef
            */
           function TemplateRef(_declarationView, _declarationTContainer, elementRef) {
-            var _this17;
+            var _this23;
 
-            _classCallCheck(this, TemplateRef);
+            _classCallCheck2(this, TemplateRef);
 
-            _this17 = _super12.call(this);
-            _this17._declarationView = _declarationView;
-            _this17._declarationTContainer = _declarationTContainer;
-            _this17.elementRef = elementRef;
-            return _this17;
+            _this23 = _super12.call(this);
+            _this23._declarationView = _declarationView;
+            _this23._declarationTContainer = _declarationTContainer;
+            _this23.elementRef = elementRef;
+            return _this23;
           }
           /**
            * @param {?} context
@@ -30051,15 +30051,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
            * @param {?} _hostView
            */
           function ViewContainerRef(_lContainer, _hostTNode, _hostView) {
-            var _this18;
+            var _this24;
 
-            _classCallCheck(this, ViewContainerRef);
+            _classCallCheck2(this, ViewContainerRef);
 
-            _this18 = _super13.call(this);
-            _this18._lContainer = _lContainer;
-            _this18._hostTNode = _hostTNode;
-            _this18._hostView = _hostView;
-            return _this18;
+            _this24 = _super13.call(this);
+            _this24._lContainer = _lContainer;
+            _this24._hostTNode = _hostTNode;
+            _this24._hostView = _hostView;
+            return _this24;
           }
           /**
            * @return {?}
@@ -30582,7 +30582,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var ChangeDetectorRef = function ChangeDetectorRef() {
-      _classCallCheck(this, ChangeDetectorRef);
+      _classCallCheck2(this, ChangeDetectorRef);
     };
     /**
      * \@internal
@@ -30672,7 +30672,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ReflectionCapabilities = /*#__PURE__*/function () {
       function ReflectionCapabilities(reflect) {
-        _classCallCheck(this, ReflectionCapabilities);
+        _classCallCheck2(this, ReflectionCapabilities);
 
         this._reflect = reflect || _global['Reflect'];
       }
@@ -31614,11 +31614,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} source
        */
       function R3Injector(def, additionalProviders, parent) {
-        var _this19 = this;
+        var _this25 = this;
 
         var source = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
-        _classCallCheck(this, R3Injector);
+        _classCallCheck2(this, R3Injector);
 
         this.parent = parent;
         /**
@@ -31651,7 +31651,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (provider) {
-          return _this19.processProvider(provider, def, additionalProviders);
+          return _this25.processProvider(provider, def, additionalProviders);
         });
         deepForEach([def],
         /**
@@ -31659,7 +31659,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (injectorDef) {
-          return _this19.processInjectorType(injectorDef, [], dedupStack);
+          return _this25.processInjectorType(injectorDef, [], dedupStack);
         }); // Make sure the INJECTOR token provides this injector.
 
         this.records.set(INJECTOR, makeRecord(undefined, this)); // Detect whether this injector has the APP_ROOT_SCOPE token and thus should provide
@@ -31801,7 +31801,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_resolveInjectorDefTypes",
         value: function _resolveInjectorDefTypes() {
-          var _this20 = this;
+          var _this26 = this;
 
           this.injectorDefTypes.forEach(
           /**
@@ -31809,7 +31809,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (defType) {
-            return _this20.get(defType);
+            return _this26.get(defType);
           });
         }
         /**
@@ -31867,7 +31867,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "processInjectorType",
         value: function processInjectorType(defOrWrappedDef, parents, dedupStack) {
-          var _this21 = this;
+          var _this27 = this;
 
           defOrWrappedDef = resolveForwardRef(defOrWrappedDef);
           if (!defOrWrappedDef) return false; // Either the defOrWrappedDef is an InjectorType (with injector def) or an
@@ -31940,7 +31940,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (imported) {
-                if (_this21.processInjectorType(imported, parents, dedupStack)) {
+                if (_this27.processInjectorType(imported, parents, dedupStack)) {
                   if (importTypesWithProviders === undefined) importTypesWithProviders = []; // If the processed import is an injector type with providers, we store it in the
                   // list of import types with providers, so that we can process those afterwards.
 
@@ -31968,7 +31968,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 * @return {?}
                 */
                 function (provider) {
-                  return _this21.processProvider(provider, ngModule, providers || EMPTY_ARRAY$2);
+                  return _this27.processProvider(provider, ngModule, providers || EMPTY_ARRAY$2);
                 });
               };
 
@@ -31998,7 +31998,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (provider) {
-              return _this21.processProvider(provider, injectorType, defProviders);
+              return _this27.processProvider(provider, injectorType, defProviders);
             });
           }
 
@@ -32472,7 +32472,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var Injector = /*#__PURE__*/function () {
       function Injector() {
-        _classCallCheck(this, Injector);
+        _classCallCheck2(this, Injector);
       }
 
       _createClass2(Injector, null, [{
@@ -32575,7 +32575,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var parent = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Injector.NULL;
         var source = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
 
-        _classCallCheck(this, StaticInjector);
+        _classCallCheck2(this, StaticInjector);
 
         this.parent = parent;
         this.source = source;
@@ -33420,7 +33420,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} id
        */
       function ReflectiveKey(token, id) {
-        _classCallCheck(this, ReflectiveKey);
+        _classCallCheck2(this, ReflectiveKey);
 
         this.token = token;
         this.id = id;
@@ -33461,7 +33461,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var KeyRegistry = /*#__PURE__*/function () {
       function KeyRegistry() {
-        _classCallCheck(this, KeyRegistry);
+        _classCallCheck2(this, KeyRegistry);
 
         this._allKeys = new Map();
       }
@@ -33526,7 +33526,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var Reflector = /*#__PURE__*/function () {
       function Reflector(reflectionCapabilities) {
-        _classCallCheck(this, Reflector);
+        _classCallCheck2(this, Reflector);
 
         this.reflectionCapabilities = reflectionCapabilities;
       }
@@ -33639,7 +33639,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} visibility
        */
       function ReflectiveDependency(key, optional, visibility) {
-        _classCallCheck(this, ReflectiveDependency);
+        _classCallCheck2(this, ReflectiveDependency);
 
         this.key = key;
         this.optional = optional;
@@ -33698,7 +33698,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} multiProvider
      */
     function ResolvedReflectiveProvider_(key, resolvedFactories, multiProvider) {
-      _classCallCheck(this, ResolvedReflectiveProvider_);
+      _classCallCheck2(this, ResolvedReflectiveProvider_);
 
       this.key = key;
       this.resolvedFactories = resolvedFactories;
@@ -33719,7 +33719,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} dependencies
      */
     function ResolvedReflectiveFactory(factory, dependencies) {
-      _classCallCheck(this, ResolvedReflectiveFactory);
+      _classCallCheck2(this, ResolvedReflectiveFactory);
 
       this.factory = factory;
       this.dependencies = dependencies;
@@ -34061,7 +34061,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ReflectiveInjector = /*#__PURE__*/function () {
       function ReflectiveInjector() {
-        _classCallCheck(this, ReflectiveInjector);
+        _classCallCheck2(this, ReflectiveInjector);
       }
 
       _createClass2(ReflectiveInjector, null, [{
@@ -34182,7 +34182,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} _parent
        */
       function ReflectiveInjector_(_providers, _parent) {
-        _classCallCheck(this, ReflectiveInjector_);
+        _classCallCheck2(this, ReflectiveInjector_);
 
         /**
          * \@internal
@@ -34332,7 +34332,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_instantiate",
         value: function _instantiate(provider, ResolvedReflectiveFactory) {
-          var _this22 = this;
+          var _this28 = this;
 
           /** @type {?} */
           var factory = ResolvedReflectiveFactory.factory;
@@ -34347,7 +34347,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (dep) {
-              return _this22._getByReflectiveDependency(dep);
+              return _this28._getByReflectiveDependency(dep);
             });
           } catch (e) {
             if (e.addKey) {
@@ -34638,7 +34638,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var Query = function Query() {
-      _classCallCheck(this, Query);
+      _classCallCheck2(this, Query);
     };
     /**
      * Type of the ContentChildren decorator / constructor function.
@@ -35262,7 +35262,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} value
        */
       function WrappedValue(value) {
-        _classCallCheck(this, WrappedValue);
+        _classCallCheck2(this, WrappedValue);
 
         this.wrapped = value;
       }
@@ -43680,7 +43680,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SimpleChange = /*#__PURE__*/function () {
       function SimpleChange(previousValue, currentValue, firstChange) {
-        _classCallCheck(this, SimpleChange);
+        _classCallCheck2(this, SimpleChange);
 
         this.previousValue = previousValue;
         this.currentValue = currentValue;
@@ -44339,7 +44339,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var ComponentRef = function ComponentRef() {
-      _classCallCheck(this, ComponentRef);
+      _classCallCheck2(this, ComponentRef);
     };
 
     if (false) {}
@@ -44357,7 +44357,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var ComponentFactory = function ComponentFactory() {
-      _classCallCheck(this, ComponentFactory);
+      _classCallCheck2(this, ComponentFactory);
     };
 
     if (false) {}
@@ -44399,7 +44399,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _NullComponentFactoryResolver = /*#__PURE__*/function () {
       function _NullComponentFactoryResolver() {
-        _classCallCheck(this, _NullComponentFactoryResolver);
+        _classCallCheck2(this, _NullComponentFactoryResolver);
       }
 
       _createClass2(_NullComponentFactoryResolver, [{
@@ -44430,7 +44430,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var ComponentFactoryResolver = function ComponentFactoryResolver() {
-      _classCallCheck(this, ComponentFactoryResolver);
+      _classCallCheck2(this, ComponentFactoryResolver);
     };
 
     ComponentFactoryResolver.NULL = new _NullComponentFactoryResolver();
@@ -44444,7 +44444,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _ngModule
        */
       function CodegenComponentFactoryResolver(factories, _parent, _ngModule) {
-        _classCallCheck(this, CodegenComponentFactoryResolver);
+        _classCallCheck2(this, CodegenComponentFactoryResolver);
 
         this._parent = _parent;
         this._ngModule = _ngModule;
@@ -44501,19 +44501,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} ngModule
        */
       function ComponentFactoryBoundToModule(factory, ngModule) {
-        var _this23;
+        var _this29;
 
-        _classCallCheck(this, ComponentFactoryBoundToModule);
+        _classCallCheck2(this, ComponentFactoryBoundToModule);
 
-        _this23 = _super14.call(this);
-        _this23.factory = factory;
-        _this23.ngModule = ngModule;
-        _this23.selector = factory.selector;
-        _this23.componentType = factory.componentType;
-        _this23.ngContentSelectors = factory.ngContentSelectors;
-        _this23.inputs = factory.inputs;
-        _this23.outputs = factory.outputs;
-        return _this23;
+        _this29 = _super14.call(this);
+        _this29.factory = factory;
+        _this29.ngModule = ngModule;
+        _this29.selector = factory.selector;
+        _this29.componentType = factory.componentType;
+        _this29.ngContentSelectors = factory.ngContentSelectors;
+        _this29.inputs = factory.inputs;
+        _this29.outputs = factory.outputs;
+        return _this29;
       }
       /**
        * @param {?} injector
@@ -44575,7 +44575,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} nativeElement
      */
     function ElementRef(nativeElement) {
-      _classCallCheck(this, ElementRef);
+      _classCallCheck2(this, ElementRef);
 
       this.nativeElement = nativeElement;
     };
@@ -44632,7 +44632,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var RendererFactory2 = function RendererFactory2() {
-      _classCallCheck(this, RendererFactory2);
+      _classCallCheck2(this, RendererFactory2);
     };
 
     if (false) {}
@@ -44674,7 +44674,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
     var Renderer2 = function Renderer2() {
-      _classCallCheck(this, Renderer2);
+      _classCallCheck2(this, Renderer2);
     };
     /**
      * \@internal
@@ -44715,7 +44715,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
     var Sanitizer = function Sanitizer() {
-      _classCallCheck(this, Sanitizer);
+      _classCallCheck2(this, Sanitizer);
     };
     /** @nocollapse */
 
@@ -44759,7 +44759,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} full
      */
     function Version(full) {
-      _classCallCheck(this, Version);
+      _classCallCheck2(this, Version);
 
       this.full = full;
       this.major = full.split('.')[0];
@@ -44783,7 +44783,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DefaultIterableDifferFactory = /*#__PURE__*/function () {
       function DefaultIterableDifferFactory() {
-        _classCallCheck(this, DefaultIterableDifferFactory);
+        _classCallCheck2(this, DefaultIterableDifferFactory);
       }
       /**
        * @param {?} obj
@@ -44836,7 +44836,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} trackByFn
        */
       function DefaultIterableDiffer(trackByFn) {
-        _classCallCheck(this, DefaultIterableDiffer);
+        _classCallCheck2(this, DefaultIterableDiffer);
 
         this.length = 0; // Keeps track of the used records at any point in time (during & across `_check()` calls)
 
@@ -45068,7 +45068,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "check",
         value: function check(collection) {
-          var _this24 = this;
+          var _this30 = this;
 
           this._reset();
           /** @type {?} */
@@ -45118,18 +45118,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (item) {
-              itemTrackBy = _this24._trackByFn(index, item);
+              itemTrackBy = _this30._trackByFn(index, item);
 
               if (record === null || !looseIdentical(record.trackById, itemTrackBy)) {
-                record = _this24._mismatch(record, item, itemTrackBy, index);
+                record = _this30._mismatch(record, item, itemTrackBy, index);
                 mayBeDirty = true;
               } else {
                 if (mayBeDirty) {
                   // TODO(misko): can we limit this to duplicates only?
-                  record = _this24._verifyReinsertion(record, item, itemTrackBy, index);
+                  record = _this30._verifyReinsertion(record, item, itemTrackBy, index);
                 }
 
-                if (!looseIdentical(record.item, item)) _this24._addIdentityChange(record, item);
+                if (!looseIdentical(record.item, item)) _this30._addIdentityChange(record, item);
               }
 
               record = record._next;
@@ -45636,7 +45636,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} trackById
      */
     function IterableChangeRecord_(item, trackById) {
-      _classCallCheck(this, IterableChangeRecord_);
+      _classCallCheck2(this, IterableChangeRecord_);
 
       this.item = item;
       this.trackById = trackById;
@@ -45703,7 +45703,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _DuplicateItemRecordList = /*#__PURE__*/function () {
       function _DuplicateItemRecordList() {
-        _classCallCheck(this, _DuplicateItemRecordList);
+        _classCallCheck2(this, _DuplicateItemRecordList);
 
         /**
          * \@internal
@@ -45828,7 +45828,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _DuplicateMap = /*#__PURE__*/function () {
       function _DuplicateMap() {
-        _classCallCheck(this, _DuplicateMap);
+        _classCallCheck2(this, _DuplicateMap);
 
         this.map = new Map();
       }
@@ -45959,7 +45959,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DefaultKeyValueDifferFactory = /*#__PURE__*/function () {
       function DefaultKeyValueDifferFactory() {
-        _classCallCheck(this, DefaultKeyValueDifferFactory);
+        _classCallCheck2(this, DefaultKeyValueDifferFactory);
       }
       /**
        * @param {?} obj
@@ -45993,7 +45993,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DefaultKeyValueDiffer = /*#__PURE__*/function () {
       function DefaultKeyValueDiffer() {
-        _classCallCheck(this, DefaultKeyValueDiffer);
+        _classCallCheck2(this, DefaultKeyValueDiffer);
 
         this._records = new Map();
         this._mapHead = null; // _appendAfter is used in the check loop
@@ -46120,7 +46120,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "check",
         value: function check(map) {
-          var _this25 = this;
+          var _this31 = this;
 
           this._reset();
           /** @type {?} */
@@ -46137,15 +46137,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (value, key) {
             if (insertBefore && insertBefore.key === key) {
-              _this25._maybeAddToChanges(insertBefore, value);
+              _this31._maybeAddToChanges(insertBefore, value);
 
-              _this25._appendAfter = insertBefore;
+              _this31._appendAfter = insertBefore;
               insertBefore = insertBefore._next;
             } else {
               /** @type {?} */
-              var record = _this25._getOrCreateRecordForKey(key, value);
+              var record = _this31._getOrCreateRecordForKey(key, value);
 
-              insertBefore = _this25._insertBeforeOrAppend(insertBefore, record);
+              insertBefore = _this31._insertBeforeOrAppend(insertBefore, record);
             }
           }); // Items remaining at the end of the list have been deleted
 
@@ -46403,7 +46403,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} key
      */
     function KeyValueChangeRecord_(key) {
-      _classCallCheck(this, KeyValueChangeRecord_);
+      _classCallCheck2(this, KeyValueChangeRecord_);
 
       this.key = key;
       this.previousValue = null;
@@ -46530,7 +46530,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} factories
        */
       function IterableDiffers(factories) {
-        _classCallCheck(this, IterableDiffers);
+        _classCallCheck2(this, IterableDiffers);
 
         this.factories = factories;
       }
@@ -46718,7 +46718,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} factories
        */
       function KeyValueDiffers(factories) {
-        _classCallCheck(this, KeyValueDiffers);
+        _classCallCheck2(this, KeyValueDiffers);
 
         this.factories = factories;
       }
@@ -46885,7 +46885,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
     var TemplateRef = function TemplateRef() {
-      _classCallCheck(this, TemplateRef);
+      _classCallCheck2(this, TemplateRef);
     };
     /**
      * \@internal
@@ -46936,7 +46936,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
     var ViewContainerRef = function ViewContainerRef() {
-      _classCallCheck(this, ViewContainerRef);
+      _classCallCheck2(this, ViewContainerRef);
     };
     /**
      * \@internal
@@ -47457,7 +47457,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var NodeData = function NodeData() {
-      _classCallCheck(this, NodeData);
+      _classCallCheck2(this, NodeData);
     };
 
     if (false) {}
@@ -47605,7 +47605,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var DebugContext = function DebugContext() {
-      _classCallCheck(this, DebugContext);
+      _classCallCheck2(this, DebugContext);
     };
 
     if (false) {}
@@ -49242,20 +49242,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} ngContentSelectors
        */
       function ComponentFactory_(selector, componentType, viewDefFactory, _inputs, _outputs, ngContentSelectors) {
-        var _this26;
+        var _this32;
 
-        _classCallCheck(this, ComponentFactory_);
+        _classCallCheck2(this, ComponentFactory_);
 
         // Attention: this ctor is called as top level function.
         // Putting any logic in here will destroy closure tree shaking!
-        _this26 = _super15.call(this);
-        _this26.selector = selector;
-        _this26.componentType = componentType;
-        _this26._inputs = _inputs;
-        _this26._outputs = _outputs;
-        _this26.ngContentSelectors = ngContentSelectors;
-        _this26.viewDefFactory = viewDefFactory;
-        return _this26;
+        _this32 = _super15.call(this);
+        _this32.selector = selector;
+        _this32.componentType = componentType;
+        _this32._inputs = _inputs;
+        _this32._outputs = _outputs;
+        _this32.ngContentSelectors = ngContentSelectors;
+        _this32.viewDefFactory = viewDefFactory;
+        return _this32;
       }
       /**
        * @return {?}
@@ -49362,19 +49362,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _component
        */
       function ComponentRef_(_view, _viewRef, _component) {
-        var _this27;
+        var _this33;
 
-        _classCallCheck(this, ComponentRef_);
+        _classCallCheck2(this, ComponentRef_);
 
-        _this27 = _super16.call(this);
-        _this27._view = _view;
-        _this27._viewRef = _viewRef;
-        _this27._component = _component;
-        _this27._elDef = _this27._view.def.nodes[0];
-        _this27.hostView = _viewRef;
-        _this27.changeDetectorRef = _viewRef;
-        _this27.instance = _component;
-        return _this27;
+        _this33 = _super16.call(this);
+        _this33._view = _view;
+        _this33._viewRef = _viewRef;
+        _this33._component = _component;
+        _this33._elDef = _this33._view.def.nodes[0];
+        _this33.hostView = _viewRef;
+        _this33.changeDetectorRef = _viewRef;
+        _this33.instance = _component;
+        return _this33;
       }
       /**
        * @return {?}
@@ -49451,7 +49451,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _data
        */
       function ViewContainerRef_(_view, _elDef, _data) {
-        _classCallCheck(this, ViewContainerRef_);
+        _classCallCheck2(this, ViewContainerRef_);
 
         this._view = _view;
         this._elDef = _elDef;
@@ -49700,7 +49700,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _view
        */
       function ViewRef_(_view) {
-        _classCallCheck(this, ViewRef_);
+        _classCallCheck2(this, ViewRef_);
 
         this._view = _view;
         this._viewContainerRef = null;
@@ -49895,14 +49895,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _def
        */
       function TemplateRef_(_parentView, _def) {
-        var _this28;
+        var _this34;
 
-        _classCallCheck(this, TemplateRef_);
+        _classCallCheck2(this, TemplateRef_);
 
-        _this28 = _super17.call(this);
-        _this28._parentView = _parentView;
-        _this28._def = _def;
-        return _this28;
+        _this34 = _super17.call(this);
+        _this34._parentView = _parentView;
+        _this34._def = _def;
+        return _this34;
       }
       /**
        * @param {?} context
@@ -49951,7 +49951,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} elDef
        */
       function Injector_(view, elDef) {
-        _classCallCheck(this, Injector_);
+        _classCallCheck2(this, Injector_);
 
         this.view = view;
         this.elDef = elDef;
@@ -50041,7 +50041,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _def
        */
       function NgModuleRef_(_moduleType, _parent, _bootstrapComponents, _def) {
-        _classCallCheck(this, NgModuleRef_);
+        _classCallCheck2(this, NgModuleRef_);
 
         this._moduleType = _moduleType;
         this._parent = _parent;
@@ -51178,13 +51178,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} ngModule The NgModuleRef to which all resolved factories are bound.
        */
       function ComponentFactoryResolver$1(ngModule) {
-        var _this29;
+        var _this35;
 
-        _classCallCheck(this, ComponentFactoryResolver$1);
+        _classCallCheck2(this, ComponentFactoryResolver$1);
 
-        _this29 = _super18.call(this);
-        _this29.ngModule = ngModule;
-        return _this29;
+        _this35 = _super18.call(this);
+        _this35.ngModule = ngModule;
+        return _this35;
       }
       /**
        * @template T
@@ -51312,18 +51312,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} ngModule The NgModuleRef to which the factory is bound.
        */
       function ComponentFactory$1(componentDef, ngModule) {
-        var _this30;
+        var _this36;
 
-        _classCallCheck(this, ComponentFactory$1);
+        _classCallCheck2(this, ComponentFactory$1);
 
-        _this30 = _super19.call(this);
-        _this30.componentDef = componentDef;
-        _this30.ngModule = ngModule;
-        _this30.componentType = componentDef.type;
-        _this30.selector = stringifyCSSSelectorList(componentDef.selectors);
-        _this30.ngContentSelectors = componentDef.ngContentSelectors ? componentDef.ngContentSelectors : [];
-        _this30.isBoundToModule = !!ngModule;
-        return _this30;
+        _this36 = _super19.call(this);
+        _this36.componentDef = componentDef;
+        _this36.ngModule = ngModule;
+        _this36.componentType = componentDef.type;
+        _this36.selector = stringifyCSSSelectorList(componentDef.selectors);
+        _this36.ngContentSelectors = componentDef.ngContentSelectors ? componentDef.ngContentSelectors : [];
+        _this36.isBoundToModule = !!ngModule;
+        return _this36;
       }
       /**
        * @return {?}
@@ -51534,20 +51534,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _tNode
        */
       function ComponentRef$1(componentType, instance, location, _rootLView, _tNode) {
-        var _this31;
+        var _this37;
 
-        _classCallCheck(this, ComponentRef$1);
+        _classCallCheck2(this, ComponentRef$1);
 
-        _this31 = _super20.call(this);
-        _this31.location = location;
-        _this31._rootLView = _rootLView;
-        _this31._tNode = _tNode;
-        _this31.destroyCbs = [];
-        _this31.instance = instance;
-        _this31.hostView = _this31.changeDetectorRef = new RootViewRef(_rootLView);
-        _this31.hostView._tViewNode = assignTViewNodeToLView(_rootLView[TVIEW], null, -1, _rootLView);
-        _this31.componentType = componentType;
-        return _this31;
+        _this37 = _super20.call(this);
+        _this37.location = location;
+        _this37._rootLView = _rootLView;
+        _this37._tNode = _tNode;
+        _this37.destroyCbs = [];
+        _this37.instance = instance;
+        _this37.hostView = _this37.changeDetectorRef = new RootViewRef(_rootLView);
+        _this37.hostView._tViewNode = assignTViewNodeToLView(_rootLView[TVIEW], null, -1, _rootLView);
+        _this37.componentType = componentType;
+        return _this37;
       }
       /**
        * @return {?}
@@ -54281,23 +54281,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _parent
        */
       function NgModuleRef$1(ngModuleType, _parent) {
-        var _this32;
+        var _this38;
 
-        _classCallCheck(this, NgModuleRef$1);
+        _classCallCheck2(this, NgModuleRef$1);
 
-        _this32 = _super21.call(this);
-        _this32._parent = _parent; // tslint:disable-next-line:require-internal-with-underscore
+        _this38 = _super21.call(this);
+        _this38._parent = _parent; // tslint:disable-next-line:require-internal-with-underscore
 
-        _this32._bootstrapComponents = [];
-        _this32.injector = _assertThisInitialized(_this32);
-        _this32.destroyCbs = []; // When bootstrapping a module we have a dependency graph that looks like this:
+        _this38._bootstrapComponents = [];
+        _this38.injector = _assertThisInitialized(_this38);
+        _this38.destroyCbs = []; // When bootstrapping a module we have a dependency graph that looks like this:
         // ApplicationRef -> ComponentFactoryResolver -> NgModuleRef. The problem is that if the
         // module being resolved tries to inject the ComponentFactoryResolver, it'll create a
         // circular dependency which will result in a runtime error, because the injector doesn't
         // exist yet. We work around the issue by creating the ComponentFactoryResolver ourselves
         // and providing it, rather than letting the injector resolve it.
 
-        _this32.componentFactoryResolver = new ComponentFactoryResolver$1(_assertThisInitialized(_this32));
+        _this38.componentFactoryResolver = new ComponentFactoryResolver$1(_assertThisInitialized(_this38));
         /** @type {?} */
 
         var ngModuleDef = getNgModuleDef(ngModuleType);
@@ -54306,25 +54306,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         var ngLocaleIdDef = getNgLocaleIdDef(ngModuleType);
         ngLocaleIdDef && setLocaleId(ngLocaleIdDef);
-        _this32._bootstrapComponents = maybeUnwrapFn(
+        _this38._bootstrapComponents = maybeUnwrapFn(
         /** @type {?} */
         ngModuleDef.bootstrap);
-        _this32._r3Injector =
+        _this38._r3Injector =
         /** @type {?} */
         createInjectorWithoutInjectorInstances(ngModuleType, _parent, [{
           provide: NgModuleRef,
-          useValue: _assertThisInitialized(_this32)
+          useValue: _assertThisInitialized(_this38)
         }, {
           provide: ComponentFactoryResolver,
-          useValue: _this32.componentFactoryResolver
+          useValue: _this38.componentFactoryResolver
         }], stringify(ngModuleType)); // We need to resolve the injector types separately from the injector creation, because
         // the module might be trying to use this ref in its contructor for DI which will cause a
         // circular error that will eventually error out, because the injector isn't created yet.
 
-        _this32._r3Injector._resolveInjectorDefTypes();
+        _this38._r3Injector._resolveInjectorDefTypes();
 
-        _this32.instance = _this32.get(ngModuleType);
-        return _this32;
+        _this38.instance = _this38.get(ngModuleType);
+        return _this38;
       }
       /**
        * @param {?} token
@@ -54403,12 +54403,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} moduleType
        */
       function NgModuleFactory$1(moduleType) {
-        var _this33;
+        var _this39;
 
-        _classCallCheck(this, NgModuleFactory$1);
+        _classCallCheck2(this, NgModuleFactory$1);
 
-        _this33 = _super22.call(this);
-        _this33.moduleType = moduleType;
+        _this39 = _super22.call(this);
+        _this39.moduleType = moduleType;
         /** @type {?} */
 
         var ngModuleDef = getNgModuleDef(moduleType);
@@ -54442,7 +54442,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           moduleType);
         }
 
-        return _this33;
+        return _this39;
       }
       /**
        * @param {?} parentInjector
@@ -55171,15 +55171,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        *
        */
       function EventEmitter() {
-        var _this34;
+        var _this40;
 
         var isAsync = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
-        _classCallCheck(this, EventEmitter);
+        _classCallCheck2(this, EventEmitter);
 
-        _this34 = _super23.call(this);
-        _this34.__isAsync = isAsync;
-        return _this34;
+        _this40 = _super23.call(this);
+        _this40.__isAsync = isAsync;
+        return _this40;
       }
       /**
        * Emits an event containing a given value.
@@ -55437,7 +55437,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var QueryList = /*#__PURE__*/function () {
       function QueryList() {
-        _classCallCheck(this, QueryList);
+        _classCallCheck2(this, QueryList);
 
         this.dirty = true;
         this._results = [];
@@ -55846,7 +55846,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} queryList
        */
       function LQuery_(queryList) {
-        _classCallCheck(this, LQuery_);
+        _classCallCheck2(this, LQuery_);
 
         this.queryList = queryList;
         this.matches = null;
@@ -55884,7 +55884,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function LQueries_() {
         var queries = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
-        _classCallCheck(this, LQueries_);
+        _classCallCheck2(this, LQueries_);
 
         this.queries = queries;
       }
@@ -55976,7 +55976,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function TQueryMetadata_(predicate, descendants, isStatic) {
       var read = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
-      _classCallCheck(this, TQueryMetadata_);
+      _classCallCheck2(this, TQueryMetadata_);
 
       this.predicate = predicate;
       this.descendants = descendants;
@@ -55993,7 +55993,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function TQueries_() {
         var queries = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
-        _classCallCheck(this, TQueries_);
+        _classCallCheck2(this, TQueries_);
 
         this.queries = queries;
       }
@@ -56116,7 +56116,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function TQuery_(metadata) {
         var nodeIndex = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : -1;
 
-        _classCallCheck(this, TQuery_);
+        _classCallCheck2(this, TQuery_);
 
         this.metadata = metadata;
         this.matches = null;
@@ -58995,9 +58995,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} appInits
        */
       function ApplicationInitStatus(appInits) {
-        var _this35 = this;
+        var _this41 = this;
 
-        _classCallCheck(this, ApplicationInitStatus);
+        _classCallCheck2(this, ApplicationInitStatus);
 
         this.appInits = appInits;
         this.initialized = false;
@@ -59009,8 +59009,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (res, rej) {
-          _this35.resolve = res;
-          _this35.reject = rej;
+          _this41.resolve = res;
+          _this41.reject = rej;
         });
       }
       /**
@@ -59022,7 +59022,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(ApplicationInitStatus, [{
         key: "runInitializers",
         value: function runInitializers() {
-          var _this36 = this;
+          var _this42 = this;
 
           if (this.initialized) {
             return;
@@ -59039,9 +59039,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function complete() {
             /** @type {?} */
-            _this36.done = true;
+            _this42.done = true;
 
-            _this36.resolve();
+            _this42.resolve();
           };
 
           if (this.appInits) {
@@ -59067,7 +59067,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (e) {
-            _this36.reject(e);
+            _this42.reject(e);
           });
 
           if (asyncInitPromises.length === 0) {
@@ -59211,7 +59211,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var Console = /*#__PURE__*/function () {
       function Console() {
-        _classCallCheck(this, Console);
+        _classCallCheck2(this, Console);
       }
 
       _createClass2(Console, [{
@@ -59433,7 +59433,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} componentFactories
      */
     function ModuleWithComponentFactories(ngModuleFactory, componentFactories) {
-      _classCallCheck(this, ModuleWithComponentFactories);
+      _classCallCheck2(this, ModuleWithComponentFactories);
 
       this.ngModuleFactory = ngModuleFactory;
       this.componentFactories = componentFactories;
@@ -59566,7 +59566,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var Compiler = /*#__PURE__*/function () {
       function Compiler() {
-        _classCallCheck(this, Compiler);
+        _classCallCheck2(this, Compiler);
 
         /**
          * Compiles the given NgModule and all of its components. All templates of the components listed
@@ -59659,7 +59659,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
     var CompilerFactory = function CompilerFactory() {
-      _classCallCheck(this, CompilerFactory);
+      _classCallCheck2(this, CompilerFactory);
     };
 
     if (false) {}
@@ -59812,7 +59812,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _ref6$shouldCoalesceE = _ref6.shouldCoalesceEventChangeDetection,
             shouldCoalesceEventChangeDetection = _ref6$shouldCoalesceE === void 0 ? false : _ref6$shouldCoalesceE;
 
-        _classCallCheck(this, NgZone);
+        _classCallCheck2(this, NgZone);
 
         this.hasPendingMacrotasks = false;
         this.hasPendingMicrotasks = false;
@@ -60278,7 +60278,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var NoopNgZone = /*#__PURE__*/function () {
       function NoopNgZone() {
-        _classCallCheck(this, NoopNgZone);
+        _classCallCheck2(this, NoopNgZone);
 
         this.hasPendingMicrotasks = false;
         this.hasPendingMacrotasks = false;
@@ -60385,9 +60385,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _ngZone
        */
       function Testability(_ngZone) {
-        var _this37 = this;
+        var _this43 = this;
 
-        _classCallCheck(this, Testability);
+        _classCallCheck2(this, Testability);
 
         this._ngZone = _ngZone;
         this._pendingCount = 0;
@@ -60410,7 +60410,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function () {
-          _this37.taskTrackingZone = typeof Zone == 'undefined' ? null : Zone.current.get('TaskTrackingZone');
+          _this43.taskTrackingZone = typeof Zone == 'undefined' ? null : Zone.current.get('TaskTrackingZone');
         });
       }
       /**
@@ -60422,7 +60422,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(Testability, [{
         key: "_watchAngularEvents",
         value: function _watchAngularEvents() {
-          var _this38 = this;
+          var _this44 = this;
 
           this._ngZone.onUnstable.subscribe({
             next:
@@ -60430,8 +60430,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function next() {
-              _this38._didWork = true;
-              _this38._isZoneStable = false;
+              _this44._didWork = true;
+              _this44._isZoneStable = false;
             }
           });
 
@@ -60440,7 +60440,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this38._ngZone.onStable.subscribe({
+            _this44._ngZone.onStable.subscribe({
               next:
               /**
               * @return {?}
@@ -60452,9 +60452,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 * @return {?}
                 */
                 function () {
-                  _this38._isZoneStable = true;
+                  _this44._isZoneStable = true;
 
-                  _this38._runCallbacksIfReady();
+                  _this44._runCallbacksIfReady();
                 });
               }
             });
@@ -60510,7 +60510,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_runCallbacksIfReady",
         value: function _runCallbacksIfReady() {
-          var _this39 = this;
+          var _this45 = this;
 
           if (this.isStable()) {
             // Schedules the call backs in a new frame so that it is always async.
@@ -60519,17 +60519,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              while (_this39._callbacks.length !== 0) {
+              while (_this45._callbacks.length !== 0) {
                 /** @type {?} */
                 var cb =
                 /** @type {?} */
-                _this39._callbacks.pop();
+                _this45._callbacks.pop();
 
                 clearTimeout(cb.timeoutId);
-                cb.doneCb(_this39._didWork);
+                cb.doneCb(_this45._didWork);
               }
 
-              _this39._didWork = false;
+              _this45._didWork = false;
             });
           } else {
             // Still not stable, send updates.
@@ -60595,7 +60595,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addCallback",
         value: function addCallback(cb, timeout, updateCb) {
-          var _this40 = this;
+          var _this46 = this;
 
           /** @type {?} */
           var timeoutId = -1;
@@ -60606,7 +60606,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              _this40._callbacks = _this40._callbacks.filter(
+              _this46._callbacks = _this46._callbacks.filter(
               /**
               * @param {?} cb
               * @return {?}
@@ -60614,7 +60614,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               function (cb) {
                 return cb.timeoutId !== timeoutId;
               });
-              cb(_this40._didWork, _this40.getPendingTasks());
+              cb(_this46._didWork, _this46.getPendingTasks());
             }, timeout);
           }
 
@@ -60723,7 +60723,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var TestabilityRegistry = /*#__PURE__*/function () {
       function TestabilityRegistry() {
-        _classCallCheck(this, TestabilityRegistry);
+        _classCallCheck2(this, TestabilityRegistry);
 
         /**
          * \@internal
@@ -60856,7 +60856,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _NoopGetTestability = /*#__PURE__*/function () {
       function _NoopGetTestability() {
-        _classCallCheck(this, _NoopGetTestability);
+        _classCallCheck2(this, _NoopGetTestability);
       }
 
       _createClass2(_NoopGetTestability, [{
@@ -61087,7 +61087,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} token
      */
     function NgProbeToken(name, token) {
-      _classCallCheck(this, NgProbeToken);
+      _classCallCheck2(this, NgProbeToken);
 
       this.name = name;
       this.token = token;
@@ -61256,7 +61256,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _injector
        */
       function PlatformRef(_injector) {
-        _classCallCheck(this, PlatformRef);
+        _classCallCheck2(this, PlatformRef);
 
         this._injector = _injector;
         this._modules = [];
@@ -61294,7 +61294,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(PlatformRef, [{
         key: "bootstrapModuleFactory",
         value: function bootstrapModuleFactory(moduleFactory, options) {
-          var _this41 = this;
+          var _this47 = this;
 
           // Note: We need to create the NgZone _before_ we instantiate the module,
           // as instantiating the module creates some providers eagerly.
@@ -61325,7 +61325,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
             var ngZoneInjector = Injector.create({
               providers: providers,
-              parent: _this41.injector,
+              parent: _this47.injector,
               name: moduleFactory.moduleType.name
             });
             /** @type {?} */
@@ -61346,7 +61346,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return remove(_this41._modules, moduleRef);
+              return remove(_this47._modules, moduleRef);
             });
 
             /** @type {?} */
@@ -61392,7 +61392,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   setLocaleId(localeId || DEFAULT_LOCALE_ID);
                 }
 
-                _this41._moduleDoBootstrap(moduleRef);
+                _this47._moduleDoBootstrap(moduleRef);
 
                 return moduleRef;
               });
@@ -61423,7 +61423,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "bootstrapModule",
         value: function bootstrapModule(moduleType) {
-          var _this42 = this;
+          var _this48 = this;
 
           var compilerOptions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
 
@@ -61435,7 +61435,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (moduleFactory) {
-            return _this42.bootstrapModuleFactory(moduleFactory, options);
+            return _this48.bootstrapModuleFactory(moduleFactory, options);
           });
         }
         /**
@@ -61758,9 +61758,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _initStatus
        */
       function ApplicationRef(_zone, _console, _injector, _exceptionHandler, _componentFactoryResolver, _initStatus) {
-        var _this43 = this;
+        var _this49 = this;
 
-        _classCallCheck(this, ApplicationRef);
+        _classCallCheck2(this, ApplicationRef);
 
         this._zone = _zone;
         this._console = _console;
@@ -61796,12 +61796,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function next() {
-            _this43._zone.run(
+            _this49._zone.run(
             /**
             * @return {?}
             */
             function () {
-              _this43.tick();
+              _this49.tick();
             });
           }
         });
@@ -61814,14 +61814,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (observer) {
-          _this43._stable = _this43._zone.isStable && !_this43._zone.hasPendingMacrotasks && !_this43._zone.hasPendingMicrotasks;
+          _this49._stable = _this49._zone.isStable && !_this49._zone.hasPendingMacrotasks && !_this49._zone.hasPendingMicrotasks;
 
-          _this43._zone.runOutsideAngular(
+          _this49._zone.runOutsideAngular(
           /**
           * @return {?}
           */
           function () {
-            observer.next(_this43._stable);
+            observer.next(_this49._stable);
             observer.complete();
           });
         });
@@ -61839,12 +61839,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /** @type {?} */
           var stableSub;
 
-          _this43._zone.runOutsideAngular(
+          _this49._zone.runOutsideAngular(
           /**
           * @return {?}
           */
           function () {
-            stableSub = _this43._zone.onStable.subscribe(
+            stableSub = _this49._zone.onStable.subscribe(
             /**
             * @return {?}
             */
@@ -61857,8 +61857,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function () {
-                if (!_this43._stable && !_this43._zone.hasPendingMacrotasks && !_this43._zone.hasPendingMicrotasks) {
-                  _this43._stable = true;
+                if (!_this49._stable && !_this49._zone.hasPendingMacrotasks && !_this49._zone.hasPendingMicrotasks) {
+                  _this49._stable = true;
                   observer.next(true);
                 }
               });
@@ -61867,17 +61867,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /** @type {?} */
 
 
-          var unstableSub = _this43._zone.onUnstable.subscribe(
+          var unstableSub = _this49._zone.onUnstable.subscribe(
           /**
           * @return {?}
           */
           function () {
             NgZone.assertInAngularZone();
 
-            if (_this43._stable) {
-              _this43._stable = false;
+            if (_this49._stable) {
+              _this49._stable = false;
 
-              _this43._zone.runOutsideAngular(
+              _this49._zone.runOutsideAngular(
               /**
               * @return {?}
               */
@@ -61926,7 +61926,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(ApplicationRef, [{
         key: "bootstrap",
         value: function bootstrap(componentOrFactory, rootSelectorOrNode) {
-          var _this44 = this;
+          var _this50 = this;
 
           if (!this._initStatus.done) {
             throw new Error('Cannot bootstrap as there are still asynchronous initializers running. Bootstrap components in the `ngDoBootstrap` method of the root module.');
@@ -61960,7 +61960,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this44._unloadComponent(compRef);
+            _this50._unloadComponent(compRef);
           });
           /** @type {?} */
 
@@ -61993,7 +61993,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "tick",
         value: function tick() {
-          var _this45 = this;
+          var _this51 = this;
 
           if (this._runningTick) {
             throw new Error('ApplicationRef.tick is called recursively');
@@ -62039,7 +62039,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return _this45._exceptionHandler.handleError(e);
+              return _this51._exceptionHandler.handleError(e);
             });
           } finally {
             this._runningTick = false;
@@ -62281,7 +62281,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var NgModuleFactoryLoader = function NgModuleFactoryLoader() {
-      _classCallCheck(this, NgModuleFactoryLoader);
+      _classCallCheck2(this, NgModuleFactoryLoader);
     };
 
     if (false) {}
@@ -62355,7 +62355,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
     var SystemJsNgModuleLoaderConfig = function SystemJsNgModuleLoaderConfig() {
-      _classCallCheck(this, SystemJsNgModuleLoaderConfig);
+      _classCallCheck2(this, SystemJsNgModuleLoaderConfig);
     };
 
     if (false) {}
@@ -62379,7 +62379,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} config
        */
       function SystemJsNgModuleLoader(_compiler, config) {
-        _classCallCheck(this, SystemJsNgModuleLoader);
+        _classCallCheck2(this, SystemJsNgModuleLoader);
 
         this._compiler = _compiler;
         this._config = config || DEFAULT_CONFIG;
@@ -62406,7 +62406,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "loadAndCompile",
         value: function loadAndCompile(path) {
-          var _this46 = this;
+          var _this52 = this;
 
           var _path$split = path.split(_SEPARATOR),
               _path$split2 = _slicedToArray(_path$split, 2),
@@ -62437,7 +62437,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (type) {
-            return _this46._compiler.compileModuleAsync(type);
+            return _this52._compiler.compileModuleAsync(type);
           });
         }
         /**
@@ -62563,7 +62563,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super24 = _createSuper(ViewRef$1);
 
       function ViewRef$1() {
-        _classCallCheck(this, ViewRef$1);
+        _classCallCheck2(this, ViewRef$1);
 
         return _super24.apply(this, arguments);
       }
@@ -62635,7 +62635,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super25 = _createSuper(EmbeddedViewRef);
 
       function EmbeddedViewRef() {
-        _classCallCheck(this, EmbeddedViewRef);
+        _classCallCheck2(this, EmbeddedViewRef);
 
         return _super25.apply(this, arguments);
       }
@@ -62675,7 +62675,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} callback
      */
     function DebugEventListener(name, callback) {
-      _classCallCheck(this, DebugEventListener);
+      _classCallCheck2(this, DebugEventListener);
 
       this.name = name;
       this.callback = callback;
@@ -62691,7 +62691,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _debugContext
        */
       function DebugNode__PRE_R3__(nativeNode, parent, _debugContext) {
-        _classCallCheck(this, DebugNode__PRE_R3__);
+        _classCallCheck2(this, DebugNode__PRE_R3__);
 
         this.listeners = [];
         this.parent = null;
@@ -62767,18 +62767,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _debugContext
        */
       function DebugElement__PRE_R3__(nativeNode, parent, _debugContext) {
-        var _this47;
+        var _this53;
 
-        _classCallCheck(this, DebugElement__PRE_R3__);
+        _classCallCheck2(this, DebugElement__PRE_R3__);
 
-        _this47 = _super26.call(this, nativeNode, parent, _debugContext);
-        _this47.properties = {};
-        _this47.attributes = {};
-        _this47.classes = {};
-        _this47.styles = {};
-        _this47.childNodes = [];
-        _this47.nativeElement = nativeNode;
-        return _this47;
+        _this53 = _super26.call(this, nativeNode, parent, _debugContext);
+        _this53.properties = {};
+        _this53.attributes = {};
+        _this53.classes = {};
+        _this53.styles = {};
+        _this53.childNodes = [];
+        _this53.nativeElement = nativeNode;
+        return _this53;
       }
       /**
        * @param {?} child
@@ -62822,7 +62822,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "insertChildrenAfter",
         value: function insertChildrenAfter(child, newChildren) {
-          var _this48 = this;
+          var _this54 = this;
 
           /** @type {?} */
           var siblingIndex = this.childNodes.indexOf(child);
@@ -62844,7 +62844,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
 
               /** @type {?} */
-              child.parent = _this48;
+              child.parent = _this54;
             });
           }
         }
@@ -63034,7 +63034,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} nativeNode
        */
       function DebugNode__POST_R3__(nativeNode) {
-        _classCallCheck(this, DebugNode__POST_R3__);
+        _classCallCheck2(this, DebugNode__POST_R3__);
 
         this.nativeNode = nativeNode;
       }
@@ -63141,7 +63141,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} nativeNode
        */
       function DebugElement__POST_R3__(nativeNode) {
-        _classCallCheck(this, DebugElement__POST_R3__);
+        _classCallCheck2(this, DebugElement__POST_R3__);
 
         ngDevMode && assertDomNode(nativeNode);
         return _super27.call(this, nativeNode);
@@ -64201,7 +64201,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} appRef
      */
     function ApplicationModule(appRef) {
-      _classCallCheck(this, ApplicationModule);
+      _classCallCheck2(this, ApplicationModule);
     };
 
     ApplicationModule.ɵmod = ɵɵdefineNgModule({
@@ -68137,7 +68137,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} nodeIndex
        */
       function DebugContext_(view, nodeIndex) {
-        _classCallCheck(this, DebugContext_);
+        _classCallCheck2(this, DebugContext_);
 
         this.view = view;
         this.nodeIndex = nodeIndex;
@@ -68476,7 +68476,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} delegate
        */
       function DebugRendererFactory2(delegate) {
-        _classCallCheck(this, DebugRendererFactory2);
+        _classCallCheck2(this, DebugRendererFactory2);
 
         this.delegate = delegate;
       }
@@ -68539,7 +68539,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} delegate
        */
       function DebugRenderer2(delegate) {
-        _classCallCheck(this, DebugRenderer2);
+        _classCallCheck2(this, DebugRenderer2);
 
         this.delegate = delegate;
         /**
@@ -69037,17 +69037,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _ngModuleDefFactory
        */
       function NgModuleFactory_(moduleType, _bootstrapComponents, _ngModuleDefFactory) {
-        var _this49;
+        var _this55;
 
-        _classCallCheck(this, NgModuleFactory_);
+        _classCallCheck2(this, NgModuleFactory_);
 
         // Attention: this ctor is called as top level function.
         // Putting any logic in here will destroy closure tree shaking!
-        _this49 = _super28.call(this);
-        _this49.moduleType = moduleType;
-        _this49._bootstrapComponents = _bootstrapComponents;
-        _this49._ngModuleDefFactory = _ngModuleDefFactory;
-        return _this49;
+        _this55 = _super28.call(this);
+        _this55.moduleType = moduleType;
+        _this55._bootstrapComponents = _bootstrapComponents;
+        _this55._ngModuleDefFactory = _ngModuleDefFactory;
+        return _this55;
       }
       /**
        * @param {?} parentInjector
@@ -69525,7 +69525,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super29 = _createSuper(GenericBrowserDomAdapter);
 
       function GenericBrowserDomAdapter() {
-        _classCallCheck(this, GenericBrowserDomAdapter);
+        _classCallCheck2(this, GenericBrowserDomAdapter);
 
         return _super29.call(this);
       }
@@ -69591,7 +69591,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super30 = _createSuper(BrowserDomAdapter);
 
       function BrowserDomAdapter() {
-        _classCallCheck(this, BrowserDomAdapter);
+        _classCallCheck2(this, BrowserDomAdapter);
 
         return _super30.apply(this, arguments);
       }
@@ -69980,7 +69980,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var BrowserGetTestability = /*#__PURE__*/function () {
       function BrowserGetTestability() {
-        _classCallCheck(this, BrowserGetTestability);
+        _classCallCheck2(this, BrowserGetTestability);
       }
 
       _createClass2(BrowserGetTestability, [{
@@ -70328,9 +70328,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _zone
        */
       function EventManager(plugins, _zone) {
-        var _this50 = this;
+        var _this56 = this;
 
-        _classCallCheck(this, EventManager);
+        _classCallCheck2(this, EventManager);
 
         this._zone = _zone;
         this._eventNameToPlugin = new Map();
@@ -70342,7 +70342,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {THIS}
         */
         function (p) {
-          return p.manager = _this50;
+          return p.manager = _this56;
         });
         this._plugins = plugins.slice().reverse();
       }
@@ -70482,7 +70482,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _doc
        */
       function EventManagerPlugin(_doc) {
-        _classCallCheck(this, EventManagerPlugin);
+        _classCallCheck2(this, EventManagerPlugin);
 
         this._doc = _doc;
       }
@@ -70521,7 +70521,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SharedStylesHost = /*#__PURE__*/function () {
       function SharedStylesHost() {
-        _classCallCheck(this, SharedStylesHost);
+        _classCallCheck2(this, SharedStylesHost);
 
         /**
          * \@internal
@@ -70537,7 +70537,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(SharedStylesHost, [{
         key: "addStyles",
         value: function addStyles(styles) {
-          var _this51 = this;
+          var _this57 = this;
 
           /** @type {?} */
           var additions = new Set();
@@ -70547,8 +70547,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (style) {
-            if (!_this51._stylesSet.has(style)) {
-              _this51._stylesSet.add(style);
+            if (!_this57._stylesSet.has(style)) {
+              _this57._stylesSet.add(style);
 
               additions.add(style);
             }
@@ -70606,18 +70606,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _doc
        */
       function DomSharedStylesHost(_doc) {
-        var _this52;
+        var _this58;
 
-        _classCallCheck(this, DomSharedStylesHost);
+        _classCallCheck2(this, DomSharedStylesHost);
 
-        _this52 = _super31.call(this);
-        _this52._doc = _doc;
-        _this52._hostNodes = new Set();
-        _this52._styleNodes = new Set();
+        _this58 = _super31.call(this);
+        _this58._doc = _doc;
+        _this58._hostNodes = new Set();
+        _this58._styleNodes = new Set();
 
-        _this52._hostNodes.add(_doc.head);
+        _this58._hostNodes.add(_doc.head);
 
-        return _this52;
+        return _this58;
       }
       /**
        * @private
@@ -70630,7 +70630,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(DomSharedStylesHost, [{
         key: "_addStylesToHost",
         value: function _addStylesToHost(styles, host) {
-          var _this53 = this;
+          var _this59 = this;
 
           styles.forEach(
           /**
@@ -70639,11 +70639,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (style) {
             /** @type {?} */
-            var styleEl = _this53._doc.createElement('style');
+            var styleEl = _this59._doc.createElement('style');
 
             styleEl.textContent = style;
 
-            _this53._styleNodes.add(host.appendChild(styleEl));
+            _this59._styleNodes.add(host.appendChild(styleEl));
           });
         }
         /**
@@ -70676,7 +70676,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onStylesAdded",
         value: function onStylesAdded(additions) {
-          var _this54 = this;
+          var _this60 = this;
 
           this._hostNodes.forEach(
           /**
@@ -70684,7 +70684,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (hostNode) {
-            return _this54._addStylesToHost(additions, hostNode);
+            return _this60._addStylesToHost(additions, hostNode);
           });
         }
         /**
@@ -70863,7 +70863,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} appId
        */
       function DomRendererFactory2(eventManager, sharedStylesHost, appId) {
-        _classCallCheck(this, DomRendererFactory2);
+        _classCallCheck2(this, DomRendererFactory2);
 
         this.eventManager = eventManager;
         this.sharedStylesHost = sharedStylesHost;
@@ -70988,7 +70988,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} eventManager
        */
       function DefaultDomRenderer2(eventManager) {
-        _classCallCheck(this, DefaultDomRenderer2);
+        _classCallCheck2(this, DefaultDomRenderer2);
 
         this.eventManager = eventManager;
         this.data = Object.create(null);
@@ -71324,19 +71324,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} appId
        */
       function EmulatedEncapsulationDomRenderer2(eventManager, sharedStylesHost, component, appId) {
-        var _this55;
+        var _this61;
 
-        _classCallCheck(this, EmulatedEncapsulationDomRenderer2);
+        _classCallCheck2(this, EmulatedEncapsulationDomRenderer2);
 
-        _this55 = _super32.call(this, eventManager);
-        _this55.component = component;
+        _this61 = _super32.call(this, eventManager);
+        _this61.component = component;
         /** @type {?} */
 
         var styles = flattenStyles(appId + '-' + component.id, component.styles, []);
         sharedStylesHost.addStyles(styles);
-        _this55.contentAttr = shimContentAttribute(appId + '-' + component.id);
-        _this55.hostAttr = shimHostAttribute(appId + '-' + component.id);
-        return _this55;
+        _this61.contentAttr = shimContentAttribute(appId + '-' + component.id);
+        _this61.hostAttr = shimHostAttribute(appId + '-' + component.id);
+        return _this61;
       }
       /**
        * @param {?} element
@@ -71384,28 +71384,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} component
        */
       function ShadowDomRenderer(eventManager, sharedStylesHost, hostEl, component) {
-        var _this56;
+        var _this62;
 
-        _classCallCheck(this, ShadowDomRenderer);
+        _classCallCheck2(this, ShadowDomRenderer);
 
-        _this56 = _super33.call(this, eventManager);
-        _this56.sharedStylesHost = sharedStylesHost;
-        _this56.hostEl = hostEl;
-        _this56.component = component;
+        _this62 = _super33.call(this, eventManager);
+        _this62.sharedStylesHost = sharedStylesHost;
+        _this62.hostEl = hostEl;
+        _this62.component = component;
 
         if (component.encapsulation === _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].ShadowDom) {
-          _this56.shadowRoot =
+          _this62.shadowRoot =
           /** @type {?} */
           hostEl.attachShadow({
             mode: 'open'
           });
         } else {
-          _this56.shadowRoot =
+          _this62.shadowRoot =
           /** @type {?} */
           hostEl.createShadowRoot();
         }
 
-        _this56.sharedStylesHost.addHost(_this56.shadowRoot);
+        _this62.sharedStylesHost.addHost(_this62.shadowRoot);
         /** @type {?} */
 
 
@@ -71416,10 +71416,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var styleEl = document.createElement('style');
           styleEl.textContent = styles[i];
 
-          _this56.shadowRoot.appendChild(styleEl);
+          _this62.shadowRoot.appendChild(styleEl);
         }
 
-        return _this56;
+        return _this62;
       }
       /**
        * @private
@@ -71508,7 +71508,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} doc
        */
       function DomEventsPlugin(doc) {
-        _classCallCheck(this, DomEventsPlugin);
+        _classCallCheck2(this, DomEventsPlugin);
 
         return _super34.call(this, doc);
       } // This plugin should come last in the list of plugins, because it accepts all
@@ -71535,7 +71535,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addEventListener",
         value: function addEventListener(element, eventName, handler) {
-          var _this57 = this;
+          var _this63 = this;
 
           element.addEventListener(eventName,
           /** @type {?} */
@@ -71545,7 +71545,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return _this57.removeEventListener(element, eventName,
+              return _this63.removeEventListener(element, eventName,
               /** @type {?} */
               handler);
             }
@@ -71688,7 +71688,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var HammerGestureConfig = /*#__PURE__*/function () {
       function HammerGestureConfig() {
-        _classCallCheck(this, HammerGestureConfig);
+        _classCallCheck2(this, HammerGestureConfig);
 
         /**
          * A set of supported event names for gestures to be used in Angular.
@@ -71786,15 +71786,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} loader
        */
       function HammerGesturesPlugin(doc, _config, console, loader) {
-        var _this58;
+        var _this64;
 
-        _classCallCheck(this, HammerGesturesPlugin);
+        _classCallCheck2(this, HammerGesturesPlugin);
 
-        _this58 = _super35.call(this, doc);
-        _this58._config = _config;
-        _this58.console = console;
-        _this58.loader = loader;
-        return _this58;
+        _this64 = _super35.call(this, doc);
+        _this64._config = _config;
+        _this64.console = console;
+        _this64.loader = loader;
+        return _this64;
       }
       /**
        * @param {?} eventName
@@ -71828,7 +71828,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addEventListener",
         value: function addEventListener(element, eventName, handler) {
-          var _this59 = this;
+          var _this65 = this;
 
           /** @type {?} */
           var zone = this.manager.getZone();
@@ -71863,7 +71863,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (!
               /** @type {?} */
               window.Hammer) {
-                _this59.console.warn("The custom HAMMER_LOADER completed, but Hammer.JS is not present.");
+                _this65.console.warn("The custom HAMMER_LOADER completed, but Hammer.JS is not present.");
 
                 deregister =
                 /**
@@ -71877,14 +71877,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (!cancelRegistration) {
                 // Now that Hammer is loaded and the listener is being loaded for real,
                 // the deregistration function changes from canceling registration to removal.
-                deregister = _this59.addEventListener(element, eventName, handler);
+                deregister = _this65.addEventListener(element, eventName, handler);
               }
             })["catch"](
             /**
             * @return {?}
             */
             function () {
-              _this59.console.warn("The \"".concat(eventName, "\" event cannot be bound because the custom ") + "Hammer.JS loader failed.");
+              _this65.console.warn("The \"".concat(eventName, "\" event cannot be bound because the custom ") + "Hammer.JS loader failed.");
 
               deregister =
               /**
@@ -71913,7 +71913,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             // Creating the manager bind events, must be done outside of angular
 
             /** @type {?} */
-            var mc = _this59._config.buildHammer(element);
+            var mc = _this65._config.buildHammer(element);
             /** @type {?} */
 
 
@@ -72071,7 +72071,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
     var HammerModule = function HammerModule() {
-      _classCallCheck(this, HammerModule);
+      _classCallCheck2(this, HammerModule);
     };
 
     HammerModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
@@ -72212,7 +72212,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} doc The document in which key events will be detected.
        */
       function KeyEventsPlugin(doc) {
-        _classCallCheck(this, KeyEventsPlugin);
+        _classCallCheck2(this, KeyEventsPlugin);
 
         return _super36.call(this, doc);
       }
@@ -72568,7 +72568,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var DomSanitizer = function DomSanitizer() {
-      _classCallCheck(this, DomSanitizer);
+      _classCallCheck2(this, DomSanitizer);
     };
 
     DomSanitizer.ɵfac = function DomSanitizer_Factory(t) {
@@ -72622,13 +72622,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _doc
        */
       function DomSanitizerImpl(_doc) {
-        var _this60;
+        var _this66;
 
-        _classCallCheck(this, DomSanitizerImpl);
+        _classCallCheck2(this, DomSanitizerImpl);
 
-        _this60 = _super37.call(this);
-        _this60._doc = _doc;
-        return _this60;
+        _this66 = _super37.call(this);
+        _this66._doc = _doc;
+        return _this66;
       }
       /**
        * @param {?} ctx
@@ -72939,7 +72939,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} parentModule
        */
       function BrowserModule(parentModule) {
-        _classCallCheck(this, BrowserModule);
+        _classCallCheck2(this, BrowserModule);
 
         if (parentModule) {
           throw new Error("BrowserModule has already been loaded. If you need access to common directives such as NgIf and NgFor from a lazy loaded module, import CommonModule instead.");
@@ -73058,7 +73058,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _doc
        */
       function Meta(_doc) {
-        _classCallCheck(this, Meta);
+        _classCallCheck2(this, Meta);
 
         this._doc = _doc;
         this._dom = Object(_angular_common__WEBPACK_IMPORTED_MODULE_0__["ɵgetDOM"])();
@@ -73086,7 +73086,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addTags",
         value: function addTags(tags) {
-          var _this61 = this;
+          var _this67 = this;
 
           var forceCreation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
           if (!tags) return [];
@@ -73098,7 +73098,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (result, tag) {
             if (tag) {
-              result.push(_this61._getOrCreateElement(tag, forceCreation));
+              result.push(_this67._getOrCreateElement(tag, forceCreation));
             }
 
             return result;
@@ -73355,7 +73355,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _doc
        */
       function Title(_doc) {
-        _classCallCheck(this, Title);
+        _classCallCheck2(this, Title);
 
         this._doc = _doc;
       }
@@ -73463,7 +73463,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @param {?} numTicks
      */
     function ChangeDetectionPerfRecord(msPerTick, numTicks) {
-      _classCallCheck(this, ChangeDetectionPerfRecord);
+      _classCallCheck2(this, ChangeDetectionPerfRecord);
 
       this.msPerTick = msPerTick;
       this.numTicks = numTicks;
@@ -73481,7 +73481,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} ref
        */
       function AngularProfiler(ref) {
-        _classCallCheck(this, AngularProfiler);
+        _classCallCheck2(this, AngularProfiler);
 
         this.appRef = ref.injector.get(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ApplicationRef"]);
       } // tslint:disable:no-console
@@ -73694,7 +73694,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var TransferState = /*#__PURE__*/function () {
       function TransferState() {
-        _classCallCheck(this, TransferState);
+        _classCallCheck2(this, TransferState);
 
         this.store = {};
         this.onSerializeCallbacks = {};
@@ -73860,7 +73860,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var BrowserTransferStateModule = function BrowserTransferStateModule() {
-      _classCallCheck(this, BrowserTransferStateModule);
+      _classCallCheck2(this, BrowserTransferStateModule);
     };
 
     BrowserTransferStateModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
@@ -73905,7 +73905,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var By = /*#__PURE__*/function () {
       function By() {
-        _classCallCheck(this, By);
+        _classCallCheck2(this, By);
       }
 
       _createClass2(By, null, [{
@@ -74760,15 +74760,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super38 = _createSuper(AsyncSubject);
 
       function AsyncSubject() {
-        var _this62;
+        var _this68;
 
-        _classCallCheck(this, AsyncSubject);
+        _classCallCheck2(this, AsyncSubject);
 
-        _this62 = _super38.apply(this, arguments);
-        _this62.value = null;
-        _this62.hasNext = false;
-        _this62.hasCompleted = false;
-        return _this62;
+        _this68 = _super38.apply(this, arguments);
+        _this68.value = null;
+        _this68.hasNext = false;
+        _this68.hasCompleted = false;
+        return _this68;
       }
 
       _createClass2(AsyncSubject, [{
@@ -74858,13 +74858,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super39 = _createSuper(BehaviorSubject);
 
       function BehaviorSubject(_value) {
-        var _this63;
+        var _this69;
 
-        _classCallCheck(this, BehaviorSubject);
+        _classCallCheck2(this, BehaviorSubject);
 
-        _this63 = _super39.call(this);
-        _this63._value = _value;
-        return _this63;
+        _this69 = _super39.call(this);
+        _this69._value = _value;
+        return _this69;
       }
 
       _createClass2(BehaviorSubject, [{
@@ -74940,16 +74940,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super40 = _createSuper(InnerSubscriber);
 
       function InnerSubscriber(parent, outerValue, outerIndex) {
-        var _this64;
+        var _this70;
 
-        _classCallCheck(this, InnerSubscriber);
+        _classCallCheck2(this, InnerSubscriber);
 
-        _this64 = _super40.call(this);
-        _this64.parent = parent;
-        _this64.outerValue = outerValue;
-        _this64.outerIndex = outerIndex;
-        _this64.index = 0;
-        return _this64;
+        _this70 = _super40.call(this);
+        _this70.parent = parent;
+        _this70.outerValue = outerValue;
+        _this70.outerIndex = outerIndex;
+        _this70.index = 0;
+        return _this70;
       }
 
       _createClass2(InnerSubscriber, [{
@@ -75032,7 +75032,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var Notification = /*#__PURE__*/function () {
       function Notification(kind, value, error) {
-        _classCallCheck(this, Notification);
+        _classCallCheck2(this, Notification);
 
         this.kind = kind;
         this.value = value;
@@ -75179,7 +75179,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var Observable = /*#__PURE__*/function () {
       function Observable(subscribe) {
-        _classCallCheck(this, Observable);
+        _classCallCheck2(this, Observable);
 
         this._isScalar = false;
 
@@ -75241,12 +75241,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "forEach",
         value: function forEach(next, promiseCtor) {
-          var _this65 = this;
+          var _this71 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var subscription;
-            subscription = _this65.subscribe(function (value) {
+            subscription = _this71.subscribe(function (value) {
               try {
                 next(value);
               } catch (err) {
@@ -75286,13 +75286,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "toPromise",
         value: function toPromise(promiseCtor) {
-          var _this66 = this;
+          var _this72 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var value;
 
-            _this66.subscribe(function (x) {
+            _this72.subscribe(function (x) {
               return value = x;
             }, function (err) {
               return reject(err);
@@ -75406,7 +75406,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super41 = _createSuper(OuterSubscriber);
 
       function OuterSubscriber() {
-        _classCallCheck(this, OuterSubscriber);
+        _classCallCheck2(this, OuterSubscriber);
 
         return _super41.apply(this, arguments);
       }
@@ -75497,29 +75497,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super42 = _createSuper(ReplaySubject);
 
       function ReplaySubject() {
-        var _this67;
+        var _this73;
 
         var bufferSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Number.POSITIVE_INFINITY;
         var windowTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
         var scheduler = arguments.length > 2 ? arguments[2] : undefined;
 
-        _classCallCheck(this, ReplaySubject);
+        _classCallCheck2(this, ReplaySubject);
 
-        _this67 = _super42.call(this);
-        _this67.scheduler = scheduler;
-        _this67._events = [];
-        _this67._infiniteTimeWindow = false;
-        _this67._bufferSize = bufferSize < 1 ? 1 : bufferSize;
-        _this67._windowTime = windowTime < 1 ? 1 : windowTime;
+        _this73 = _super42.call(this);
+        _this73.scheduler = scheduler;
+        _this73._events = [];
+        _this73._infiniteTimeWindow = false;
+        _this73._bufferSize = bufferSize < 1 ? 1 : bufferSize;
+        _this73._windowTime = windowTime < 1 ? 1 : windowTime;
 
         if (windowTime === Number.POSITIVE_INFINITY) {
-          _this67._infiniteTimeWindow = true;
-          _this67.next = _this67.nextInfiniteTimeWindow;
+          _this73._infiniteTimeWindow = true;
+          _this73.next = _this73.nextInfiniteTimeWindow;
         } else {
-          _this67.next = _this67.nextTimeWindow;
+          _this73.next = _this73.nextTimeWindow;
         }
 
-        return _this67;
+        return _this73;
       }
 
       _createClass2(ReplaySubject, [{
@@ -75626,7 +75626,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }(_Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]);
 
     var ReplayEvent = function ReplayEvent(time, value) {
-      _classCallCheck(this, ReplayEvent);
+      _classCallCheck2(this, ReplayEvent);
 
       this.time = time;
       this.value = value;
@@ -75660,7 +75660,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function Scheduler(SchedulerAction) {
         var now = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Scheduler.now;
 
-        _classCallCheck(this, Scheduler);
+        _classCallCheck2(this, Scheduler);
 
         this.SchedulerAction = SchedulerAction;
         this.now = now;
@@ -75760,13 +75760,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super43 = _createSuper(SubjectSubscriber);
 
       function SubjectSubscriber(destination) {
-        var _this68;
+        var _this74;
 
-        _classCallCheck(this, SubjectSubscriber);
+        _classCallCheck2(this, SubjectSubscriber);
 
-        _this68 = _super43.call(this, destination);
-        _this68.destination = destination;
-        return _this68;
+        _this74 = _super43.call(this, destination);
+        _this74.destination = destination;
+        return _this74;
       }
 
       return SubjectSubscriber;
@@ -75778,17 +75778,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super44 = _createSuper(Subject);
 
       function Subject() {
-        var _this69;
+        var _this75;
 
-        _classCallCheck(this, Subject);
+        _classCallCheck2(this, Subject);
 
-        _this69 = _super44.call(this);
-        _this69.observers = [];
-        _this69.closed = false;
-        _this69.isStopped = false;
-        _this69.hasError = false;
-        _this69.thrownError = null;
-        return _this69;
+        _this75 = _super44.call(this);
+        _this75.observers = [];
+        _this75.closed = false;
+        _this75.isStopped = false;
+        _this75.hasError = false;
+        _this75.thrownError = null;
+        return _this75;
       }
 
       _createClass2(Subject, [{
@@ -75912,14 +75912,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super45 = _createSuper(AnonymousSubject);
 
       function AnonymousSubject(destination, source) {
-        var _this70;
+        var _this76;
 
-        _classCallCheck(this, AnonymousSubject);
+        _classCallCheck2(this, AnonymousSubject);
 
-        _this70 = _super45.call(this);
-        _this70.destination = destination;
-        _this70.source = source;
-        return _this70;
+        _this76 = _super45.call(this);
+        _this76.destination = destination;
+        _this76.source = source;
+        return _this76;
       }
 
       _createClass2(AnonymousSubject, [{
@@ -76001,15 +76001,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super46 = _createSuper(SubjectSubscription);
 
       function SubjectSubscription(subject, subscriber) {
-        var _this71;
+        var _this77;
 
-        _classCallCheck(this, SubjectSubscription);
+        _classCallCheck2(this, SubjectSubscription);
 
-        _this71 = _super46.call(this);
-        _this71.subject = subject;
-        _this71.subscriber = subscriber;
-        _this71.closed = false;
-        return _this71;
+        _this77 = _super46.call(this);
+        _this77.subject = subject;
+        _this77.subscriber = subscriber;
+        _this77.closed = false;
+        return _this77;
       }
 
       _createClass2(SubjectSubscription, [{
@@ -76111,47 +76111,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super47 = _createSuper(Subscriber);
 
       function Subscriber(destinationOrNext, error, complete) {
-        var _this72;
+        var _this78;
 
-        _classCallCheck(this, Subscriber);
+        _classCallCheck2(this, Subscriber);
 
-        _this72 = _super47.call(this);
-        _this72.syncErrorValue = null;
-        _this72.syncErrorThrown = false;
-        _this72.syncErrorThrowable = false;
-        _this72.isStopped = false;
+        _this78 = _super47.call(this);
+        _this78.syncErrorValue = null;
+        _this78.syncErrorThrown = false;
+        _this78.syncErrorThrowable = false;
+        _this78.isStopped = false;
 
         switch (arguments.length) {
           case 0:
-            _this72.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+            _this78.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
             break;
 
           case 1:
             if (!destinationOrNext) {
-              _this72.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+              _this78.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
               break;
             }
 
             if (typeof destinationOrNext === 'object') {
               if (destinationOrNext instanceof Subscriber) {
-                _this72.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
-                _this72.destination = destinationOrNext;
-                destinationOrNext.add(_assertThisInitialized(_this72));
+                _this78.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
+                _this78.destination = destinationOrNext;
+                destinationOrNext.add(_assertThisInitialized(_this78));
               } else {
-                _this72.syncErrorThrowable = true;
-                _this72.destination = new SafeSubscriber(_assertThisInitialized(_this72), destinationOrNext);
+                _this78.syncErrorThrowable = true;
+                _this78.destination = new SafeSubscriber(_assertThisInitialized(_this78), destinationOrNext);
               }
 
               break;
             }
 
           default:
-            _this72.syncErrorThrowable = true;
-            _this72.destination = new SafeSubscriber(_assertThisInitialized(_this72), destinationOrNext, error, complete);
+            _this78.syncErrorThrowable = true;
+            _this78.destination = new SafeSubscriber(_assertThisInitialized(_this78), destinationOrNext, error, complete);
             break;
         }
 
-        return _this72;
+        return _this78;
       }
 
       _createClass2(Subscriber, [{
@@ -76241,15 +76241,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super48 = _createSuper(SafeSubscriber);
 
       function SafeSubscriber(_parentSubscriber, observerOrNext, error, complete) {
-        var _this73;
+        var _this79;
 
-        _classCallCheck(this, SafeSubscriber);
+        _classCallCheck2(this, SafeSubscriber);
 
-        _this73 = _super48.call(this);
-        _this73._parentSubscriber = _parentSubscriber;
+        _this79 = _super48.call(this);
+        _this79._parentSubscriber = _parentSubscriber;
         var next;
 
-        var context = _assertThisInitialized(_this73);
+        var context = _assertThisInitialized(_this79);
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(observerOrNext)) {
           next = observerOrNext;
@@ -76262,18 +76262,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             context = Object.create(observerOrNext);
 
             if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(context.unsubscribe)) {
-              _this73.add(context.unsubscribe.bind(context));
+              _this79.add(context.unsubscribe.bind(context));
             }
 
-            context.unsubscribe = _this73.unsubscribe.bind(_assertThisInitialized(_this73));
+            context.unsubscribe = _this79.unsubscribe.bind(_assertThisInitialized(_this79));
           }
         }
 
-        _this73._context = context;
-        _this73._next = next;
-        _this73._error = error;
-        _this73._complete = complete;
-        return _this73;
+        _this79._context = context;
+        _this79._next = next;
+        _this79._error = error;
+        _this79._complete = complete;
+        return _this79;
       }
 
       _createClass2(SafeSubscriber, [{
@@ -76329,14 +76329,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "complete",
         value: function complete() {
-          var _this74 = this;
+          var _this80 = this;
 
           if (!this.isStopped) {
             var _parentSubscriber = this._parentSubscriber;
 
             if (this._complete) {
               var wrappedComplete = function wrappedComplete() {
-                return _this74._complete.call(_this74._context);
+                return _this80._complete.call(_this80._context);
               };
 
               if (!_config__WEBPACK_IMPORTED_MODULE_4__["config"].useDeprecatedSynchronousErrorHandling || !_parentSubscriber.syncErrorThrowable) {
@@ -76454,7 +76454,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var Subscription = /*#__PURE__*/function () {
       function Subscription(unsubscribe) {
-        _classCallCheck(this, Subscription);
+        _classCallCheck2(this, Subscription);
 
         this.closed = false;
         this._parentOrParents = null;
@@ -76725,16 +76725,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super49 = _createSuper(ConnectableObservable);
 
       function ConnectableObservable(source, subjectFactory) {
-        var _this75;
+        var _this81;
 
-        _classCallCheck(this, ConnectableObservable);
+        _classCallCheck2(this, ConnectableObservable);
 
-        _this75 = _super49.call(this);
-        _this75.source = source;
-        _this75.subjectFactory = subjectFactory;
-        _this75._refCount = 0;
-        _this75._isComplete = false;
-        return _this75;
+        _this81 = _super49.call(this);
+        _this81.source = source;
+        _this81.subjectFactory = subjectFactory;
+        _this81._refCount = 0;
+        _this81._isComplete = false;
+        return _this81;
       }
 
       _createClass2(ConnectableObservable, [{
@@ -76824,13 +76824,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super50 = _createSuper(ConnectableSubscriber);
 
       function ConnectableSubscriber(destination, connectable) {
-        var _this76;
+        var _this82;
 
-        _classCallCheck(this, ConnectableSubscriber);
+        _classCallCheck2(this, ConnectableSubscriber);
 
-        _this76 = _super50.call(this, destination);
-        _this76.connectable = connectable;
-        return _this76;
+        _this82 = _super50.call(this, destination);
+        _this82.connectable = connectable;
+        return _this82;
       }
 
       _createClass2(ConnectableSubscriber, [{
@@ -76873,7 +76873,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var RefCountOperator = /*#__PURE__*/function () {
       function RefCountOperator(connectable) {
-        _classCallCheck(this, RefCountOperator);
+        _classCallCheck2(this, RefCountOperator);
 
         this.connectable = connectable;
       }
@@ -76903,13 +76903,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super51 = _createSuper(RefCountSubscriber);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this77;
+        var _this83;
 
-        _classCallCheck(this, RefCountSubscriber);
+        _classCallCheck2(this, RefCountSubscriber);
 
-        _this77 = _super51.call(this, destination);
-        _this77.connectable = connectable;
-        return _this77;
+        _this83 = _super51.call(this, destination);
+        _this83.connectable = connectable;
+        return _this83;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -76998,27 +76998,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super52 = _createSuper(SubscribeOnObservable);
 
       function SubscribeOnObservable(source) {
-        var _this78;
+        var _this84;
 
         var delayTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
         var scheduler = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
 
-        _classCallCheck(this, SubscribeOnObservable);
+        _classCallCheck2(this, SubscribeOnObservable);
 
-        _this78 = _super52.call(this);
-        _this78.source = source;
-        _this78.delayTime = delayTime;
-        _this78.scheduler = scheduler;
+        _this84 = _super52.call(this);
+        _this84.source = source;
+        _this84.delayTime = delayTime;
+        _this84.scheduler = scheduler;
 
         if (!Object(_util_isNumeric__WEBPACK_IMPORTED_MODULE_2__["isNumeric"])(delayTime) || delayTime < 0) {
-          _this78.delayTime = 0;
+          _this84.delayTime = 0;
         }
 
         if (!scheduler || typeof scheduler.schedule !== 'function') {
-          _this78.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
+          _this84.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
         }
 
-        return _this78;
+        return _this84;
       }
 
       _createClass2(SubscribeOnObservable, [{
@@ -77176,7 +77176,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this79 = this;
+      var _this85 = this;
 
       var self = this;
       var args = state.args,
@@ -77197,7 +77197,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-          _this79.add(scheduler.schedule(dispatchNext, 0, {
+          _this85.add(scheduler.schedule(dispatchNext, 0, {
             value: value,
             subject: subject
           }));
@@ -77359,7 +77359,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this80 = this;
+      var _this86 = this;
 
       var params = state.params,
           subscriber = state.subscriber,
@@ -77380,14 +77380,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var err = innerArgs.shift();
 
           if (err) {
-            _this80.add(scheduler.schedule(dispatchError, 0, {
+            _this86.add(scheduler.schedule(dispatchError, 0, {
               err: err,
               subject: subject
             }));
           } else {
             var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-            _this80.add(scheduler.schedule(dispatchNext, 0, {
+            _this86.add(scheduler.schedule(dispatchNext, 0, {
               value: value,
               subject: subject
             }));
@@ -77513,7 +77513,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var CombineLatestOperator = /*#__PURE__*/function () {
       function CombineLatestOperator(resultSelector) {
-        _classCallCheck(this, CombineLatestOperator);
+        _classCallCheck2(this, CombineLatestOperator);
 
         this.resultSelector = resultSelector;
       }
@@ -77534,16 +77534,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super53 = _createSuper(CombineLatestSubscriber);
 
       function CombineLatestSubscriber(destination, resultSelector) {
-        var _this81;
+        var _this87;
 
-        _classCallCheck(this, CombineLatestSubscriber);
+        _classCallCheck2(this, CombineLatestSubscriber);
 
-        _this81 = _super53.call(this, destination);
-        _this81.resultSelector = resultSelector;
-        _this81.active = 0;
-        _this81.values = [];
-        _this81.observables = [];
-        return _this81;
+        _this87 = _super53.call(this, destination);
+        _this87.resultSelector = resultSelector;
+        _this87.active = 0;
+        _this87.values = [];
+        _this87.observables = [];
+        return _this87;
       }
 
       _createClass2(CombineLatestSubscriber, [{
@@ -78994,7 +78994,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var RaceOperator = /*#__PURE__*/function () {
       function RaceOperator() {
-        _classCallCheck(this, RaceOperator);
+        _classCallCheck2(this, RaceOperator);
       }
 
       _createClass2(RaceOperator, [{
@@ -79013,15 +79013,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super54 = _createSuper(RaceSubscriber);
 
       function RaceSubscriber(destination) {
-        var _this82;
+        var _this88;
 
-        _classCallCheck(this, RaceSubscriber);
+        _classCallCheck2(this, RaceSubscriber);
 
-        _this82 = _super54.call(this, destination);
-        _this82.hasFirst = false;
-        _this82.observables = [];
-        _this82.subscriptions = [];
-        return _this82;
+        _this88 = _super54.call(this, destination);
+        _this88.hasFirst = false;
+        _this88.observables = [];
+        _this88.subscriptions = [];
+        return _this88;
       }
 
       _createClass2(RaceSubscriber, [{
@@ -79476,7 +79476,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ZipOperator = /*#__PURE__*/function () {
       function ZipOperator(resultSelector) {
-        _classCallCheck(this, ZipOperator);
+        _classCallCheck2(this, ZipOperator);
 
         this.resultSelector = resultSelector;
       }
@@ -79497,18 +79497,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super55 = _createSuper(ZipSubscriber);
 
       function ZipSubscriber(destination, resultSelector) {
-        var _this83;
+        var _this89;
 
         var values = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Object.create(null);
 
-        _classCallCheck(this, ZipSubscriber);
+        _classCallCheck2(this, ZipSubscriber);
 
-        _this83 = _super55.call(this, destination);
-        _this83.iterators = [];
-        _this83.active = 0;
-        _this83.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
-        _this83.values = values;
-        return _this83;
+        _this89 = _super55.call(this, destination);
+        _this89.iterators = [];
+        _this89.active = 0;
+        _this89.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
+        _this89.values = values;
+        return _this89;
       }
 
       _createClass2(ZipSubscriber, [{
@@ -79624,7 +79624,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var StaticIterator = /*#__PURE__*/function () {
       function StaticIterator(iterator) {
-        _classCallCheck(this, StaticIterator);
+        _classCallCheck2(this, StaticIterator);
 
         this.iterator = iterator;
         this.nextResult = iterator.next();
@@ -79655,7 +79655,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var StaticArrayIterator = /*#__PURE__*/function () {
       function StaticArrayIterator(array) {
-        _classCallCheck(this, StaticArrayIterator);
+        _classCallCheck2(this, StaticArrayIterator);
 
         this.array = array;
         this.index = 0;
@@ -79702,17 +79702,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super56 = _createSuper(ZipBufferIterator);
 
       function ZipBufferIterator(destination, parent, observable) {
-        var _this84;
+        var _this90;
 
-        _classCallCheck(this, ZipBufferIterator);
+        _classCallCheck2(this, ZipBufferIterator);
 
-        _this84 = _super56.call(this, destination);
-        _this84.parent = parent;
-        _this84.observable = observable;
-        _this84.stillUnsubscribed = true;
-        _this84.buffer = [];
-        _this84.isComplete = false;
-        return _this84;
+        _this90 = _super56.call(this, destination);
+        _this90.parent = parent;
+        _this90.observable = observable;
+        _this90.stillUnsubscribed = true;
+        _this90.buffer = [];
+        _this90.isComplete = false;
+        return _this90;
       }
 
       _createClass2(ZipBufferIterator, [{
@@ -79817,7 +79817,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var AuditOperator = /*#__PURE__*/function () {
       function AuditOperator(durationSelector) {
-        _classCallCheck(this, AuditOperator);
+        _classCallCheck2(this, AuditOperator);
 
         this.durationSelector = durationSelector;
       }
@@ -79838,14 +79838,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super57 = _createSuper(AuditSubscriber);
 
       function AuditSubscriber(destination, durationSelector) {
-        var _this85;
+        var _this91;
 
-        _classCallCheck(this, AuditSubscriber);
+        _classCallCheck2(this, AuditSubscriber);
 
-        _this85 = _super57.call(this, destination);
-        _this85.durationSelector = durationSelector;
-        _this85.hasValue = false;
-        return _this85;
+        _this91 = _super57.call(this, destination);
+        _this91.durationSelector = durationSelector;
+        _this91.hasValue = false;
+        return _this91;
       }
 
       _createClass2(AuditSubscriber, [{
@@ -80000,7 +80000,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var BufferOperator = /*#__PURE__*/function () {
       function BufferOperator(closingNotifier) {
-        _classCallCheck(this, BufferOperator);
+        _classCallCheck2(this, BufferOperator);
 
         this.closingNotifier = closingNotifier;
       }
@@ -80021,16 +80021,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super58 = _createSuper(BufferSubscriber);
 
       function BufferSubscriber(destination, closingNotifier) {
-        var _this86;
+        var _this92;
 
-        _classCallCheck(this, BufferSubscriber);
+        _classCallCheck2(this, BufferSubscriber);
 
-        _this86 = _super58.call(this, destination);
-        _this86.buffer = [];
+        _this92 = _super58.call(this, destination);
+        _this92.buffer = [];
 
-        _this86.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this86), closingNotifier));
+        _this92.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this92), closingNotifier));
 
-        return _this86;
+        return _this92;
       }
 
       _createClass2(BufferSubscriber, [{
@@ -80089,7 +80089,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var BufferCountOperator = /*#__PURE__*/function () {
       function BufferCountOperator(bufferSize, startBufferEvery) {
-        _classCallCheck(this, BufferCountOperator);
+        _classCallCheck2(this, BufferCountOperator);
 
         this.bufferSize = bufferSize;
         this.startBufferEvery = startBufferEvery;
@@ -80117,14 +80117,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super59 = _createSuper(BufferCountSubscriber);
 
       function BufferCountSubscriber(destination, bufferSize) {
-        var _this87;
+        var _this93;
 
-        _classCallCheck(this, BufferCountSubscriber);
+        _classCallCheck2(this, BufferCountSubscriber);
 
-        _this87 = _super59.call(this, destination);
-        _this87.bufferSize = bufferSize;
-        _this87.buffer = [];
-        return _this87;
+        _this93 = _super59.call(this, destination);
+        _this93.bufferSize = bufferSize;
+        _this93.buffer = [];
+        return _this93;
       }
 
       _createClass2(BufferCountSubscriber, [{
@@ -80160,16 +80160,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super60 = _createSuper(BufferSkipCountSubscriber);
 
       function BufferSkipCountSubscriber(destination, bufferSize, startBufferEvery) {
-        var _this88;
+        var _this94;
 
-        _classCallCheck(this, BufferSkipCountSubscriber);
+        _classCallCheck2(this, BufferSkipCountSubscriber);
 
-        _this88 = _super60.call(this, destination);
-        _this88.bufferSize = bufferSize;
-        _this88.startBufferEvery = startBufferEvery;
-        _this88.buffers = [];
-        _this88.count = 0;
-        return _this88;
+        _this94 = _super60.call(this, destination);
+        _this94.bufferSize = bufferSize;
+        _this94.startBufferEvery = startBufferEvery;
+        _this94.buffers = [];
+        _this94.count = 0;
+        return _this94;
       }
 
       _createClass2(BufferSkipCountSubscriber, [{
@@ -80286,7 +80286,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var BufferTimeOperator = /*#__PURE__*/function () {
       function BufferTimeOperator(bufferTimeSpan, bufferCreationInterval, maxBufferSize, scheduler) {
-        _classCallCheck(this, BufferTimeOperator);
+        _classCallCheck2(this, BufferTimeOperator);
 
         this.bufferTimeSpan = bufferTimeSpan;
         this.bufferCreationInterval = bufferCreationInterval;
@@ -80305,7 +80305,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     var Context = function Context() {
-      _classCallCheck(this, Context);
+      _classCallCheck2(this, Context);
 
       this.buffer = [];
     };
@@ -80316,47 +80316,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super61 = _createSuper(BufferTimeSubscriber);
 
       function BufferTimeSubscriber(destination, bufferTimeSpan, bufferCreationInterval, maxBufferSize, scheduler) {
-        var _this89;
+        var _this95;
 
-        _classCallCheck(this, BufferTimeSubscriber);
+        _classCallCheck2(this, BufferTimeSubscriber);
 
-        _this89 = _super61.call(this, destination);
-        _this89.bufferTimeSpan = bufferTimeSpan;
-        _this89.bufferCreationInterval = bufferCreationInterval;
-        _this89.maxBufferSize = maxBufferSize;
-        _this89.scheduler = scheduler;
-        _this89.contexts = [];
+        _this95 = _super61.call(this, destination);
+        _this95.bufferTimeSpan = bufferTimeSpan;
+        _this95.bufferCreationInterval = bufferCreationInterval;
+        _this95.maxBufferSize = maxBufferSize;
+        _this95.scheduler = scheduler;
+        _this95.contexts = [];
 
-        var context = _this89.openContext();
+        var context = _this95.openContext();
 
-        _this89.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
+        _this95.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
 
-        if (_this89.timespanOnly) {
+        if (_this95.timespanOnly) {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this89),
+            subscriber: _assertThisInitialized(_this95),
             context: context,
             bufferTimeSpan: bufferTimeSpan
           };
 
-          _this89.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
+          _this95.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
         } else {
           var closeState = {
-            subscriber: _assertThisInitialized(_this89),
+            subscriber: _assertThisInitialized(_this95),
             context: context
           };
           var creationState = {
             bufferTimeSpan: bufferTimeSpan,
             bufferCreationInterval: bufferCreationInterval,
-            subscriber: _assertThisInitialized(_this89),
+            subscriber: _assertThisInitialized(_this95),
             scheduler: scheduler
           };
 
-          _this89.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
+          _this95.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
 
-          _this89.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
+          _this95.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
         }
 
-        return _this89;
+        return _this95;
       }
 
       _createClass2(BufferTimeSubscriber, [{
@@ -80534,7 +80534,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var BufferToggleOperator = /*#__PURE__*/function () {
       function BufferToggleOperator(openings, closingSelector) {
-        _classCallCheck(this, BufferToggleOperator);
+        _classCallCheck2(this, BufferToggleOperator);
 
         this.openings = openings;
         this.closingSelector = closingSelector;
@@ -80556,18 +80556,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super62 = _createSuper(BufferToggleSubscriber);
 
       function BufferToggleSubscriber(destination, openings, closingSelector) {
-        var _this90;
+        var _this96;
 
-        _classCallCheck(this, BufferToggleSubscriber);
+        _classCallCheck2(this, BufferToggleSubscriber);
 
-        _this90 = _super62.call(this, destination);
-        _this90.openings = openings;
-        _this90.closingSelector = closingSelector;
-        _this90.contexts = [];
+        _this96 = _super62.call(this, destination);
+        _this96.openings = openings;
+        _this96.closingSelector = closingSelector;
+        _this96.contexts = [];
 
-        _this90.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this90), openings));
+        _this96.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this96), openings));
 
-        return _this90;
+        return _this96;
       }
 
       _createClass2(BufferToggleSubscriber, [{
@@ -80727,7 +80727,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var BufferWhenOperator = /*#__PURE__*/function () {
       function BufferWhenOperator(closingSelector) {
-        _classCallCheck(this, BufferWhenOperator);
+        _classCallCheck2(this, BufferWhenOperator);
 
         this.closingSelector = closingSelector;
       }
@@ -80748,17 +80748,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super63 = _createSuper(BufferWhenSubscriber);
 
       function BufferWhenSubscriber(destination, closingSelector) {
-        var _this91;
+        var _this97;
 
-        _classCallCheck(this, BufferWhenSubscriber);
+        _classCallCheck2(this, BufferWhenSubscriber);
 
-        _this91 = _super63.call(this, destination);
-        _this91.closingSelector = closingSelector;
-        _this91.subscribing = false;
+        _this97 = _super63.call(this, destination);
+        _this97.closingSelector = closingSelector;
+        _this97.subscribing = false;
 
-        _this91.openBuffer();
+        _this97.openBuffer();
 
-        return _this91;
+        return _this97;
       }
 
       _createClass2(BufferWhenSubscriber, [{
@@ -80887,7 +80887,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var CatchOperator = /*#__PURE__*/function () {
       function CatchOperator(selector) {
-        _classCallCheck(this, CatchOperator);
+        _classCallCheck2(this, CatchOperator);
 
         this.selector = selector;
       }
@@ -80908,14 +80908,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super64 = _createSuper(CatchSubscriber);
 
       function CatchSubscriber(destination, selector, caught) {
-        var _this92;
+        var _this98;
 
-        _classCallCheck(this, CatchSubscriber);
+        _classCallCheck2(this, CatchSubscriber);
 
-        _this92 = _super64.call(this, destination);
-        _this92.selector = selector;
-        _this92.caught = caught;
-        return _this92;
+        _this98 = _super64.call(this, destination);
+        _this98.selector = selector;
+        _this98.caught = caught;
+        return _this98;
       }
 
       _createClass2(CatchSubscriber, [{
@@ -81230,7 +81230,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var CountOperator = /*#__PURE__*/function () {
       function CountOperator(predicate, source) {
-        _classCallCheck(this, CountOperator);
+        _classCallCheck2(this, CountOperator);
 
         this.predicate = predicate;
         this.source = source;
@@ -81252,16 +81252,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super65 = _createSuper(CountSubscriber);
 
       function CountSubscriber(destination, predicate, source) {
-        var _this93;
+        var _this99;
 
-        _classCallCheck(this, CountSubscriber);
+        _classCallCheck2(this, CountSubscriber);
 
-        _this93 = _super65.call(this, destination);
-        _this93.predicate = predicate;
-        _this93.source = source;
-        _this93.count = 0;
-        _this93.index = 0;
-        return _this93;
+        _this99 = _super65.call(this, destination);
+        _this99.predicate = predicate;
+        _this99.source = source;
+        _this99.count = 0;
+        _this99.index = 0;
+        return _this99;
       }
 
       _createClass2(CountSubscriber, [{
@@ -81344,7 +81344,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DebounceOperator = /*#__PURE__*/function () {
       function DebounceOperator(durationSelector) {
-        _classCallCheck(this, DebounceOperator);
+        _classCallCheck2(this, DebounceOperator);
 
         this.durationSelector = durationSelector;
       }
@@ -81365,15 +81365,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super66 = _createSuper(DebounceSubscriber);
 
       function DebounceSubscriber(destination, durationSelector) {
-        var _this94;
+        var _this100;
 
-        _classCallCheck(this, DebounceSubscriber);
+        _classCallCheck2(this, DebounceSubscriber);
 
-        _this94 = _super66.call(this, destination);
-        _this94.durationSelector = durationSelector;
-        _this94.hasValue = false;
-        _this94.durationSubscription = null;
-        return _this94;
+        _this100 = _super66.call(this, destination);
+        _this100.durationSelector = durationSelector;
+        _this100.hasValue = false;
+        _this100.durationSubscription = null;
+        return _this100;
       }
 
       _createClass2(DebounceSubscriber, [{
@@ -81492,7 +81492,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DebounceTimeOperator = /*#__PURE__*/function () {
       function DebounceTimeOperator(dueTime, scheduler) {
-        _classCallCheck(this, DebounceTimeOperator);
+        _classCallCheck2(this, DebounceTimeOperator);
 
         this.dueTime = dueTime;
         this.scheduler = scheduler;
@@ -81514,17 +81514,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super67 = _createSuper(DebounceTimeSubscriber);
 
       function DebounceTimeSubscriber(destination, dueTime, scheduler) {
-        var _this95;
+        var _this101;
 
-        _classCallCheck(this, DebounceTimeSubscriber);
+        _classCallCheck2(this, DebounceTimeSubscriber);
 
-        _this95 = _super67.call(this, destination);
-        _this95.dueTime = dueTime;
-        _this95.scheduler = scheduler;
-        _this95.debouncedSubscription = null;
-        _this95.lastValue = null;
-        _this95.hasValue = false;
-        return _this95;
+        _this101 = _super67.call(this, destination);
+        _this101.dueTime = dueTime;
+        _this101.scheduler = scheduler;
+        _this101.debouncedSubscription = null;
+        _this101.lastValue = null;
+        _this101.hasValue = false;
+        return _this101;
       }
 
       _createClass2(DebounceTimeSubscriber, [{
@@ -81612,7 +81612,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DefaultIfEmptyOperator = /*#__PURE__*/function () {
       function DefaultIfEmptyOperator(defaultValue) {
-        _classCallCheck(this, DefaultIfEmptyOperator);
+        _classCallCheck2(this, DefaultIfEmptyOperator);
 
         this.defaultValue = defaultValue;
       }
@@ -81633,14 +81633,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super68 = _createSuper(DefaultIfEmptySubscriber);
 
       function DefaultIfEmptySubscriber(destination, defaultValue) {
-        var _this96;
+        var _this102;
 
-        _classCallCheck(this, DefaultIfEmptySubscriber);
+        _classCallCheck2(this, DefaultIfEmptySubscriber);
 
-        _this96 = _super68.call(this, destination);
-        _this96.defaultValue = defaultValue;
-        _this96.isEmpty = true;
-        return _this96;
+        _this102 = _super68.call(this, destination);
+        _this102.defaultValue = defaultValue;
+        _this102.isEmpty = true;
+        return _this102;
       }
 
       _createClass2(DefaultIfEmptySubscriber, [{
@@ -81722,7 +81722,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DelayOperator = /*#__PURE__*/function () {
       function DelayOperator(delay, scheduler) {
-        _classCallCheck(this, DelayOperator);
+        _classCallCheck2(this, DelayOperator);
 
         this.delay = delay;
         this.scheduler = scheduler;
@@ -81744,17 +81744,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super69 = _createSuper(DelaySubscriber);
 
       function DelaySubscriber(destination, delay, scheduler) {
-        var _this97;
+        var _this103;
 
-        _classCallCheck(this, DelaySubscriber);
+        _classCallCheck2(this, DelaySubscriber);
 
-        _this97 = _super69.call(this, destination);
-        _this97.delay = delay;
-        _this97.scheduler = scheduler;
-        _this97.queue = [];
-        _this97.active = false;
-        _this97.errored = false;
-        return _this97;
+        _this103 = _super69.call(this, destination);
+        _this103.delay = delay;
+        _this103.scheduler = scheduler;
+        _this103.queue = [];
+        _this103.active = false;
+        _this103.errored = false;
+        return _this103;
       }
 
       _createClass2(DelaySubscriber, [{
@@ -81829,7 +81829,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }(_Subscriber__WEBPACK_IMPORTED_MODULE_2__["Subscriber"]);
 
     var DelayMessage = function DelayMessage(time, notification) {
-      _classCallCheck(this, DelayMessage);
+      _classCallCheck2(this, DelayMessage);
 
       this.time = time;
       this.notification = notification;
@@ -81897,7 +81897,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DelayWhenOperator = /*#__PURE__*/function () {
       function DelayWhenOperator(delayDurationSelector) {
-        _classCallCheck(this, DelayWhenOperator);
+        _classCallCheck2(this, DelayWhenOperator);
 
         this.delayDurationSelector = delayDurationSelector;
       }
@@ -81918,16 +81918,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super70 = _createSuper(DelayWhenSubscriber);
 
       function DelayWhenSubscriber(destination, delayDurationSelector) {
-        var _this98;
+        var _this104;
 
-        _classCallCheck(this, DelayWhenSubscriber);
+        _classCallCheck2(this, DelayWhenSubscriber);
 
-        _this98 = _super70.call(this, destination);
-        _this98.delayDurationSelector = delayDurationSelector;
-        _this98.completed = false;
-        _this98.delayNotifierSubscriptions = [];
-        _this98.index = 0;
-        return _this98;
+        _this104 = _super70.call(this, destination);
+        _this104.delayDurationSelector = delayDurationSelector;
+        _this104.completed = false;
+        _this104.delayNotifierSubscriptions = [];
+        _this104.index = 0;
+        return _this104;
       }
 
       _createClass2(DelayWhenSubscriber, [{
@@ -82016,14 +82016,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super71 = _createSuper(SubscriptionDelayObservable);
 
       function SubscriptionDelayObservable(source, subscriptionDelay) {
-        var _this99;
+        var _this105;
 
-        _classCallCheck(this, SubscriptionDelayObservable);
+        _classCallCheck2(this, SubscriptionDelayObservable);
 
-        _this99 = _super71.call(this);
-        _this99.source = source;
-        _this99.subscriptionDelay = subscriptionDelay;
-        return _this99;
+        _this105 = _super71.call(this);
+        _this105.source = source;
+        _this105.subscriptionDelay = subscriptionDelay;
+        return _this105;
       }
 
       _createClass2(SubscriptionDelayObservable, [{
@@ -82042,15 +82042,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super72 = _createSuper(SubscriptionDelaySubscriber);
 
       function SubscriptionDelaySubscriber(parent, source) {
-        var _this100;
+        var _this106;
 
-        _classCallCheck(this, SubscriptionDelaySubscriber);
+        _classCallCheck2(this, SubscriptionDelaySubscriber);
 
-        _this100 = _super72.call(this);
-        _this100.parent = parent;
-        _this100.source = source;
-        _this100.sourceSubscribed = false;
-        return _this100;
+        _this106 = _super72.call(this);
+        _this106.parent = parent;
+        _this106.source = source;
+        _this106.sourceSubscribed = false;
+        return _this106;
       }
 
       _createClass2(SubscriptionDelaySubscriber, [{
@@ -82122,7 +82122,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DeMaterializeOperator = /*#__PURE__*/function () {
       function DeMaterializeOperator() {
-        _classCallCheck(this, DeMaterializeOperator);
+        _classCallCheck2(this, DeMaterializeOperator);
       }
 
       _createClass2(DeMaterializeOperator, [{
@@ -82141,7 +82141,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super73 = _createSuper(DeMaterializeSubscriber);
 
       function DeMaterializeSubscriber(destination) {
-        _classCallCheck(this, DeMaterializeSubscriber);
+        _classCallCheck2(this, DeMaterializeSubscriber);
 
         return _super73.call(this, destination);
       }
@@ -82206,7 +82206,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DistinctOperator = /*#__PURE__*/function () {
       function DistinctOperator(keySelector, flushes) {
-        _classCallCheck(this, DistinctOperator);
+        _classCallCheck2(this, DistinctOperator);
 
         this.keySelector = keySelector;
         this.flushes = flushes;
@@ -82228,19 +82228,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super74 = _createSuper(DistinctSubscriber);
 
       function DistinctSubscriber(destination, keySelector, flushes) {
-        var _this101;
+        var _this107;
 
-        _classCallCheck(this, DistinctSubscriber);
+        _classCallCheck2(this, DistinctSubscriber);
 
-        _this101 = _super74.call(this, destination);
-        _this101.keySelector = keySelector;
-        _this101.values = new Set();
+        _this107 = _super74.call(this, destination);
+        _this107.keySelector = keySelector;
+        _this107.values = new Set();
 
         if (flushes) {
-          _this101.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this101), flushes));
+          _this107.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this107), flushes));
         }
 
-        return _this101;
+        return _this107;
       }
 
       _createClass2(DistinctSubscriber, [{
@@ -82330,7 +82330,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DistinctUntilChangedOperator = /*#__PURE__*/function () {
       function DistinctUntilChangedOperator(compare, keySelector) {
-        _classCallCheck(this, DistinctUntilChangedOperator);
+        _classCallCheck2(this, DistinctUntilChangedOperator);
 
         this.compare = compare;
         this.keySelector = keySelector;
@@ -82352,19 +82352,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super75 = _createSuper(DistinctUntilChangedSubscriber);
 
       function DistinctUntilChangedSubscriber(destination, compare, keySelector) {
-        var _this102;
+        var _this108;
 
-        _classCallCheck(this, DistinctUntilChangedSubscriber);
+        _classCallCheck2(this, DistinctUntilChangedSubscriber);
 
-        _this102 = _super75.call(this, destination);
-        _this102.keySelector = keySelector;
-        _this102.hasKey = false;
+        _this108 = _super75.call(this, destination);
+        _this108.keySelector = keySelector;
+        _this108.hasKey = false;
 
         if (typeof compare === 'function') {
-          _this102.compare = compare;
+          _this108.compare = compare;
         }
 
-        return _this102;
+        return _this108;
       }
 
       _createClass2(DistinctUntilChangedSubscriber, [{
@@ -82596,7 +82596,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var EveryOperator = /*#__PURE__*/function () {
       function EveryOperator(predicate, thisArg, source) {
-        _classCallCheck(this, EveryOperator);
+        _classCallCheck2(this, EveryOperator);
 
         this.predicate = predicate;
         this.thisArg = thisArg;
@@ -82619,17 +82619,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super76 = _createSuper(EverySubscriber);
 
       function EverySubscriber(destination, predicate, thisArg, source) {
-        var _this103;
+        var _this109;
 
-        _classCallCheck(this, EverySubscriber);
+        _classCallCheck2(this, EverySubscriber);
 
-        _this103 = _super76.call(this, destination);
-        _this103.predicate = predicate;
-        _this103.thisArg = thisArg;
-        _this103.source = source;
-        _this103.index = 0;
-        _this103.thisArg = thisArg || _assertThisInitialized(_this103);
-        return _this103;
+        _this109 = _super76.call(this, destination);
+        _this109.predicate = predicate;
+        _this109.thisArg = thisArg;
+        _this109.source = source;
+        _this109.index = 0;
+        _this109.thisArg = thisArg || _assertThisInitialized(_this109);
+        return _this109;
       }
 
       _createClass2(EverySubscriber, [{
@@ -82708,7 +82708,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SwitchFirstOperator = /*#__PURE__*/function () {
       function SwitchFirstOperator() {
-        _classCallCheck(this, SwitchFirstOperator);
+        _classCallCheck2(this, SwitchFirstOperator);
       }
 
       _createClass2(SwitchFirstOperator, [{
@@ -82727,14 +82727,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super77 = _createSuper(SwitchFirstSubscriber);
 
       function SwitchFirstSubscriber(destination) {
-        var _this104;
+        var _this110;
 
-        _classCallCheck(this, SwitchFirstSubscriber);
+        _classCallCheck2(this, SwitchFirstSubscriber);
 
-        _this104 = _super77.call(this, destination);
-        _this104.hasCompleted = false;
-        _this104.hasSubscription = false;
-        return _this104;
+        _this110 = _super77.call(this, destination);
+        _this110.hasCompleted = false;
+        _this110.hasSubscription = false;
+        return _this110;
       }
 
       _createClass2(SwitchFirstSubscriber, [{
@@ -82841,7 +82841,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ExhaustMapOperator = /*#__PURE__*/function () {
       function ExhaustMapOperator(project) {
-        _classCallCheck(this, ExhaustMapOperator);
+        _classCallCheck2(this, ExhaustMapOperator);
 
         this.project = project;
       }
@@ -82862,16 +82862,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super78 = _createSuper(ExhaustMapSubscriber);
 
       function ExhaustMapSubscriber(destination, project) {
-        var _this105;
+        var _this111;
 
-        _classCallCheck(this, ExhaustMapSubscriber);
+        _classCallCheck2(this, ExhaustMapSubscriber);
 
-        _this105 = _super78.call(this, destination);
-        _this105.project = project;
-        _this105.hasSubscription = false;
-        _this105.hasCompleted = false;
-        _this105.index = 0;
-        return _this105;
+        _this111 = _super78.call(this, destination);
+        _this111.project = project;
+        _this111.hasSubscription = false;
+        _this111.hasCompleted = false;
+        _this111.index = 0;
+        return _this111;
       }
 
       _createClass2(ExhaustMapSubscriber, [{
@@ -83006,7 +83006,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ExpandOperator = /*#__PURE__*/function () {
       function ExpandOperator(project, concurrent, scheduler) {
-        _classCallCheck(this, ExpandOperator);
+        _classCallCheck2(this, ExpandOperator);
 
         this.project = project;
         this.concurrent = concurrent;
@@ -83029,23 +83029,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super79 = _createSuper(ExpandSubscriber);
 
       function ExpandSubscriber(destination, project, concurrent, scheduler) {
-        var _this106;
+        var _this112;
 
-        _classCallCheck(this, ExpandSubscriber);
+        _classCallCheck2(this, ExpandSubscriber);
 
-        _this106 = _super79.call(this, destination);
-        _this106.project = project;
-        _this106.concurrent = concurrent;
-        _this106.scheduler = scheduler;
-        _this106.index = 0;
-        _this106.active = 0;
-        _this106.hasCompleted = false;
+        _this112 = _super79.call(this, destination);
+        _this112.project = project;
+        _this112.concurrent = concurrent;
+        _this112.scheduler = scheduler;
+        _this112.index = 0;
+        _this112.active = 0;
+        _this112.hasCompleted = false;
 
         if (concurrent < Number.POSITIVE_INFINITY) {
-          _this106.buffer = [];
+          _this112.buffer = [];
         }
 
-        return _this106;
+        return _this112;
       }
 
       _createClass2(ExpandSubscriber, [{
@@ -83179,7 +83179,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var FilterOperator = /*#__PURE__*/function () {
       function FilterOperator(predicate, thisArg) {
-        _classCallCheck(this, FilterOperator);
+        _classCallCheck2(this, FilterOperator);
 
         this.predicate = predicate;
         this.thisArg = thisArg;
@@ -83201,15 +83201,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super80 = _createSuper(FilterSubscriber);
 
       function FilterSubscriber(destination, predicate, thisArg) {
-        var _this107;
+        var _this113;
 
-        _classCallCheck(this, FilterSubscriber);
+        _classCallCheck2(this, FilterSubscriber);
 
-        _this107 = _super80.call(this, destination);
-        _this107.predicate = predicate;
-        _this107.thisArg = thisArg;
-        _this107.count = 0;
-        return _this107;
+        _this113 = _super80.call(this, destination);
+        _this113.predicate = predicate;
+        _this113.thisArg = thisArg;
+        _this113.count = 0;
+        return _this113;
       }
 
       _createClass2(FilterSubscriber, [{
@@ -83277,7 +83277,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var FinallyOperator = /*#__PURE__*/function () {
       function FinallyOperator(callback) {
-        _classCallCheck(this, FinallyOperator);
+        _classCallCheck2(this, FinallyOperator);
 
         this.callback = callback;
       }
@@ -83298,15 +83298,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super81 = _createSuper(FinallySubscriber);
 
       function FinallySubscriber(destination, callback) {
-        var _this108;
+        var _this114;
 
-        _classCallCheck(this, FinallySubscriber);
+        _classCallCheck2(this, FinallySubscriber);
 
-        _this108 = _super81.call(this, destination);
+        _this114 = _super81.call(this, destination);
 
-        _this108.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
+        _this114.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
 
-        return _this108;
+        return _this114;
       }
 
       return FinallySubscriber;
@@ -83366,7 +83366,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var FindValueOperator = /*#__PURE__*/function () {
       function FindValueOperator(predicate, source, yieldIndex, thisArg) {
-        _classCallCheck(this, FindValueOperator);
+        _classCallCheck2(this, FindValueOperator);
 
         this.predicate = predicate;
         this.source = source;
@@ -83390,17 +83390,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super82 = _createSuper(FindValueSubscriber);
 
       function FindValueSubscriber(destination, predicate, source, yieldIndex, thisArg) {
-        var _this109;
+        var _this115;
 
-        _classCallCheck(this, FindValueSubscriber);
+        _classCallCheck2(this, FindValueSubscriber);
 
-        _this109 = _super82.call(this, destination);
-        _this109.predicate = predicate;
-        _this109.source = source;
-        _this109.yieldIndex = yieldIndex;
-        _this109.thisArg = thisArg;
-        _this109.index = 0;
-        return _this109;
+        _this115 = _super82.call(this, destination);
+        _this115.predicate = predicate;
+        _this115.source = source;
+        _this115.yieldIndex = yieldIndex;
+        _this115.thisArg = thisArg;
+        _this115.index = 0;
+        return _this115;
       }
 
       _createClass2(FindValueSubscriber, [{
@@ -83607,7 +83607,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var GroupByOperator = /*#__PURE__*/function () {
       function GroupByOperator(keySelector, elementSelector, durationSelector, subjectSelector) {
-        _classCallCheck(this, GroupByOperator);
+        _classCallCheck2(this, GroupByOperator);
 
         this.keySelector = keySelector;
         this.elementSelector = elementSelector;
@@ -83631,19 +83631,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super83 = _createSuper(GroupBySubscriber);
 
       function GroupBySubscriber(destination, keySelector, elementSelector, durationSelector, subjectSelector) {
-        var _this110;
+        var _this116;
 
-        _classCallCheck(this, GroupBySubscriber);
+        _classCallCheck2(this, GroupBySubscriber);
 
-        _this110 = _super83.call(this, destination);
-        _this110.keySelector = keySelector;
-        _this110.elementSelector = elementSelector;
-        _this110.durationSelector = durationSelector;
-        _this110.subjectSelector = subjectSelector;
-        _this110.groups = null;
-        _this110.attemptedToUnsubscribe = false;
-        _this110.count = 0;
-        return _this110;
+        _this116 = _super83.call(this, destination);
+        _this116.keySelector = keySelector;
+        _this116.elementSelector = elementSelector;
+        _this116.durationSelector = durationSelector;
+        _this116.subjectSelector = subjectSelector;
+        _this116.groups = null;
+        _this116.attemptedToUnsubscribe = false;
+        _this116.count = 0;
+        return _this116;
       }
 
       _createClass2(GroupBySubscriber, [{
@@ -83761,15 +83761,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super84 = _createSuper(GroupDurationSubscriber);
 
       function GroupDurationSubscriber(key, group, parent) {
-        var _this111;
+        var _this117;
 
-        _classCallCheck(this, GroupDurationSubscriber);
+        _classCallCheck2(this, GroupDurationSubscriber);
 
-        _this111 = _super84.call(this, group);
-        _this111.key = key;
-        _this111.group = group;
-        _this111.parent = parent;
-        return _this111;
+        _this117 = _super84.call(this, group);
+        _this117.key = key;
+        _this117.group = group;
+        _this117.parent = parent;
+        return _this117;
       }
 
       _createClass2(GroupDurationSubscriber, [{
@@ -83799,15 +83799,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super85 = _createSuper(GroupedObservable);
 
       function GroupedObservable(key, groupSubject, refCountSubscription) {
-        var _this112;
+        var _this118;
 
-        _classCallCheck(this, GroupedObservable);
+        _classCallCheck2(this, GroupedObservable);
 
-        _this112 = _super85.call(this);
-        _this112.key = key;
-        _this112.groupSubject = groupSubject;
-        _this112.refCountSubscription = refCountSubscription;
-        return _this112;
+        _this118 = _super85.call(this);
+        _this118.key = key;
+        _this118.groupSubject = groupSubject;
+        _this118.refCountSubscription = refCountSubscription;
+        return _this118;
       }
 
       _createClass2(GroupedObservable, [{
@@ -83835,14 +83835,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super86 = _createSuper(InnerRefCountSubscription);
 
       function InnerRefCountSubscription(parent) {
-        var _this113;
+        var _this119;
 
-        _classCallCheck(this, InnerRefCountSubscription);
+        _classCallCheck2(this, InnerRefCountSubscription);
 
-        _this113 = _super86.call(this);
-        _this113.parent = parent;
+        _this119 = _super86.call(this);
+        _this119.parent = parent;
         parent.count++;
-        return _this113;
+        return _this119;
       }
 
       _createClass2(InnerRefCountSubscription, [{
@@ -83903,7 +83903,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var IgnoreElementsOperator = /*#__PURE__*/function () {
       function IgnoreElementsOperator() {
-        _classCallCheck(this, IgnoreElementsOperator);
+        _classCallCheck2(this, IgnoreElementsOperator);
       }
 
       _createClass2(IgnoreElementsOperator, [{
@@ -83922,7 +83922,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super87 = _createSuper(IgnoreElementsSubscriber);
 
       function IgnoreElementsSubscriber() {
-        _classCallCheck(this, IgnoreElementsSubscriber);
+        _classCallCheck2(this, IgnoreElementsSubscriber);
 
         return _super87.apply(this, arguments);
       }
@@ -83973,7 +83973,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var IsEmptyOperator = /*#__PURE__*/function () {
       function IsEmptyOperator() {
-        _classCallCheck(this, IsEmptyOperator);
+        _classCallCheck2(this, IsEmptyOperator);
       }
 
       _createClass2(IsEmptyOperator, [{
@@ -83992,7 +83992,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super88 = _createSuper(IsEmptySubscriber);
 
       function IsEmptySubscriber(destination) {
-        _classCallCheck(this, IsEmptySubscriber);
+        _classCallCheck2(this, IsEmptySubscriber);
 
         return _super88.call(this, destination);
       }
@@ -84138,7 +84138,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var MapOperator = /*#__PURE__*/function () {
       function MapOperator(project, thisArg) {
-        _classCallCheck(this, MapOperator);
+        _classCallCheck2(this, MapOperator);
 
         this.project = project;
         this.thisArg = thisArg;
@@ -84160,15 +84160,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super89 = _createSuper(MapSubscriber);
 
       function MapSubscriber(destination, project, thisArg) {
-        var _this114;
+        var _this120;
 
-        _classCallCheck(this, MapSubscriber);
+        _classCallCheck2(this, MapSubscriber);
 
-        _this114 = _super89.call(this, destination);
-        _this114.project = project;
-        _this114.count = 0;
-        _this114.thisArg = thisArg || _assertThisInitialized(_this114);
-        return _this114;
+        _this120 = _super89.call(this, destination);
+        _this120.project = project;
+        _this120.count = 0;
+        _this120.thisArg = thisArg || _assertThisInitialized(_this120);
+        return _this120;
       }
 
       _createClass2(MapSubscriber, [{
@@ -84228,7 +84228,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var MapToOperator = /*#__PURE__*/function () {
       function MapToOperator(value) {
-        _classCallCheck(this, MapToOperator);
+        _classCallCheck2(this, MapToOperator);
 
         this.value = value;
       }
@@ -84249,13 +84249,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super90 = _createSuper(MapToSubscriber);
 
       function MapToSubscriber(destination, value) {
-        var _this115;
+        var _this121;
 
-        _classCallCheck(this, MapToSubscriber);
+        _classCallCheck2(this, MapToSubscriber);
 
-        _this115 = _super90.call(this, destination);
-        _this115.value = value;
-        return _this115;
+        _this121 = _super90.call(this, destination);
+        _this121.value = value;
+        return _this121;
       }
 
       _createClass2(MapToSubscriber, [{
@@ -84312,7 +84312,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var MaterializeOperator = /*#__PURE__*/function () {
       function MaterializeOperator() {
-        _classCallCheck(this, MaterializeOperator);
+        _classCallCheck2(this, MaterializeOperator);
       }
 
       _createClass2(MaterializeOperator, [{
@@ -84331,7 +84331,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super91 = _createSuper(MaterializeSubscriber);
 
       function MaterializeSubscriber(destination) {
-        _classCallCheck(this, MaterializeSubscriber);
+        _classCallCheck2(this, MaterializeSubscriber);
 
         return _super91.call(this, destination);
       }
@@ -84570,7 +84570,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function MergeMapOperator(project) {
         var concurrent = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
 
-        _classCallCheck(this, MergeMapOperator);
+        _classCallCheck2(this, MergeMapOperator);
 
         this.project = project;
         this.concurrent = concurrent;
@@ -84592,20 +84592,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super92 = _createSuper(MergeMapSubscriber);
 
       function MergeMapSubscriber(destination, project) {
-        var _this116;
+        var _this122;
 
         var concurrent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Number.POSITIVE_INFINITY;
 
-        _classCallCheck(this, MergeMapSubscriber);
+        _classCallCheck2(this, MergeMapSubscriber);
 
-        _this116 = _super92.call(this, destination);
-        _this116.project = project;
-        _this116.concurrent = concurrent;
-        _this116.hasCompleted = false;
-        _this116.buffer = [];
-        _this116.active = 0;
-        _this116.index = 0;
-        return _this116;
+        _this122 = _super92.call(this, destination);
+        _this122.project = project;
+        _this122.concurrent = concurrent;
+        _this122.hasCompleted = false;
+        _this122.buffer = [];
+        _this122.active = 0;
+        _this122.index = 0;
+        return _this122;
       }
 
       _createClass2(MergeMapSubscriber, [{
@@ -84791,7 +84791,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var MergeScanOperator = /*#__PURE__*/function () {
       function MergeScanOperator(accumulator, seed, concurrent) {
-        _classCallCheck(this, MergeScanOperator);
+        _classCallCheck2(this, MergeScanOperator);
 
         this.accumulator = accumulator;
         this.seed = seed;
@@ -84814,20 +84814,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super93 = _createSuper(MergeScanSubscriber);
 
       function MergeScanSubscriber(destination, accumulator, acc, concurrent) {
-        var _this117;
+        var _this123;
 
-        _classCallCheck(this, MergeScanSubscriber);
+        _classCallCheck2(this, MergeScanSubscriber);
 
-        _this117 = _super93.call(this, destination);
-        _this117.accumulator = accumulator;
-        _this117.acc = acc;
-        _this117.concurrent = concurrent;
-        _this117.hasValue = false;
-        _this117.hasCompleted = false;
-        _this117.buffer = [];
-        _this117.active = 0;
-        _this117.index = 0;
-        return _this117;
+        _this123 = _super93.call(this, destination);
+        _this123.accumulator = accumulator;
+        _this123.acc = acc;
+        _this123.concurrent = concurrent;
+        _this123.hasValue = false;
+        _this123.hasCompleted = false;
+        _this123.buffer = [];
+        _this123.active = 0;
+        _this123.index = 0;
+        return _this123;
       }
 
       _createClass2(MergeScanSubscriber, [{
@@ -85010,7 +85010,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var MulticastOperator = /*#__PURE__*/function () {
       function MulticastOperator(subjectFactory, selector) {
-        _classCallCheck(this, MulticastOperator);
+        _classCallCheck2(this, MulticastOperator);
 
         this.subjectFactory = subjectFactory;
         this.selector = selector;
@@ -85095,7 +85095,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function ObserveOnOperator(scheduler) {
         var delay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 
-        _classCallCheck(this, ObserveOnOperator);
+        _classCallCheck2(this, ObserveOnOperator);
 
         this.scheduler = scheduler;
         this.delay = delay;
@@ -85117,16 +85117,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super94 = _createSuper(ObserveOnSubscriber);
 
       function ObserveOnSubscriber(destination, scheduler) {
-        var _this118;
+        var _this124;
 
         var delay = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
 
-        _classCallCheck(this, ObserveOnSubscriber);
+        _classCallCheck2(this, ObserveOnSubscriber);
 
-        _this118 = _super94.call(this, destination);
-        _this118.scheduler = scheduler;
-        _this118.delay = delay;
-        return _this118;
+        _this124 = _super94.call(this, destination);
+        _this124.scheduler = scheduler;
+        _this124.delay = delay;
+        return _this124;
       }
 
       _createClass2(ObserveOnSubscriber, [{
@@ -85166,7 +85166,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }(_Subscriber__WEBPACK_IMPORTED_MODULE_0__["Subscriber"]);
 
     var ObserveOnMessage = function ObserveOnMessage(notification, destination) {
-      _classCallCheck(this, ObserveOnMessage);
+      _classCallCheck2(this, ObserveOnMessage);
 
       this.notification = notification;
       this.destination = destination;
@@ -85263,7 +85263,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var OnErrorResumeNextOperator = /*#__PURE__*/function () {
       function OnErrorResumeNextOperator(nextSources) {
-        _classCallCheck(this, OnErrorResumeNextOperator);
+        _classCallCheck2(this, OnErrorResumeNextOperator);
 
         this.nextSources = nextSources;
       }
@@ -85284,14 +85284,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super95 = _createSuper(OnErrorResumeNextSubscriber);
 
       function OnErrorResumeNextSubscriber(destination, nextSources) {
-        var _this119;
+        var _this125;
 
-        _classCallCheck(this, OnErrorResumeNextSubscriber);
+        _classCallCheck2(this, OnErrorResumeNextSubscriber);
 
-        _this119 = _super95.call(this, destination);
-        _this119.destination = destination;
-        _this119.nextSources = nextSources;
-        return _this119;
+        _this125 = _super95.call(this, destination);
+        _this125.destination = destination;
+        _this125.nextSources = nextSources;
+        return _this125;
       }
 
       _createClass2(OnErrorResumeNextSubscriber, [{
@@ -85377,7 +85377,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var PairwiseOperator = /*#__PURE__*/function () {
       function PairwiseOperator() {
-        _classCallCheck(this, PairwiseOperator);
+        _classCallCheck2(this, PairwiseOperator);
       }
 
       _createClass2(PairwiseOperator, [{
@@ -85396,13 +85396,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super96 = _createSuper(PairwiseSubscriber);
 
       function PairwiseSubscriber(destination) {
-        var _this120;
+        var _this126;
 
-        _classCallCheck(this, PairwiseSubscriber);
+        _classCallCheck2(this, PairwiseSubscriber);
 
-        _this120 = _super96.call(this, destination);
-        _this120.hasPrev = false;
-        return _this120;
+        _this126 = _super96.call(this, destination);
+        _this126.hasPrev = false;
+        return _this126;
       }
 
       _createClass2(PairwiseSubscriber, [{
@@ -85861,7 +85861,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var RefCountOperator = /*#__PURE__*/function () {
       function RefCountOperator(connectable) {
-        _classCallCheck(this, RefCountOperator);
+        _classCallCheck2(this, RefCountOperator);
 
         this.connectable = connectable;
       }
@@ -85891,13 +85891,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super97 = _createSuper(RefCountSubscriber);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this121;
+        var _this127;
 
-        _classCallCheck(this, RefCountSubscriber);
+        _classCallCheck2(this, RefCountSubscriber);
 
-        _this121 = _super97.call(this, destination);
-        _this121.connectable = connectable;
-        return _this121;
+        _this127 = _super97.call(this, destination);
+        _this127.connectable = connectable;
+        return _this127;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -85989,7 +85989,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var RepeatOperator = /*#__PURE__*/function () {
       function RepeatOperator(count, source) {
-        _classCallCheck(this, RepeatOperator);
+        _classCallCheck2(this, RepeatOperator);
 
         this.count = count;
         this.source = source;
@@ -86011,14 +86011,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super98 = _createSuper(RepeatSubscriber);
 
       function RepeatSubscriber(destination, count, source) {
-        var _this122;
+        var _this128;
 
-        _classCallCheck(this, RepeatSubscriber);
+        _classCallCheck2(this, RepeatSubscriber);
 
-        _this122 = _super98.call(this, destination);
-        _this122.count = count;
-        _this122.source = source;
-        return _this122;
+        _this128 = _super98.call(this, destination);
+        _this128.count = count;
+        _this128.source = source;
+        return _this128;
       }
 
       _createClass2(RepeatSubscriber, [{
@@ -86092,7 +86092,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var RepeatWhenOperator = /*#__PURE__*/function () {
       function RepeatWhenOperator(notifier) {
-        _classCallCheck(this, RepeatWhenOperator);
+        _classCallCheck2(this, RepeatWhenOperator);
 
         this.notifier = notifier;
       }
@@ -86113,15 +86113,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super99 = _createSuper(RepeatWhenSubscriber);
 
       function RepeatWhenSubscriber(destination, notifier, source) {
-        var _this123;
+        var _this129;
 
-        _classCallCheck(this, RepeatWhenSubscriber);
+        _classCallCheck2(this, RepeatWhenSubscriber);
 
-        _this123 = _super99.call(this, destination);
-        _this123.notifier = notifier;
-        _this123.source = source;
-        _this123.sourceIsBeingSubscribedTo = true;
-        return _this123;
+        _this129 = _super99.call(this, destination);
+        _this129.notifier = notifier;
+        _this129.source = source;
+        _this129.sourceIsBeingSubscribedTo = true;
+        return _this129;
       }
 
       _createClass2(RepeatWhenSubscriber, [{
@@ -86245,7 +86245,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var RetryOperator = /*#__PURE__*/function () {
       function RetryOperator(count, source) {
-        _classCallCheck(this, RetryOperator);
+        _classCallCheck2(this, RetryOperator);
 
         this.count = count;
         this.source = source;
@@ -86267,14 +86267,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super100 = _createSuper(RetrySubscriber);
 
       function RetrySubscriber(destination, count, source) {
-        var _this124;
+        var _this130;
 
-        _classCallCheck(this, RetrySubscriber);
+        _classCallCheck2(this, RetrySubscriber);
 
-        _this124 = _super100.call(this, destination);
-        _this124.count = count;
-        _this124.source = source;
-        return _this124;
+        _this130 = _super100.call(this, destination);
+        _this130.count = count;
+        _this130.source = source;
+        return _this130;
       }
 
       _createClass2(RetrySubscriber, [{
@@ -86348,7 +86348,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var RetryWhenOperator = /*#__PURE__*/function () {
       function RetryWhenOperator(notifier, source) {
-        _classCallCheck(this, RetryWhenOperator);
+        _classCallCheck2(this, RetryWhenOperator);
 
         this.notifier = notifier;
         this.source = source;
@@ -86370,14 +86370,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super101 = _createSuper(RetryWhenSubscriber);
 
       function RetryWhenSubscriber(destination, notifier, source) {
-        var _this125;
+        var _this131;
 
-        _classCallCheck(this, RetryWhenSubscriber);
+        _classCallCheck2(this, RetryWhenSubscriber);
 
-        _this125 = _super101.call(this, destination);
-        _this125.notifier = notifier;
-        _this125.source = source;
-        return _this125;
+        _this131 = _super101.call(this, destination);
+        _this131.notifier = notifier;
+        _this131.source = source;
+        return _this131;
       }
 
       _createClass2(RetryWhenSubscriber, [{
@@ -86490,7 +86490,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SampleOperator = /*#__PURE__*/function () {
       function SampleOperator(notifier) {
-        _classCallCheck(this, SampleOperator);
+        _classCallCheck2(this, SampleOperator);
 
         this.notifier = notifier;
       }
@@ -86514,13 +86514,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super102 = _createSuper(SampleSubscriber);
 
       function SampleSubscriber() {
-        var _this126;
+        var _this132;
 
-        _classCallCheck(this, SampleSubscriber);
+        _classCallCheck2(this, SampleSubscriber);
 
-        _this126 = _super102.apply(this, arguments);
-        _this126.hasValue = false;
-        return _this126;
+        _this132 = _super102.apply(this, arguments);
+        _this132.hasValue = false;
+        return _this132;
       }
 
       _createClass2(SampleSubscriber, [{
@@ -86597,7 +86597,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SampleTimeOperator = /*#__PURE__*/function () {
       function SampleTimeOperator(period, scheduler) {
-        _classCallCheck(this, SampleTimeOperator);
+        _classCallCheck2(this, SampleTimeOperator);
 
         this.period = period;
         this.scheduler = scheduler;
@@ -86619,21 +86619,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super103 = _createSuper(SampleTimeSubscriber);
 
       function SampleTimeSubscriber(destination, period, scheduler) {
-        var _this127;
+        var _this133;
 
-        _classCallCheck(this, SampleTimeSubscriber);
+        _classCallCheck2(this, SampleTimeSubscriber);
 
-        _this127 = _super103.call(this, destination);
-        _this127.period = period;
-        _this127.scheduler = scheduler;
-        _this127.hasValue = false;
+        _this133 = _super103.call(this, destination);
+        _this133.period = period;
+        _this133.scheduler = scheduler;
+        _this133.hasValue = false;
 
-        _this127.add(scheduler.schedule(dispatchNotification, period, {
-          subscriber: _assertThisInitialized(_this127),
+        _this133.add(scheduler.schedule(dispatchNotification, period, {
+          subscriber: _assertThisInitialized(_this133),
           period: period
         }));
 
-        return _this127;
+        return _this133;
       }
 
       _createClass2(SampleTimeSubscriber, [{
@@ -86708,7 +86708,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function ScanOperator(accumulator, seed) {
         var hasSeed = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
-        _classCallCheck(this, ScanOperator);
+        _classCallCheck2(this, ScanOperator);
 
         this.accumulator = accumulator;
         this.seed = seed;
@@ -86731,16 +86731,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super104 = _createSuper(ScanSubscriber);
 
       function ScanSubscriber(destination, accumulator, _seed, hasSeed) {
-        var _this128;
+        var _this134;
 
-        _classCallCheck(this, ScanSubscriber);
+        _classCallCheck2(this, ScanSubscriber);
 
-        _this128 = _super104.call(this, destination);
-        _this128.accumulator = accumulator;
-        _this128._seed = _seed;
-        _this128.hasSeed = hasSeed;
-        _this128.index = 0;
-        return _this128;
+        _this134 = _super104.call(this, destination);
+        _this134.accumulator = accumulator;
+        _this134._seed = _seed;
+        _this134.hasSeed = hasSeed;
+        _this134.index = 0;
+        return _this134;
       }
 
       _createClass2(ScanSubscriber, [{
@@ -86832,7 +86832,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SequenceEqualOperator = /*#__PURE__*/function () {
       function SequenceEqualOperator(compareTo, comparator) {
-        _classCallCheck(this, SequenceEqualOperator);
+        _classCallCheck2(this, SequenceEqualOperator);
 
         this.compareTo = compareTo;
         this.comparator = comparator;
@@ -86854,20 +86854,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super105 = _createSuper(SequenceEqualSubscriber);
 
       function SequenceEqualSubscriber(destination, compareTo, comparator) {
-        var _this129;
+        var _this135;
 
-        _classCallCheck(this, SequenceEqualSubscriber);
+        _classCallCheck2(this, SequenceEqualSubscriber);
 
-        _this129 = _super105.call(this, destination);
-        _this129.compareTo = compareTo;
-        _this129.comparator = comparator;
-        _this129._a = [];
-        _this129._b = [];
-        _this129._oneComplete = false;
+        _this135 = _super105.call(this, destination);
+        _this135.compareTo = compareTo;
+        _this135.comparator = comparator;
+        _this135._a = [];
+        _this135._b = [];
+        _this135._oneComplete = false;
 
-        _this129.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this129))));
+        _this135.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this135))));
 
-        return _this129;
+        return _this135;
       }
 
       _createClass2(SequenceEqualSubscriber, [{
@@ -86955,13 +86955,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super106 = _createSuper(SequenceEqualCompareToSubscriber);
 
       function SequenceEqualCompareToSubscriber(destination, parent) {
-        var _this130;
+        var _this136;
 
-        _classCallCheck(this, SequenceEqualCompareToSubscriber);
+        _classCallCheck2(this, SequenceEqualCompareToSubscriber);
 
-        _this130 = _super106.call(this, destination);
-        _this130.parent = parent;
-        return _this130;
+        _this136 = _super106.call(this, destination);
+        _this136.parent = parent;
+        return _this136;
       }
 
       _createClass2(SequenceEqualCompareToSubscriber, [{
@@ -87179,7 +87179,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SingleOperator = /*#__PURE__*/function () {
       function SingleOperator(predicate, source) {
-        _classCallCheck(this, SingleOperator);
+        _classCallCheck2(this, SingleOperator);
 
         this.predicate = predicate;
         this.source = source;
@@ -87201,16 +87201,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super107 = _createSuper(SingleSubscriber);
 
       function SingleSubscriber(destination, predicate, source) {
-        var _this131;
+        var _this137;
 
-        _classCallCheck(this, SingleSubscriber);
+        _classCallCheck2(this, SingleSubscriber);
 
-        _this131 = _super107.call(this, destination);
-        _this131.predicate = predicate;
-        _this131.source = source;
-        _this131.seenValue = false;
-        _this131.index = 0;
-        return _this131;
+        _this137 = _super107.call(this, destination);
+        _this137.predicate = predicate;
+        _this137.source = source;
+        _this137.seenValue = false;
+        _this137.index = 0;
+        return _this137;
       }
 
       _createClass2(SingleSubscriber, [{
@@ -87300,7 +87300,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SkipOperator = /*#__PURE__*/function () {
       function SkipOperator(total) {
-        _classCallCheck(this, SkipOperator);
+        _classCallCheck2(this, SkipOperator);
 
         this.total = total;
       }
@@ -87321,14 +87321,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super108 = _createSuper(SkipSubscriber);
 
       function SkipSubscriber(destination, total) {
-        var _this132;
+        var _this138;
 
-        _classCallCheck(this, SkipSubscriber);
+        _classCallCheck2(this, SkipSubscriber);
 
-        _this132 = _super108.call(this, destination);
-        _this132.total = total;
-        _this132.count = 0;
-        return _this132;
+        _this138 = _super108.call(this, destination);
+        _this138.total = total;
+        _this138.count = 0;
+        return _this138;
       }
 
       _createClass2(SkipSubscriber, [{
@@ -87387,7 +87387,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SkipLastOperator = /*#__PURE__*/function () {
       function SkipLastOperator(_skipCount) {
-        _classCallCheck(this, SkipLastOperator);
+        _classCallCheck2(this, SkipLastOperator);
 
         this._skipCount = _skipCount;
 
@@ -87416,15 +87416,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super109 = _createSuper(SkipLastSubscriber);
 
       function SkipLastSubscriber(destination, _skipCount) {
-        var _this133;
+        var _this139;
 
-        _classCallCheck(this, SkipLastSubscriber);
+        _classCallCheck2(this, SkipLastSubscriber);
 
-        _this133 = _super109.call(this, destination);
-        _this133._skipCount = _skipCount;
-        _this133._count = 0;
-        _this133._ring = new Array(_skipCount);
-        return _this133;
+        _this139 = _super109.call(this, destination);
+        _this139._skipCount = _skipCount;
+        _this139._count = 0;
+        _this139._ring = new Array(_skipCount);
+        return _this139;
       }
 
       _createClass2(SkipLastSubscriber, [{
@@ -87498,7 +87498,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SkipUntilOperator = /*#__PURE__*/function () {
       function SkipUntilOperator(notifier) {
-        _classCallCheck(this, SkipUntilOperator);
+        _classCallCheck2(this, SkipUntilOperator);
 
         this.notifier = notifier;
       }
@@ -87519,26 +87519,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super110 = _createSuper(SkipUntilSubscriber);
 
       function SkipUntilSubscriber(destination, notifier) {
-        var _this134;
+        var _this140;
 
-        _classCallCheck(this, SkipUntilSubscriber);
+        _classCallCheck2(this, SkipUntilSubscriber);
 
-        _this134 = _super110.call(this, destination);
-        _this134.hasValue = false;
-        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this134), undefined, undefined);
+        _this140 = _super110.call(this, destination);
+        _this140.hasValue = false;
+        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this140), undefined, undefined);
 
-        _this134.add(innerSubscriber);
+        _this140.add(innerSubscriber);
 
-        _this134.innerSubscription = innerSubscriber;
-        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this134), notifier, undefined, undefined, innerSubscriber);
+        _this140.innerSubscription = innerSubscriber;
+        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this140), notifier, undefined, undefined, innerSubscriber);
 
         if (innerSubscription !== innerSubscriber) {
-          _this134.add(innerSubscription);
+          _this140.add(innerSubscription);
 
-          _this134.innerSubscription = innerSubscription;
+          _this140.innerSubscription = innerSubscription;
         }
 
-        return _this134;
+        return _this140;
       }
 
       _createClass2(SkipUntilSubscriber, [{
@@ -87603,7 +87603,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SkipWhileOperator = /*#__PURE__*/function () {
       function SkipWhileOperator(predicate) {
-        _classCallCheck(this, SkipWhileOperator);
+        _classCallCheck2(this, SkipWhileOperator);
 
         this.predicate = predicate;
       }
@@ -87624,15 +87624,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super111 = _createSuper(SkipWhileSubscriber);
 
       function SkipWhileSubscriber(destination, predicate) {
-        var _this135;
+        var _this141;
 
-        _classCallCheck(this, SkipWhileSubscriber);
+        _classCallCheck2(this, SkipWhileSubscriber);
 
-        _this135 = _super111.call(this, destination);
-        _this135.predicate = predicate;
-        _this135.skipping = true;
-        _this135.index = 0;
-        return _this135;
+        _this141 = _super111.call(this, destination);
+        _this141.predicate = predicate;
+        _this141.skipping = true;
+        _this141.index = 0;
+        return _this141;
       }
 
       _createClass2(SkipWhileSubscriber, [{
@@ -87757,7 +87757,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SubscribeOnOperator = /*#__PURE__*/function () {
       function SubscribeOnOperator(scheduler, delay) {
-        _classCallCheck(this, SubscribeOnOperator);
+        _classCallCheck2(this, SubscribeOnOperator);
 
         this.scheduler = scheduler;
         this.delay = delay;
@@ -87885,7 +87885,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var SwitchMapOperator = /*#__PURE__*/function () {
       function SwitchMapOperator(project) {
-        _classCallCheck(this, SwitchMapOperator);
+        _classCallCheck2(this, SwitchMapOperator);
 
         this.project = project;
       }
@@ -87906,14 +87906,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super112 = _createSuper(SwitchMapSubscriber);
 
       function SwitchMapSubscriber(destination, project) {
-        var _this136;
+        var _this142;
 
-        _classCallCheck(this, SwitchMapSubscriber);
+        _classCallCheck2(this, SwitchMapSubscriber);
 
-        _this136 = _super112.call(this, destination);
-        _this136.project = project;
-        _this136.index = 0;
-        return _this136;
+        _this142 = _super112.call(this, destination);
+        _this142.project = project;
+        _this142.index = 0;
+        return _this142;
       }
 
       _createClass2(SwitchMapSubscriber, [{
@@ -88078,7 +88078,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var TakeOperator = /*#__PURE__*/function () {
       function TakeOperator(total) {
-        _classCallCheck(this, TakeOperator);
+        _classCallCheck2(this, TakeOperator);
 
         this.total = total;
 
@@ -88103,14 +88103,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super113 = _createSuper(TakeSubscriber);
 
       function TakeSubscriber(destination, total) {
-        var _this137;
+        var _this143;
 
-        _classCallCheck(this, TakeSubscriber);
+        _classCallCheck2(this, TakeSubscriber);
 
-        _this137 = _super113.call(this, destination);
-        _this137.total = total;
-        _this137.count = 0;
-        return _this137;
+        _this143 = _super113.call(this, destination);
+        _this143.total = total;
+        _this143.count = 0;
+        return _this143;
       }
 
       _createClass2(TakeSubscriber, [{
@@ -88187,7 +88187,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var TakeLastOperator = /*#__PURE__*/function () {
       function TakeLastOperator(total) {
-        _classCallCheck(this, TakeLastOperator);
+        _classCallCheck2(this, TakeLastOperator);
 
         this.total = total;
 
@@ -88212,15 +88212,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super114 = _createSuper(TakeLastSubscriber);
 
       function TakeLastSubscriber(destination, total) {
-        var _this138;
+        var _this144;
 
-        _classCallCheck(this, TakeLastSubscriber);
+        _classCallCheck2(this, TakeLastSubscriber);
 
-        _this138 = _super114.call(this, destination);
-        _this138.total = total;
-        _this138.ring = new Array();
-        _this138.count = 0;
-        return _this138;
+        _this144 = _super114.call(this, destination);
+        _this144.total = total;
+        _this144.ring = new Array();
+        _this144.count = 0;
+        return _this144;
       }
 
       _createClass2(TakeLastSubscriber, [{
@@ -88304,7 +88304,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var TakeUntilOperator = /*#__PURE__*/function () {
       function TakeUntilOperator(notifier) {
-        _classCallCheck(this, TakeUntilOperator);
+        _classCallCheck2(this, TakeUntilOperator);
 
         this.notifier = notifier;
       }
@@ -88333,13 +88333,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super115 = _createSuper(TakeUntilSubscriber);
 
       function TakeUntilSubscriber(destination) {
-        var _this139;
+        var _this145;
 
-        _classCallCheck(this, TakeUntilSubscriber);
+        _classCallCheck2(this, TakeUntilSubscriber);
 
-        _this139 = _super115.call(this, destination);
-        _this139.seenValue = false;
-        return _this139;
+        _this145 = _super115.call(this, destination);
+        _this145.seenValue = false;
+        return _this145;
       }
 
       _createClass2(TakeUntilSubscriber, [{
@@ -88395,7 +88395,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var TakeWhileOperator = /*#__PURE__*/function () {
       function TakeWhileOperator(predicate, inclusive) {
-        _classCallCheck(this, TakeWhileOperator);
+        _classCallCheck2(this, TakeWhileOperator);
 
         this.predicate = predicate;
         this.inclusive = inclusive;
@@ -88417,15 +88417,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super116 = _createSuper(TakeWhileSubscriber);
 
       function TakeWhileSubscriber(destination, predicate, inclusive) {
-        var _this140;
+        var _this146;
 
-        _classCallCheck(this, TakeWhileSubscriber);
+        _classCallCheck2(this, TakeWhileSubscriber);
 
-        _this140 = _super116.call(this, destination);
-        _this140.predicate = predicate;
-        _this140.inclusive = inclusive;
-        _this140.index = 0;
-        return _this140;
+        _this146 = _super116.call(this, destination);
+        _this146.predicate = predicate;
+        _this146.inclusive = inclusive;
+        _this146.index = 0;
+        return _this146;
       }
 
       _createClass2(TakeWhileSubscriber, [{
@@ -88513,7 +88513,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var DoOperator = /*#__PURE__*/function () {
       function DoOperator(nextOrObserver, error, complete) {
-        _classCallCheck(this, DoOperator);
+        _classCallCheck2(this, DoOperator);
 
         this.nextOrObserver = nextOrObserver;
         this.error = error;
@@ -88536,28 +88536,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super117 = _createSuper(TapSubscriber);
 
       function TapSubscriber(destination, observerOrNext, error, complete) {
-        var _this141;
+        var _this147;
 
-        _classCallCheck(this, TapSubscriber);
+        _classCallCheck2(this, TapSubscriber);
 
-        _this141 = _super117.call(this, destination);
-        _this141._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this141._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this141._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this141._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this141._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this147 = _super117.call(this, destination);
+        _this147._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this147._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this147._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this147._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this147._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_2__["isFunction"])(observerOrNext)) {
-          _this141._context = _assertThisInitialized(_this141);
-          _this141._tapNext = observerOrNext;
+          _this147._context = _assertThisInitialized(_this147);
+          _this147._tapNext = observerOrNext;
         } else if (observerOrNext) {
-          _this141._context = observerOrNext;
-          _this141._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this141._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this141._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this147._context = observerOrNext;
+          _this147._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this147._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this147._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
         }
 
-        return _this141;
+        return _this147;
       }
 
       _createClass2(TapSubscriber, [{
@@ -88657,7 +88657,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ThrottleOperator = /*#__PURE__*/function () {
       function ThrottleOperator(durationSelector, leading, trailing) {
-        _classCallCheck(this, ThrottleOperator);
+        _classCallCheck2(this, ThrottleOperator);
 
         this.durationSelector = durationSelector;
         this.leading = leading;
@@ -88680,17 +88680,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super118 = _createSuper(ThrottleSubscriber);
 
       function ThrottleSubscriber(destination, durationSelector, _leading, _trailing) {
-        var _this142;
+        var _this148;
 
-        _classCallCheck(this, ThrottleSubscriber);
+        _classCallCheck2(this, ThrottleSubscriber);
 
-        _this142 = _super118.call(this, destination);
-        _this142.destination = destination;
-        _this142.durationSelector = durationSelector;
-        _this142._leading = _leading;
-        _this142._trailing = _trailing;
-        _this142._hasValue = false;
-        return _this142;
+        _this148 = _super118.call(this, destination);
+        _this148.destination = destination;
+        _this148.durationSelector = durationSelector;
+        _this148._leading = _leading;
+        _this148._trailing = _trailing;
+        _this148._hasValue = false;
+        return _this148;
       }
 
       _createClass2(ThrottleSubscriber, [{
@@ -88823,7 +88823,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ThrottleTimeOperator = /*#__PURE__*/function () {
       function ThrottleTimeOperator(duration, scheduler, leading, trailing) {
-        _classCallCheck(this, ThrottleTimeOperator);
+        _classCallCheck2(this, ThrottleTimeOperator);
 
         this.duration = duration;
         this.scheduler = scheduler;
@@ -88847,18 +88847,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super119 = _createSuper(ThrottleTimeSubscriber);
 
       function ThrottleTimeSubscriber(destination, duration, scheduler, leading, trailing) {
-        var _this143;
+        var _this149;
 
-        _classCallCheck(this, ThrottleTimeSubscriber);
+        _classCallCheck2(this, ThrottleTimeSubscriber);
 
-        _this143 = _super119.call(this, destination);
-        _this143.duration = duration;
-        _this143.scheduler = scheduler;
-        _this143.leading = leading;
-        _this143.trailing = trailing;
-        _this143._hasTrailingValue = false;
-        _this143._trailingValue = null;
-        return _this143;
+        _this149 = _super119.call(this, destination);
+        _this149.duration = duration;
+        _this149.scheduler = scheduler;
+        _this149.leading = leading;
+        _this149.trailing = trailing;
+        _this149._hasTrailingValue = false;
+        _this149._trailingValue = null;
+        return _this149;
       }
 
       _createClass2(ThrottleTimeSubscriber, [{
@@ -88964,7 +88964,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var ThrowIfEmptyOperator = /*#__PURE__*/function () {
       function ThrowIfEmptyOperator(errorFactory) {
-        _classCallCheck(this, ThrowIfEmptyOperator);
+        _classCallCheck2(this, ThrowIfEmptyOperator);
 
         this.errorFactory = errorFactory;
       }
@@ -88985,14 +88985,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super120 = _createSuper(ThrowIfEmptySubscriber);
 
       function ThrowIfEmptySubscriber(destination, errorFactory) {
-        var _this144;
+        var _this150;
 
-        _classCallCheck(this, ThrowIfEmptySubscriber);
+        _classCallCheck2(this, ThrowIfEmptySubscriber);
 
-        _this144 = _super120.call(this, destination);
-        _this144.errorFactory = errorFactory;
-        _this144.hasValue = false;
-        return _this144;
+        _this150 = _super120.call(this, destination);
+        _this150.errorFactory = errorFactory;
+        _this150.hasValue = false;
+        return _this150;
       }
 
       _createClass2(ThrowIfEmptySubscriber, [{
@@ -89107,7 +89107,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     var TimeInterval = function TimeInterval(value, interval) {
-      _classCallCheck(this, TimeInterval);
+      _classCallCheck2(this, TimeInterval);
 
       this.value = value;
       this.interval = interval;
@@ -89225,7 +89225,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var TimeoutWithOperator = /*#__PURE__*/function () {
       function TimeoutWithOperator(waitFor, absoluteTimeout, withObservable, scheduler) {
-        _classCallCheck(this, TimeoutWithOperator);
+        _classCallCheck2(this, TimeoutWithOperator);
 
         this.waitFor = waitFor;
         this.absoluteTimeout = absoluteTimeout;
@@ -89249,20 +89249,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super121 = _createSuper(TimeoutWithSubscriber);
 
       function TimeoutWithSubscriber(destination, absoluteTimeout, waitFor, withObservable, scheduler) {
-        var _this145;
+        var _this151;
 
-        _classCallCheck(this, TimeoutWithSubscriber);
+        _classCallCheck2(this, TimeoutWithSubscriber);
 
-        _this145 = _super121.call(this, destination);
-        _this145.absoluteTimeout = absoluteTimeout;
-        _this145.waitFor = waitFor;
-        _this145.withObservable = withObservable;
-        _this145.scheduler = scheduler;
-        _this145.action = null;
+        _this151 = _super121.call(this, destination);
+        _this151.absoluteTimeout = absoluteTimeout;
+        _this151.waitFor = waitFor;
+        _this151.withObservable = withObservable;
+        _this151.scheduler = scheduler;
+        _this151.action = null;
 
-        _this145.scheduleTimeout();
+        _this151.scheduleTimeout();
 
-        return _this145;
+        return _this151;
       }
 
       _createClass2(TimeoutWithSubscriber, [{
@@ -89356,7 +89356,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     var Timestamp = function Timestamp(value, timestamp) {
-      _classCallCheck(this, Timestamp);
+      _classCallCheck2(this, Timestamp);
 
       this.value = value;
       this.timestamp = timestamp;
@@ -89455,7 +89455,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var WindowOperator = /*#__PURE__*/function () {
       function WindowOperator(windowBoundaries) {
-        _classCallCheck(this, WindowOperator);
+        _classCallCheck2(this, WindowOperator);
 
         this.windowBoundaries = windowBoundaries;
       }
@@ -89483,14 +89483,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super122 = _createSuper(WindowSubscriber);
 
       function WindowSubscriber(destination) {
-        var _this146;
+        var _this152;
 
-        _classCallCheck(this, WindowSubscriber);
+        _classCallCheck2(this, WindowSubscriber);
 
-        _this146 = _super122.call(this, destination);
-        _this146.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
-        destination.next(_this146.window);
-        return _this146;
+        _this152 = _super122.call(this, destination);
+        _this152.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+        destination.next(_this152.window);
+        return _this152;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -89593,7 +89593,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var WindowCountOperator = /*#__PURE__*/function () {
       function WindowCountOperator(windowSize, startWindowEvery) {
-        _classCallCheck(this, WindowCountOperator);
+        _classCallCheck2(this, WindowCountOperator);
 
         this.windowSize = windowSize;
         this.startWindowEvery = startWindowEvery;
@@ -89615,18 +89615,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super123 = _createSuper(WindowCountSubscriber);
 
       function WindowCountSubscriber(destination, windowSize, startWindowEvery) {
-        var _this147;
+        var _this153;
 
-        _classCallCheck(this, WindowCountSubscriber);
+        _classCallCheck2(this, WindowCountSubscriber);
 
-        _this147 = _super123.call(this, destination);
-        _this147.destination = destination;
-        _this147.windowSize = windowSize;
-        _this147.startWindowEvery = startWindowEvery;
-        _this147.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
-        _this147.count = 0;
-        destination.next(_this147.windows[0]);
-        return _this147;
+        _this153 = _super123.call(this, destination);
+        _this153.destination = destination;
+        _this153.windowSize = windowSize;
+        _this153.startWindowEvery = startWindowEvery;
+        _this153.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
+        _this153.count = 0;
+        destination.next(_this153.windows[0]);
+        return _this153;
       }
 
       _createClass2(WindowCountSubscriber, [{
@@ -89774,7 +89774,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var WindowTimeOperator = /*#__PURE__*/function () {
       function WindowTimeOperator(windowTimeSpan, windowCreationInterval, maxWindowSize, scheduler) {
-        _classCallCheck(this, WindowTimeOperator);
+        _classCallCheck2(this, WindowTimeOperator);
 
         this.windowTimeSpan = windowTimeSpan;
         this.windowCreationInterval = windowCreationInterval;
@@ -89798,13 +89798,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super124 = _createSuper(CountedSubject);
 
       function CountedSubject() {
-        var _this148;
+        var _this154;
 
-        _classCallCheck(this, CountedSubject);
+        _classCallCheck2(this, CountedSubject);
 
-        _this148 = _super124.apply(this, arguments);
-        _this148._numberOfNextedValues = 0;
-        return _this148;
+        _this154 = _super124.apply(this, arguments);
+        _this154._numberOfNextedValues = 0;
+        return _this154;
       }
 
       _createClass2(CountedSubject, [{
@@ -89830,47 +89830,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super125 = _createSuper(WindowTimeSubscriber);
 
       function WindowTimeSubscriber(destination, windowTimeSpan, windowCreationInterval, maxWindowSize, scheduler) {
-        var _this149;
+        var _this155;
 
-        _classCallCheck(this, WindowTimeSubscriber);
+        _classCallCheck2(this, WindowTimeSubscriber);
 
-        _this149 = _super125.call(this, destination);
-        _this149.destination = destination;
-        _this149.windowTimeSpan = windowTimeSpan;
-        _this149.windowCreationInterval = windowCreationInterval;
-        _this149.maxWindowSize = maxWindowSize;
-        _this149.scheduler = scheduler;
-        _this149.windows = [];
+        _this155 = _super125.call(this, destination);
+        _this155.destination = destination;
+        _this155.windowTimeSpan = windowTimeSpan;
+        _this155.windowCreationInterval = windowCreationInterval;
+        _this155.maxWindowSize = maxWindowSize;
+        _this155.scheduler = scheduler;
+        _this155.windows = [];
 
-        var window = _this149.openWindow();
+        var window = _this155.openWindow();
 
         if (windowCreationInterval !== null && windowCreationInterval >= 0) {
           var closeState = {
-            subscriber: _assertThisInitialized(_this149),
+            subscriber: _assertThisInitialized(_this155),
             window: window,
             context: null
           };
           var creationState = {
             windowTimeSpan: windowTimeSpan,
             windowCreationInterval: windowCreationInterval,
-            subscriber: _assertThisInitialized(_this149),
+            subscriber: _assertThisInitialized(_this155),
             scheduler: scheduler
           };
 
-          _this149.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
+          _this155.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
 
-          _this149.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
+          _this155.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
         } else {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this149),
+            subscriber: _assertThisInitialized(_this155),
             window: window,
             windowTimeSpan: windowTimeSpan
           };
 
-          _this149.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
+          _this155.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
         }
 
-        return _this149;
+        return _this155;
       }
 
       _createClass2(WindowTimeSubscriber, [{
@@ -90040,7 +90040,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var WindowToggleOperator = /*#__PURE__*/function () {
       function WindowToggleOperator(openings, closingSelector) {
-        _classCallCheck(this, WindowToggleOperator);
+        _classCallCheck2(this, WindowToggleOperator);
 
         this.openings = openings;
         this.closingSelector = closingSelector;
@@ -90062,18 +90062,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super126 = _createSuper(WindowToggleSubscriber);
 
       function WindowToggleSubscriber(destination, openings, closingSelector) {
-        var _this150;
+        var _this156;
 
-        _classCallCheck(this, WindowToggleSubscriber);
+        _classCallCheck2(this, WindowToggleSubscriber);
 
-        _this150 = _super126.call(this, destination);
-        _this150.openings = openings;
-        _this150.closingSelector = closingSelector;
-        _this150.contexts = [];
+        _this156 = _super126.call(this, destination);
+        _this156.openings = openings;
+        _this156.closingSelector = closingSelector;
+        _this156.contexts = [];
 
-        _this150.add(_this150.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this150), openings, openings));
+        _this156.add(_this156.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this156), openings, openings));
 
-        return _this150;
+        return _this156;
       }
 
       _createClass2(WindowToggleSubscriber, [{
@@ -90261,7 +90261,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var WindowOperator = /*#__PURE__*/function () {
       function WindowOperator(closingSelector) {
-        _classCallCheck(this, WindowOperator);
+        _classCallCheck2(this, WindowOperator);
 
         this.closingSelector = closingSelector;
       }
@@ -90282,17 +90282,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super127 = _createSuper(WindowSubscriber);
 
       function WindowSubscriber(destination, closingSelector) {
-        var _this151;
+        var _this157;
 
-        _classCallCheck(this, WindowSubscriber);
+        _classCallCheck2(this, WindowSubscriber);
 
-        _this151 = _super127.call(this, destination);
-        _this151.destination = destination;
-        _this151.closingSelector = closingSelector;
+        _this157 = _super127.call(this, destination);
+        _this157.destination = destination;
+        _this157.closingSelector = closingSelector;
 
-        _this151.openWindow();
+        _this157.openWindow();
 
-        return _this151;
+        return _this157;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -90427,7 +90427,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var WithLatestFromOperator = /*#__PURE__*/function () {
       function WithLatestFromOperator(observables, project) {
-        _classCallCheck(this, WithLatestFromOperator);
+        _classCallCheck2(this, WithLatestFromOperator);
 
         this.observables = observables;
         this.project = project;
@@ -90449,28 +90449,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super128 = _createSuper(WithLatestFromSubscriber);
 
       function WithLatestFromSubscriber(destination, observables, project) {
-        var _this152;
+        var _this158;
 
-        _classCallCheck(this, WithLatestFromSubscriber);
+        _classCallCheck2(this, WithLatestFromSubscriber);
 
-        _this152 = _super128.call(this, destination);
-        _this152.observables = observables;
-        _this152.project = project;
-        _this152.toRespond = [];
+        _this158 = _super128.call(this, destination);
+        _this158.observables = observables;
+        _this158.project = project;
+        _this158.toRespond = [];
         var len = observables.length;
-        _this152.values = new Array(len);
+        _this158.values = new Array(len);
 
         for (var i = 0; i < len; i++) {
-          _this152.toRespond.push(i);
+          _this158.toRespond.push(i);
         }
 
         for (var _i21 = 0; _i21 < len; _i21++) {
           var observable = observables[_i21];
 
-          _this152.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this152), observable, observable, _i21));
+          _this158.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this158), observable, observable, _i21));
         }
 
-        return _this152;
+        return _this158;
       }
 
       _createClass2(WithLatestFromSubscriber, [{
@@ -90991,7 +90991,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super129 = _createSuper(Action);
 
       function Action(scheduler, work) {
-        _classCallCheck(this, Action);
+        _classCallCheck2(this, Action);
 
         return _super129.call(this);
       }
@@ -91043,14 +91043,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super130 = _createSuper(AnimationFrameAction);
 
       function AnimationFrameAction(scheduler, work) {
-        var _this153;
+        var _this159;
 
-        _classCallCheck(this, AnimationFrameAction);
+        _classCallCheck2(this, AnimationFrameAction);
 
-        _this153 = _super130.call(this, scheduler, work);
-        _this153.scheduler = scheduler;
-        _this153.work = work;
-        return _this153;
+        _this159 = _super130.call(this, scheduler, work);
+        _this159.scheduler = scheduler;
+        _this159.work = work;
+        return _this159;
       }
 
       _createClass2(AnimationFrameAction, [{
@@ -91124,7 +91124,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super131 = _createSuper(AnimationFrameScheduler);
 
       function AnimationFrameScheduler() {
-        _classCallCheck(this, AnimationFrameScheduler);
+        _classCallCheck2(this, AnimationFrameScheduler);
 
         return _super131.apply(this, arguments);
       }
@@ -91203,14 +91203,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super132 = _createSuper(AsapAction);
 
       function AsapAction(scheduler, work) {
-        var _this154;
+        var _this160;
 
-        _classCallCheck(this, AsapAction);
+        _classCallCheck2(this, AsapAction);
 
-        _this154 = _super132.call(this, scheduler, work);
-        _this154.scheduler = scheduler;
-        _this154.work = work;
-        return _this154;
+        _this160 = _super132.call(this, scheduler, work);
+        _this160.scheduler = scheduler;
+        _this160.work = work;
+        return _this160;
       }
 
       _createClass2(AsapAction, [{
@@ -91283,7 +91283,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super133 = _createSuper(AsapScheduler);
 
       function AsapScheduler() {
-        _classCallCheck(this, AsapScheduler);
+        _classCallCheck2(this, AsapScheduler);
 
         return _super133.apply(this, arguments);
       }
@@ -91356,15 +91356,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super134 = _createSuper(AsyncAction);
 
       function AsyncAction(scheduler, work) {
-        var _this155;
+        var _this161;
 
-        _classCallCheck(this, AsyncAction);
+        _classCallCheck2(this, AsyncAction);
 
-        _this155 = _super134.call(this, scheduler, work);
-        _this155.scheduler = scheduler;
-        _this155.work = work;
-        _this155.pending = false;
-        return _this155;
+        _this161 = _super134.call(this, scheduler, work);
+        _this161.scheduler = scheduler;
+        _this161.work = work;
+        _this161.pending = false;
+        return _this161;
       }
 
       _createClass2(AsyncAction, [{
@@ -91505,23 +91505,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super135 = _createSuper(AsyncScheduler);
 
       function AsyncScheduler(SchedulerAction) {
-        var _this156;
+        var _this162;
 
         var now = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _Scheduler__WEBPACK_IMPORTED_MODULE_0__["Scheduler"].now;
 
-        _classCallCheck(this, AsyncScheduler);
+        _classCallCheck2(this, AsyncScheduler);
 
-        _this156 = _super135.call(this, SchedulerAction, function () {
-          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this156)) {
+        _this162 = _super135.call(this, SchedulerAction, function () {
+          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this162)) {
             return AsyncScheduler.delegate.now();
           } else {
             return now();
           }
         });
-        _this156.actions = [];
-        _this156.active = false;
-        _this156.scheduled = undefined;
-        return _this156;
+        _this162.actions = [];
+        _this162.active = false;
+        _this162.scheduled = undefined;
+        return _this162;
       }
 
       _createClass2(AsyncScheduler, [{
@@ -91606,14 +91606,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super136 = _createSuper(QueueAction);
 
       function QueueAction(scheduler, work) {
-        var _this157;
+        var _this163;
 
-        _classCallCheck(this, QueueAction);
+        _classCallCheck2(this, QueueAction);
 
-        _this157 = _super136.call(this, scheduler, work);
-        _this157.scheduler = scheduler;
-        _this157.work = work;
-        return _this157;
+        _this163 = _super136.call(this, scheduler, work);
+        _this163.scheduler = scheduler;
+        _this163.work = work;
+        return _this163;
       }
 
       _createClass2(QueueAction, [{
@@ -91687,7 +91687,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super137 = _createSuper(QueueScheduler);
 
       function QueueScheduler() {
-        _classCallCheck(this, QueueScheduler);
+        _classCallCheck2(this, QueueScheduler);
 
         return _super137.apply(this, arguments);
       }
@@ -91743,20 +91743,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super138 = _createSuper(VirtualTimeScheduler);
 
       function VirtualTimeScheduler() {
-        var _this158;
+        var _this164;
 
         var SchedulerAction = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : VirtualAction;
         var maxFrames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
 
-        _classCallCheck(this, VirtualTimeScheduler);
+        _classCallCheck2(this, VirtualTimeScheduler);
 
-        _this158 = _super138.call(this, SchedulerAction, function () {
-          return _this158.frame;
+        _this164 = _super138.call(this, SchedulerAction, function () {
+          return _this164.frame;
         });
-        _this158.maxFrames = maxFrames;
-        _this158.frame = 0;
-        _this158.index = -1;
-        return _this158;
+        _this164.maxFrames = maxFrames;
+        _this164.frame = 0;
+        _this164.index = -1;
+        return _this164;
       }
 
       _createClass2(VirtualTimeScheduler, [{
@@ -91796,19 +91796,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super139 = _createSuper(VirtualAction);
 
       function VirtualAction(scheduler, work) {
-        var _this159;
+        var _this165;
 
         var index = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : scheduler.index += 1;
 
-        _classCallCheck(this, VirtualAction);
+        _classCallCheck2(this, VirtualAction);
 
-        _this159 = _super139.call(this, scheduler, work);
-        _this159.scheduler = scheduler;
-        _this159.work = work;
-        _this159.index = index;
-        _this159.active = true;
-        _this159.index = scheduler.index = index;
-        return _this159;
+        _this165 = _super139.call(this, scheduler, work);
+        _this165.scheduler = scheduler;
+        _this165.work = work;
+        _this165.index = index;
+        _this165.active = true;
+        _this165.index = scheduler.index = index;
+        return _this165;
       }
 
       _createClass2(VirtualAction, [{
@@ -94594,6 +94594,1227 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     /***/
 
+  },
+
+  /***/
+  "./node_modules/typed.js/lib/typed.js":
+  /*!********************************************!*\
+    !*** ./node_modules/typed.js/lib/typed.js ***!
+    \********************************************/
+
+  /*! no static exports found */
+
+  /***/
+  function node_modulesTypedJsLibTypedJs(module, exports, __webpack_require__) {
+    /*!
+     * 
+     *   typed.js - A JavaScript Typing Animation Library
+     *   Author: Matt Boldt <me@mattboldt.com>
+     *   Version: v2.0.11
+     *   Url: https://github.com/mattboldt/typed.js
+     *   License(s): MIT
+     * 
+     */
+    (function webpackUniversalModuleDefinition(root, factory) {
+      if (true) module.exports = factory();else {}
+    })(this, function () {
+      return (
+        /******/
+        function (modules) {
+          // webpackBootstrap
+
+          /******/
+          // The module cache
+
+          /******/
+          var installedModules = {};
+          /******/
+
+          /******/
+          // The require function
+
+          /******/
+
+          function __webpack_require__(moduleId) {
+            /******/
+
+            /******/
+            // Check if module is in cache
+
+            /******/
+            if (installedModules[moduleId])
+              /******/
+              return installedModules[moduleId].exports;
+            /******/
+
+            /******/
+            // Create a new module (and put it into the cache)
+
+            /******/
+
+            var module = installedModules[moduleId] = {
+              /******/
+              exports: {},
+
+              /******/
+              id: moduleId,
+
+              /******/
+              loaded: false
+              /******/
+
+            };
+            /******/
+
+            /******/
+            // Execute the module function
+
+            /******/
+
+            modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+            /******/
+
+            /******/
+            // Flag the module as loaded
+
+            /******/
+
+            module.loaded = true;
+            /******/
+
+            /******/
+            // Return the exports of the module
+
+            /******/
+
+            return module.exports;
+            /******/
+          }
+          /******/
+
+          /******/
+
+          /******/
+          // expose the modules object (__webpack_modules__)
+
+          /******/
+
+
+          __webpack_require__.m = modules;
+          /******/
+
+          /******/
+          // expose the module cache
+
+          /******/
+
+          __webpack_require__.c = installedModules;
+          /******/
+
+          /******/
+          // __webpack_public_path__
+
+          /******/
+
+          __webpack_require__.p = "";
+          /******/
+
+          /******/
+          // Load entry module and return exports
+
+          /******/
+
+          return __webpack_require__(0);
+          /******/
+        }(
+        /************************************************************************/
+
+        /******/
+        [
+        /* 0 */
+
+        /***/
+        function (module, exports, __webpack_require__) {
+          'use strict';
+
+          Object.defineProperty(exports, '__esModule', {
+            value: true
+          });
+
+          var _createClass = function () {
+            function defineProperties(target, props) {
+              for (var i = 0; i < props.length; i++) {
+                var descriptor = props[i];
+                descriptor.enumerable = descriptor.enumerable || false;
+                descriptor.configurable = true;
+                if ('value' in descriptor) descriptor.writable = true;
+                Object.defineProperty(target, descriptor.key, descriptor);
+              }
+            }
+
+            return function (Constructor, protoProps, staticProps) {
+              if (protoProps) defineProperties(Constructor.prototype, protoProps);
+              if (staticProps) defineProperties(Constructor, staticProps);
+              return Constructor;
+            };
+          }();
+
+          function _classCallCheck(instance, Constructor) {
+            if (!(instance instanceof Constructor)) {
+              throw new TypeError('Cannot call a class as a function');
+            }
+          }
+
+          var _initializerJs = __webpack_require__(1);
+
+          var _htmlParserJs = __webpack_require__(3);
+          /**
+           * Welcome to Typed.js!
+           * @param {string} elementId HTML element ID _OR_ HTML element
+           * @param {object} options options object
+           * @returns {object} a new Typed object
+           */
+
+
+          var Typed = function () {
+            function Typed(elementId, options) {
+              _classCallCheck(this, Typed); // Initialize it up
+
+
+              _initializerJs.initializer.load(this, options, elementId); // All systems go!
+
+
+              this.begin();
+            }
+            /**
+             * Toggle start() and stop() of the Typed instance
+             * @public
+             */
+
+
+            _createClass(Typed, [{
+              key: 'toggle',
+              value: function toggle() {
+                this.pause.status ? this.start() : this.stop();
+              }
+              /**
+               * Stop typing / backspacing and enable cursor blinking
+               * @public
+               */
+
+            }, {
+              key: 'stop',
+              value: function stop() {
+                if (this.typingComplete) return;
+                if (this.pause.status) return;
+                this.toggleBlinking(true);
+                this.pause.status = true;
+                this.options.onStop(this.arrayPos, this);
+              }
+              /**
+               * Start typing / backspacing after being stopped
+               * @public
+               */
+
+            }, {
+              key: 'start',
+              value: function start() {
+                if (this.typingComplete) return;
+                if (!this.pause.status) return;
+                this.pause.status = false;
+
+                if (this.pause.typewrite) {
+                  this.typewrite(this.pause.curString, this.pause.curStrPos);
+                } else {
+                  this.backspace(this.pause.curString, this.pause.curStrPos);
+                }
+
+                this.options.onStart(this.arrayPos, this);
+              }
+              /**
+               * Destroy this instance of Typed
+               * @public
+               */
+
+            }, {
+              key: 'destroy',
+              value: function destroy() {
+                this.reset(false);
+                this.options.onDestroy(this);
+              }
+              /**
+               * Reset Typed and optionally restarts
+               * @param {boolean} restart
+               * @public
+               */
+
+            }, {
+              key: 'reset',
+              value: function reset() {
+                var restart = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
+                clearInterval(this.timeout);
+                this.replaceText('');
+
+                if (this.cursor && this.cursor.parentNode) {
+                  this.cursor.parentNode.removeChild(this.cursor);
+                  this.cursor = null;
+                }
+
+                this.strPos = 0;
+                this.arrayPos = 0;
+                this.curLoop = 0;
+
+                if (restart) {
+                  this.insertCursor();
+                  this.options.onReset(this);
+                  this.begin();
+                }
+              }
+              /**
+               * Begins the typing animation
+               * @private
+               */
+
+            }, {
+              key: 'begin',
+              value: function begin() {
+                var _this = this;
+
+                this.options.onBegin(this);
+                this.typingComplete = false;
+                this.shuffleStringsIfNeeded(this);
+                this.insertCursor();
+                if (this.bindInputFocusEvents) this.bindFocusEvents();
+                this.timeout = setTimeout(function () {
+                  // Check if there is some text in the element, if yes start by backspacing the default message
+                  if (!_this.currentElContent || _this.currentElContent.length === 0) {
+                    _this.typewrite(_this.strings[_this.sequence[_this.arrayPos]], _this.strPos);
+                  } else {
+                    // Start typing
+                    _this.backspace(_this.currentElContent, _this.currentElContent.length);
+                  }
+                }, this.startDelay);
+              }
+              /**
+               * Called for each character typed
+               * @param {string} curString the current string in the strings array
+               * @param {number} curStrPos the current position in the curString
+               * @private
+               */
+
+            }, {
+              key: 'typewrite',
+              value: function typewrite(curString, curStrPos) {
+                var _this2 = this;
+
+                if (this.fadeOut && this.el.classList.contains(this.fadeOutClass)) {
+                  this.el.classList.remove(this.fadeOutClass);
+                  if (this.cursor) this.cursor.classList.remove(this.fadeOutClass);
+                }
+
+                var humanize = this.humanizer(this.typeSpeed);
+                var numChars = 1;
+
+                if (this.pause.status === true) {
+                  this.setPauseStatus(curString, curStrPos, true);
+                  return;
+                } // contain typing function in a timeout humanize'd delay
+
+
+                this.timeout = setTimeout(function () {
+                  // skip over any HTML chars
+                  curStrPos = _htmlParserJs.htmlParser.typeHtmlChars(curString, curStrPos, _this2);
+                  var pauseTime = 0;
+                  var substr = curString.substr(curStrPos); // check for an escape character before a pause value
+                  // format: \^\d+ .. eg: ^1000 .. should be able to print the ^ too using ^^
+                  // single ^ are removed from string
+
+                  if (substr.charAt(0) === '^') {
+                    if (/^\^\d+/.test(substr)) {
+                      var skip = 1; // skip at least 1
+
+                      substr = /\d+/.exec(substr)[0];
+                      skip += substr.length;
+                      pauseTime = parseInt(substr);
+                      _this2.temporaryPause = true;
+
+                      _this2.options.onTypingPaused(_this2.arrayPos, _this2); // strip out the escape character and pause value so they're not printed
+
+
+                      curString = curString.substring(0, curStrPos) + curString.substring(curStrPos + skip);
+
+                      _this2.toggleBlinking(true);
+                    }
+                  } // check for skip characters formatted as
+                  // "this is a `string to print NOW` ..."
+
+
+                  if (substr.charAt(0) === '`') {
+                    while (curString.substr(curStrPos + numChars).charAt(0) !== '`') {
+                      numChars++;
+                      if (curStrPos + numChars > curString.length) break;
+                    } // strip out the escape characters and append all the string in between
+
+
+                    var stringBeforeSkip = curString.substring(0, curStrPos);
+                    var stringSkipped = curString.substring(stringBeforeSkip.length + 1, curStrPos + numChars);
+                    var stringAfterSkip = curString.substring(curStrPos + numChars + 1);
+                    curString = stringBeforeSkip + stringSkipped + stringAfterSkip;
+                    numChars--;
+                  } // timeout for any pause after a character
+
+
+                  _this2.timeout = setTimeout(function () {
+                    // Accounts for blinking while paused
+                    _this2.toggleBlinking(false); // We're done with this sentence!
+
+
+                    if (curStrPos >= curString.length) {
+                      _this2.doneTyping(curString, curStrPos);
+                    } else {
+                      _this2.keepTyping(curString, curStrPos, numChars);
+                    } // end of character pause
+
+
+                    if (_this2.temporaryPause) {
+                      _this2.temporaryPause = false;
+
+                      _this2.options.onTypingResumed(_this2.arrayPos, _this2);
+                    }
+                  }, pauseTime); // humanized value for typing
+                }, humanize);
+              }
+              /**
+               * Continue to the next string & begin typing
+               * @param {string} curString the current string in the strings array
+               * @param {number} curStrPos the current position in the curString
+               * @private
+               */
+
+            }, {
+              key: 'keepTyping',
+              value: function keepTyping(curString, curStrPos, numChars) {
+                // call before functions if applicable
+                if (curStrPos === 0) {
+                  this.toggleBlinking(false);
+                  this.options.preStringTyped(this.arrayPos, this);
+                } // start typing each new char into existing string
+                // curString: arg, this.el.html: original text inside element
+
+
+                curStrPos += numChars;
+                var nextString = curString.substr(0, curStrPos);
+                this.replaceText(nextString); // loop the function
+
+                this.typewrite(curString, curStrPos);
+              }
+              /**
+               * We're done typing the current string
+               * @param {string} curString the current string in the strings array
+               * @param {number} curStrPos the current position in the curString
+               * @private
+               */
+
+            }, {
+              key: 'doneTyping',
+              value: function doneTyping(curString, curStrPos) {
+                var _this3 = this; // fires callback function
+
+
+                this.options.onStringTyped(this.arrayPos, this);
+                this.toggleBlinking(true); // is this the final string
+
+                if (this.arrayPos === this.strings.length - 1) {
+                  // callback that occurs on the last typed string
+                  this.complete(); // quit if we wont loop back
+
+                  if (this.loop === false || this.curLoop === this.loopCount) {
+                    return;
+                  }
+                }
+
+                this.timeout = setTimeout(function () {
+                  _this3.backspace(curString, curStrPos);
+                }, this.backDelay);
+              }
+              /**
+               * Backspaces 1 character at a time
+               * @param {string} curString the current string in the strings array
+               * @param {number} curStrPos the current position in the curString
+               * @private
+               */
+
+            }, {
+              key: 'backspace',
+              value: function backspace(curString, curStrPos) {
+                var _this4 = this;
+
+                if (this.pause.status === true) {
+                  this.setPauseStatus(curString, curStrPos, true);
+                  return;
+                }
+
+                if (this.fadeOut) return this.initFadeOut();
+                this.toggleBlinking(false);
+                var humanize = this.humanizer(this.backSpeed);
+                this.timeout = setTimeout(function () {
+                  curStrPos = _htmlParserJs.htmlParser.backSpaceHtmlChars(curString, curStrPos, _this4); // replace text with base text + typed characters
+
+                  var curStringAtPosition = curString.substr(0, curStrPos);
+
+                  _this4.replaceText(curStringAtPosition); // if smartBack is enabled
+
+
+                  if (_this4.smartBackspace) {
+                    // the remaining part of the current string is equal of the same part of the new string
+                    var nextString = _this4.strings[_this4.arrayPos + 1];
+
+                    if (nextString && curStringAtPosition === nextString.substr(0, curStrPos)) {
+                      _this4.stopNum = curStrPos;
+                    } else {
+                      _this4.stopNum = 0;
+                    }
+                  } // if the number (id of character in current string) is
+                  // less than the stop number, keep going
+
+
+                  if (curStrPos > _this4.stopNum) {
+                    // subtract characters one by one
+                    curStrPos--; // loop the function
+
+                    _this4.backspace(curString, curStrPos);
+                  } else if (curStrPos <= _this4.stopNum) {
+                    // if the stop number has been reached, increase
+                    // array position to next string
+                    _this4.arrayPos++; // When looping, begin at the beginning after backspace complete
+
+                    if (_this4.arrayPos === _this4.strings.length) {
+                      _this4.arrayPos = 0;
+
+                      _this4.options.onLastStringBackspaced();
+
+                      _this4.shuffleStringsIfNeeded();
+
+                      _this4.begin();
+                    } else {
+                      _this4.typewrite(_this4.strings[_this4.sequence[_this4.arrayPos]], curStrPos);
+                    }
+                  } // humanized value for typing
+
+                }, humanize);
+              }
+              /**
+               * Full animation is complete
+               * @private
+               */
+
+            }, {
+              key: 'complete',
+              value: function complete() {
+                this.options.onComplete(this);
+
+                if (this.loop) {
+                  this.curLoop++;
+                } else {
+                  this.typingComplete = true;
+                }
+              }
+              /**
+               * Has the typing been stopped
+               * @param {string} curString the current string in the strings array
+               * @param {number} curStrPos the current position in the curString
+               * @param {boolean} isTyping
+               * @private
+               */
+
+            }, {
+              key: 'setPauseStatus',
+              value: function setPauseStatus(curString, curStrPos, isTyping) {
+                this.pause.typewrite = isTyping;
+                this.pause.curString = curString;
+                this.pause.curStrPos = curStrPos;
+              }
+              /**
+               * Toggle the blinking cursor
+               * @param {boolean} isBlinking
+               * @private
+               */
+
+            }, {
+              key: 'toggleBlinking',
+              value: function toggleBlinking(isBlinking) {
+                if (!this.cursor) return; // if in paused state, don't toggle blinking a 2nd time
+
+                if (this.pause.status) return;
+                if (this.cursorBlinking === isBlinking) return;
+                this.cursorBlinking = isBlinking;
+
+                if (isBlinking) {
+                  this.cursor.classList.add('typed-cursor--blink');
+                } else {
+                  this.cursor.classList.remove('typed-cursor--blink');
+                }
+              }
+              /**
+               * Speed in MS to type
+               * @param {number} speed
+               * @private
+               */
+
+            }, {
+              key: 'humanizer',
+              value: function humanizer(speed) {
+                return Math.round(Math.random() * speed / 2) + speed;
+              }
+              /**
+               * Shuffle the sequence of the strings array
+               * @private
+               */
+
+            }, {
+              key: 'shuffleStringsIfNeeded',
+              value: function shuffleStringsIfNeeded() {
+                if (!this.shuffle) return;
+                this.sequence = this.sequence.sort(function () {
+                  return Math.random() - 0.5;
+                });
+              }
+              /**
+               * Adds a CSS class to fade out current string
+               * @private
+               */
+
+            }, {
+              key: 'initFadeOut',
+              value: function initFadeOut() {
+                var _this5 = this;
+
+                this.el.className += ' ' + this.fadeOutClass;
+                if (this.cursor) this.cursor.className += ' ' + this.fadeOutClass;
+                return setTimeout(function () {
+                  _this5.arrayPos++;
+
+                  _this5.replaceText(''); // Resets current string if end of loop reached
+
+
+                  if (_this5.strings.length > _this5.arrayPos) {
+                    _this5.typewrite(_this5.strings[_this5.sequence[_this5.arrayPos]], 0);
+                  } else {
+                    _this5.typewrite(_this5.strings[0], 0);
+
+                    _this5.arrayPos = 0;
+                  }
+                }, this.fadeOutDelay);
+              }
+              /**
+               * Replaces current text in the HTML element
+               * depending on element type
+               * @param {string} str
+               * @private
+               */
+
+            }, {
+              key: 'replaceText',
+              value: function replaceText(str) {
+                if (this.attr) {
+                  this.el.setAttribute(this.attr, str);
+                } else {
+                  if (this.isInput) {
+                    this.el.value = str;
+                  } else if (this.contentType === 'html') {
+                    this.el.innerHTML = str;
+                  } else {
+                    this.el.textContent = str;
+                  }
+                }
+              }
+              /**
+               * If using input elements, bind focus in order to
+               * start and stop the animation
+               * @private
+               */
+
+            }, {
+              key: 'bindFocusEvents',
+              value: function bindFocusEvents() {
+                var _this6 = this;
+
+                if (!this.isInput) return;
+                this.el.addEventListener('focus', function (e) {
+                  _this6.stop();
+                });
+                this.el.addEventListener('blur', function (e) {
+                  if (_this6.el.value && _this6.el.value.length !== 0) {
+                    return;
+                  }
+
+                  _this6.start();
+                });
+              }
+              /**
+               * On init, insert the cursor element
+               * @private
+               */
+
+            }, {
+              key: 'insertCursor',
+              value: function insertCursor() {
+                if (!this.showCursor) return;
+                if (this.cursor) return;
+                this.cursor = document.createElement('span');
+                this.cursor.className = 'typed-cursor';
+                this.cursor.innerHTML = this.cursorChar;
+                this.el.parentNode && this.el.parentNode.insertBefore(this.cursor, this.el.nextSibling);
+              }
+            }]);
+
+            return Typed;
+          }();
+
+          exports['default'] = Typed;
+          module.exports = exports['default'];
+          /***/
+        },
+        /* 1 */
+
+        /***/
+        function (module, exports, __webpack_require__) {
+          'use strict';
+
+          Object.defineProperty(exports, '__esModule', {
+            value: true
+          });
+
+          var _extends = Object.assign || function (target) {
+            for (var i = 1; i < arguments.length; i++) {
+              var source = arguments[i];
+
+              for (var key in source) {
+                if (Object.prototype.hasOwnProperty.call(source, key)) {
+                  target[key] = source[key];
+                }
+              }
+            }
+
+            return target;
+          };
+
+          var _createClass = function () {
+            function defineProperties(target, props) {
+              for (var i = 0; i < props.length; i++) {
+                var descriptor = props[i];
+                descriptor.enumerable = descriptor.enumerable || false;
+                descriptor.configurable = true;
+                if ('value' in descriptor) descriptor.writable = true;
+                Object.defineProperty(target, descriptor.key, descriptor);
+              }
+            }
+
+            return function (Constructor, protoProps, staticProps) {
+              if (protoProps) defineProperties(Constructor.prototype, protoProps);
+              if (staticProps) defineProperties(Constructor, staticProps);
+              return Constructor;
+            };
+          }();
+
+          function _interopRequireDefault(obj) {
+            return obj && obj.__esModule ? obj : {
+              'default': obj
+            };
+          }
+
+          function _classCallCheck(instance, Constructor) {
+            if (!(instance instanceof Constructor)) {
+              throw new TypeError('Cannot call a class as a function');
+            }
+          }
+
+          var _defaultsJs = __webpack_require__(2);
+
+          var _defaultsJs2 = _interopRequireDefault(_defaultsJs);
+          /**
+           * Initialize the Typed object
+           */
+
+
+          var Initializer = function () {
+            function Initializer() {
+              _classCallCheck(this, Initializer);
+            }
+
+            _createClass(Initializer, [{
+              key: 'load',
+
+              /**
+               * Load up defaults & options on the Typed instance
+               * @param {Typed} self instance of Typed
+               * @param {object} options options object
+               * @param {string} elementId HTML element ID _OR_ instance of HTML element
+               * @private
+               */
+              value: function load(self, options, elementId) {
+                // chosen element to manipulate text
+                if (typeof elementId === 'string') {
+                  self.el = document.querySelector(elementId);
+                } else {
+                  self.el = elementId;
+                }
+
+                self.options = _extends({}, _defaultsJs2['default'], options); // attribute to type into
+
+                self.isInput = self.el.tagName.toLowerCase() === 'input';
+                self.attr = self.options.attr;
+                self.bindInputFocusEvents = self.options.bindInputFocusEvents; // show cursor
+
+                self.showCursor = self.isInput ? false : self.options.showCursor; // custom cursor
+
+                self.cursorChar = self.options.cursorChar; // Is the cursor blinking
+
+                self.cursorBlinking = true; // text content of element
+
+                self.elContent = self.attr ? self.el.getAttribute(self.attr) : self.el.textContent; // html or plain text
+
+                self.contentType = self.options.contentType; // typing speed
+
+                self.typeSpeed = self.options.typeSpeed; // add a delay before typing starts
+
+                self.startDelay = self.options.startDelay; // backspacing speed
+
+                self.backSpeed = self.options.backSpeed; // only backspace what doesn't match the previous string
+
+                self.smartBackspace = self.options.smartBackspace; // amount of time to wait before backspacing
+
+                self.backDelay = self.options.backDelay; // Fade out instead of backspace
+
+                self.fadeOut = self.options.fadeOut;
+                self.fadeOutClass = self.options.fadeOutClass;
+                self.fadeOutDelay = self.options.fadeOutDelay; // variable to check whether typing is currently paused
+
+                self.isPaused = false; // input strings of text
+
+                self.strings = self.options.strings.map(function (s) {
+                  return s.trim();
+                }); // div containing strings
+
+                if (typeof self.options.stringsElement === 'string') {
+                  self.stringsElement = document.querySelector(self.options.stringsElement);
+                } else {
+                  self.stringsElement = self.options.stringsElement;
+                }
+
+                if (self.stringsElement) {
+                  self.strings = [];
+                  self.stringsElement.style.display = 'none';
+                  var strings = Array.prototype.slice.apply(self.stringsElement.children);
+                  var stringsLength = strings.length;
+
+                  if (stringsLength) {
+                    for (var i = 0; i < stringsLength; i += 1) {
+                      var stringEl = strings[i];
+                      self.strings.push(stringEl.innerHTML.trim());
+                    }
+                  }
+                } // character number position of current string
+
+
+                self.strPos = 0; // current array position
+
+                self.arrayPos = 0; // index of string to stop backspacing on
+
+                self.stopNum = 0; // Looping logic
+
+                self.loop = self.options.loop;
+                self.loopCount = self.options.loopCount;
+                self.curLoop = 0; // shuffle the strings
+
+                self.shuffle = self.options.shuffle; // the order of strings
+
+                self.sequence = [];
+                self.pause = {
+                  status: false,
+                  typewrite: true,
+                  curString: '',
+                  curStrPos: 0
+                }; // When the typing is complete (when not looped)
+
+                self.typingComplete = false; // Set the order in which the strings are typed
+
+                for (var i in self.strings) {
+                  self.sequence[i] = i;
+                } // If there is some text in the element
+
+
+                self.currentElContent = this.getCurrentElContent(self);
+                self.autoInsertCss = self.options.autoInsertCss;
+                this.appendAnimationCss(self);
+              }
+            }, {
+              key: 'getCurrentElContent',
+              value: function getCurrentElContent(self) {
+                var elContent = '';
+
+                if (self.attr) {
+                  elContent = self.el.getAttribute(self.attr);
+                } else if (self.isInput) {
+                  elContent = self.el.value;
+                } else if (self.contentType === 'html') {
+                  elContent = self.el.innerHTML;
+                } else {
+                  elContent = self.el.textContent;
+                }
+
+                return elContent;
+              }
+            }, {
+              key: 'appendAnimationCss',
+              value: function appendAnimationCss(self) {
+                var cssDataName = 'data-typed-js-css';
+
+                if (!self.autoInsertCss) {
+                  return;
+                }
+
+                if (!self.showCursor && !self.fadeOut) {
+                  return;
+                }
+
+                if (document.querySelector('[' + cssDataName + ']')) {
+                  return;
+                }
+
+                var css = document.createElement('style');
+                css.type = 'text/css';
+                css.setAttribute(cssDataName, true);
+                var innerCss = '';
+
+                if (self.showCursor) {
+                  innerCss += '\n        .typed-cursor{\n          opacity: 1;\n        }\n        .typed-cursor.typed-cursor--blink{\n          animation: typedjsBlink 0.7s infinite;\n          -webkit-animation: typedjsBlink 0.7s infinite;\n                  animation: typedjsBlink 0.7s infinite;\n        }\n        @keyframes typedjsBlink{\n          50% { opacity: 0.0; }\n        }\n        @-webkit-keyframes typedjsBlink{\n          0% { opacity: 1; }\n          50% { opacity: 0.0; }\n          100% { opacity: 1; }\n        }\n      ';
+                }
+
+                if (self.fadeOut) {
+                  innerCss += '\n        .typed-fade-out{\n          opacity: 0;\n          transition: opacity .25s;\n        }\n        .typed-cursor.typed-cursor--blink.typed-fade-out{\n          -webkit-animation: 0;\n          animation: 0;\n        }\n      ';
+                }
+
+                if (css.length === 0) {
+                  return;
+                }
+
+                css.innerHTML = innerCss;
+                document.body.appendChild(css);
+              }
+            }]);
+
+            return Initializer;
+          }();
+
+          exports['default'] = Initializer;
+          var initializer = new Initializer();
+          exports.initializer = initializer;
+          /***/
+        },
+        /* 2 */
+
+        /***/
+        function (module, exports) {
+          /**
+           * Defaults & options
+           * @returns {object} Typed defaults & options
+           * @public
+           */
+          'use strict';
+
+          Object.defineProperty(exports, '__esModule', {
+            value: true
+          });
+          var defaults = {
+            /**
+             * @property {array} strings strings to be typed
+             * @property {string} stringsElement ID of element containing string children
+             */
+            strings: ['These are the default values...', 'You know what you should do?', 'Use your own!', 'Have a great day!'],
+            stringsElement: null,
+
+            /**
+             * @property {number} typeSpeed type speed in milliseconds
+             */
+            typeSpeed: 0,
+
+            /**
+             * @property {number} startDelay time before typing starts in milliseconds
+             */
+            startDelay: 0,
+
+            /**
+             * @property {number} backSpeed backspacing speed in milliseconds
+             */
+            backSpeed: 0,
+
+            /**
+             * @property {boolean} smartBackspace only backspace what doesn't match the previous string
+             */
+            smartBackspace: true,
+
+            /**
+             * @property {boolean} shuffle shuffle the strings
+             */
+            shuffle: false,
+
+            /**
+             * @property {number} backDelay time before backspacing in milliseconds
+             */
+            backDelay: 700,
+
+            /**
+             * @property {boolean} fadeOut Fade out instead of backspace
+             * @property {string} fadeOutClass css class for fade animation
+             * @property {boolean} fadeOutDelay Fade out delay in milliseconds
+             */
+            fadeOut: false,
+            fadeOutClass: 'typed-fade-out',
+            fadeOutDelay: 500,
+
+            /**
+             * @property {boolean} loop loop strings
+             * @property {number} loopCount amount of loops
+             */
+            loop: false,
+            loopCount: Infinity,
+
+            /**
+             * @property {boolean} showCursor show cursor
+             * @property {string} cursorChar character for cursor
+             * @property {boolean} autoInsertCss insert CSS for cursor and fadeOut into HTML <head>
+             */
+            showCursor: true,
+            cursorChar: '|',
+            autoInsertCss: true,
+
+            /**
+             * @property {string} attr attribute for typing
+             * Ex: input placeholder, value, or just HTML text
+             */
+            attr: null,
+
+            /**
+             * @property {boolean} bindInputFocusEvents bind to focus and blur if el is text input
+             */
+            bindInputFocusEvents: false,
+
+            /**
+             * @property {string} contentType 'html' or 'null' for plaintext
+             */
+            contentType: 'html',
+
+            /**
+             * Before it begins typing
+             * @param {Typed} self
+             */
+            onBegin: function onBegin(self) {},
+
+            /**
+             * All typing is complete
+             * @param {Typed} self
+             */
+            onComplete: function onComplete(self) {},
+
+            /**
+             * Before each string is typed
+             * @param {number} arrayPos
+             * @param {Typed} self
+             */
+            preStringTyped: function preStringTyped(arrayPos, self) {},
+
+            /**
+             * After each string is typed
+             * @param {number} arrayPos
+             * @param {Typed} self
+             */
+            onStringTyped: function onStringTyped(arrayPos, self) {},
+
+            /**
+             * During looping, after last string is typed
+             * @param {Typed} self
+             */
+            onLastStringBackspaced: function onLastStringBackspaced(self) {},
+
+            /**
+             * Typing has been stopped
+             * @param {number} arrayPos
+             * @param {Typed} self
+             */
+            onTypingPaused: function onTypingPaused(arrayPos, self) {},
+
+            /**
+             * Typing has been started after being stopped
+             * @param {number} arrayPos
+             * @param {Typed} self
+             */
+            onTypingResumed: function onTypingResumed(arrayPos, self) {},
+
+            /**
+             * After reset
+             * @param {Typed} self
+             */
+            onReset: function onReset(self) {},
+
+            /**
+             * After stop
+             * @param {number} arrayPos
+             * @param {Typed} self
+             */
+            onStop: function onStop(arrayPos, self) {},
+
+            /**
+             * After start
+             * @param {number} arrayPos
+             * @param {Typed} self
+             */
+            onStart: function onStart(arrayPos, self) {},
+
+            /**
+             * After destroy
+             * @param {Typed} self
+             */
+            onDestroy: function onDestroy(self) {}
+          };
+          exports['default'] = defaults;
+          module.exports = exports['default'];
+          /***/
+        },
+        /* 3 */
+
+        /***/
+        function (module, exports) {
+          /**
+           * TODO: These methods can probably be combined somehow
+           * Parse HTML tags & HTML Characters
+           */
+          'use strict';
+
+          Object.defineProperty(exports, '__esModule', {
+            value: true
+          });
+
+          var _createClass = function () {
+            function defineProperties(target, props) {
+              for (var i = 0; i < props.length; i++) {
+                var descriptor = props[i];
+                descriptor.enumerable = descriptor.enumerable || false;
+                descriptor.configurable = true;
+                if ('value' in descriptor) descriptor.writable = true;
+                Object.defineProperty(target, descriptor.key, descriptor);
+              }
+            }
+
+            return function (Constructor, protoProps, staticProps) {
+              if (protoProps) defineProperties(Constructor.prototype, protoProps);
+              if (staticProps) defineProperties(Constructor, staticProps);
+              return Constructor;
+            };
+          }();
+
+          function _classCallCheck(instance, Constructor) {
+            if (!(instance instanceof Constructor)) {
+              throw new TypeError('Cannot call a class as a function');
+            }
+          }
+
+          var HTMLParser = function () {
+            function HTMLParser() {
+              _classCallCheck(this, HTMLParser);
+            }
+
+            _createClass(HTMLParser, [{
+              key: 'typeHtmlChars',
+
+              /**
+               * Type HTML tags & HTML Characters
+               * @param {string} curString Current string
+               * @param {number} curStrPos Position in current string
+               * @param {Typed} self instance of Typed
+               * @returns {number} a new string position
+               * @private
+               */
+              value: function typeHtmlChars(curString, curStrPos, self) {
+                if (self.contentType !== 'html') return curStrPos;
+                var curChar = curString.substr(curStrPos).charAt(0);
+
+                if (curChar === '<' || curChar === '&') {
+                  var endTag = '';
+
+                  if (curChar === '<') {
+                    endTag = '>';
+                  } else {
+                    endTag = ';';
+                  }
+
+                  while (curString.substr(curStrPos + 1).charAt(0) !== endTag) {
+                    curStrPos++;
+
+                    if (curStrPos + 1 > curString.length) {
+                      break;
+                    }
+                  }
+
+                  curStrPos++;
+                }
+
+                return curStrPos;
+              }
+              /**
+               * Backspace HTML tags and HTML Characters
+               * @param {string} curString Current string
+               * @param {number} curStrPos Position in current string
+               * @param {Typed} self instance of Typed
+               * @returns {number} a new string position
+               * @private
+               */
+
+            }, {
+              key: 'backSpaceHtmlChars',
+              value: function backSpaceHtmlChars(curString, curStrPos, self) {
+                if (self.contentType !== 'html') return curStrPos;
+                var curChar = curString.substr(curStrPos).charAt(0);
+
+                if (curChar === '>' || curChar === ';') {
+                  var endTag = '';
+
+                  if (curChar === '>') {
+                    endTag = '<';
+                  } else {
+                    endTag = '&';
+                  }
+
+                  while (curString.substr(curStrPos - 1).charAt(0) !== endTag) {
+                    curStrPos--;
+
+                    if (curStrPos < 0) {
+                      break;
+                    }
+                  }
+
+                  curStrPos--;
+                }
+
+                return curStrPos;
+              }
+            }]);
+
+            return HTMLParser;
+          }();
+
+          exports['default'] = HTMLParser;
+          var htmlParser = new HTMLParser();
+          exports.htmlParser = htmlParser;
+          /***/
+        }
+        /******/
+        ])
+      );
+    });
+
+    ;
+    /***/
   }
 }]);
 //# sourceMappingURL=vendor-es5.js.map
