@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const compression = require("compression");
-const zlib = require("zlib");
 const helmet = require("helmet");
 const cluster = require("cluster");
 
@@ -14,8 +13,7 @@ if (cluster.isMaster) {
 } else {
 	app.use(
 		compression({
-			level: zlib.Z_BEST_COMPRESSION,
-			strategy: zlib.Z_DEFAULT_STRATEGY,
+			level: 9,
 		})
 	);
 	app.use(helmet());
@@ -23,7 +21,6 @@ if (cluster.isMaster) {
 
 	app.all("*", (_, res) => {
 		res.sendFile(path.join(__dirname, "public", "index.html"));
-		res.flush();
 	});
 
 	const PORT = process.env.PORT || 8080;
