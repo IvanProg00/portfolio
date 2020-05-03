@@ -14,6 +14,7 @@ if (cluster.isMaster) {
 	app.use(
 		compression({
 			level: 9,
+			strategy: 0
 		})
 	);
 	app.use(helmet());
