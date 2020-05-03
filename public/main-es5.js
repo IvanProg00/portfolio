@@ -1576,16 +1576,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         title: "Languages",
         elems: [{
           name: "Spain",
-          progress: 80
+          progress: 60
         }, {
           name: "English",
-          progress: 40
+          progress: 20
         }, {
           name: "Russian",
           progress: 100
         }, {
           name: "Italian",
-          progress: 20
+          progress: 12
         }]
       }];
     };
