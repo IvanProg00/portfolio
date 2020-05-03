@@ -3033,7 +3033,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/vanek/Рабочий стол/Проекты/Portfolio/app/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /home/vanek/Рабочий стол/Проекты/mighty-escarpment-70398/app/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })
