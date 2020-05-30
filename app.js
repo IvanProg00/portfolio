@@ -13,8 +13,7 @@ if (cluster.isMaster) {
 } else {
 	app.use(
 		compression({
-			level: 9,
-			strategy: 0
+			level: 8,
 		})
 	);
 	app.use(helmet());
@@ -26,6 +25,6 @@ if (cluster.isMaster) {
 
 	const PORT = process.env.PORT || 8080;
 	app.listen(PORT, () => {
-		console.log(`server working on ${PORT}`);
+		console.log(`Server is working on ${PORT}`);
 	});
 }
