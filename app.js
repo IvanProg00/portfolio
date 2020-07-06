@@ -5,10 +5,7 @@ const compression = require("compression");
 const helmet = require("helmet");
 
 app.use(
-	compression({
-		level: 8,
-		strategy: 0,
-	})
+	compression()
 );
 app.use(helmet());
 app.use(express.static("public"));
