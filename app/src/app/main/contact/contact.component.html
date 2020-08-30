@@ -1,0 +1,27 @@
+<section id="contact">
+	<div class="container">
+		<h2>Contact</h2>
+		<address>
+			<ul>
+				<li *ngFor="let item of contacts">
+					<span
+						*ngIf="item.link === undefined; else linkFunc"
+						[class]="item.class"
+					>
+						<i [class]="item.icon"></i>
+						<span>{{ item.title }}</span>
+					</span>
+					<ng-template #linkFunc>
+						<a [href]="item.link" [class]="item.class">
+							<fa-icon
+								[icon]="item.icon"
+								[styles]="item.styles"
+							></fa-icon>
+							<span>{{ item.title }}</span>
+						</a>
+					</ng-template>
+				</li>
+			</ul>
+		</address>
+	</div>
+</section>

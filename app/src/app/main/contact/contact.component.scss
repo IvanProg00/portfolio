@@ -1,0 +1,37 @@
+@import "../../variables.scss";
+
+section {
+	> div.container {
+		max-width: $maxWidthMain;
+		width: 95%;
+		margin: 0 auto;
+		padding-top: 40px;
+		h2 {
+			text-transform: uppercase;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		address {
+			ul {
+				li {
+					> a {
+						color: $colorMain;
+						font-size: 22px;
+						margin: 15px 0;
+						display: block;
+						display: flex;
+						align-items: center;
+						> span {
+							font-weight: 300;
+							transition: all 0.2s linear;
+						}
+					}
+					> a:hover > span {
+						color: $hoverColorContact;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}

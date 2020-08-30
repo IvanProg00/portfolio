@@ -1,0 +1,66 @@
+@import "../../variables.scss";
+
+section {
+	padding-top: 40px;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+	}
+	div.study {
+		background-image: url("../../../assets/images/background_education.webp");
+		background-size: cover;
+		background-position: 50% 50%;
+		padding: 60px 0;
+		margin-top: 60px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		> div.overlay {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.75);
+		}
+		> div.container {
+			max-width: $widthEducation;
+			width: 95%;
+			margin: 0 auto;
+			position: relative;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: 20px;
+			@media screen and (max-width: $maxWidthEducation) {
+				grid-template-columns: 1fr;
+			}
+			div.card {
+				background-color: $bgEducationCard;
+				color: $colorEducationCard;
+				padding: 20px 12px;
+				border: 2px solid $borderEducationCard;
+				border-radius: 4px;
+				margin: 0 10px;
+				display: grid;
+				grid-template-rows: auto 1fr auto;
+				h4 {
+					color: $colorEducationTitleCard;
+					text-align: center;
+					line-height: 160%;
+					margin-bottom: 20px;
+				}
+				span {
+					font-weight: 300;
+					line-height: 130%;
+					display: block;
+					&.school {
+						margin-bottom: 18px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+@import "../variables.scss";
+
+footer {
+	padding: 40px 0;
+	background-color: $bgFooter;
+	color: $colorFooter;
+	div.foot {
+		max-width: $maxWidthFooter;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
