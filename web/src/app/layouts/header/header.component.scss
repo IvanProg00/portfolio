@@ -1,0 +1,134 @@
+@import "../..//variables.scss";
+
+$hamburgerSize: 30px;
+$lineHeight: $hamburgerSize / 5;
+$middleLine: (($hamburgerSize - $lineHeight) / 5) * 2.5;
+
+header {
+	background-color: $bgHeader;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	div.nav {
+		padding: 15px 0;
+		max-width: $maxWidthHeader;
+		width: 95%;
+		margin: 0 auto;
+		overflow: auto;
+		&.selected {
+			div.hamburger {
+				z-index: 100;
+				span.line {
+					&:nth-child(1) {
+						top: $middleLine;
+						opacity: 0;
+					}
+					&:nth-child(3) {
+						top: $middleLine;
+						opacity: 0;
+					}
+					&:nth-child(2) {
+						transform: rotate(45deg);
+					}
+					&:nth-child(4) {
+						transform: rotate(-45deg);
+					}
+				}
+			}
+			nav {
+				right: 0;
+			}
+		}
+		div.hamburger {
+			width: $hamburgerSize;
+			height: $hamburgerSize;
+			position: relative;
+			cursor: pointer;
+			span.line {
+				transition: all $animateHamburger;
+				position: absolute;
+				background-color: $colorHamburger;
+				height: $lineHeight;
+				width: 100%;
+				border-radius: 3px;
+				display: block;
+				&:nth-child(1) {
+					top: 0;
+				}
+				&:nth-child(2) {
+					top: $middleLine;
+				}
+				&:nth-child(3) {
+					top: $hamburgerSize - $lineHeight;
+				}
+				&:nth-child(4) {
+					top: $middleLine;
+				}
+			}
+			@media screen and (min-width: ($screenMaxWidth4 + 1px)) {
+				display: none;
+			}
+		}
+		div.dark {
+			display: none;
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background-color: rgba(51, 51, 51, 0.5);
+		}
+		&.selected {
+			div.dark {
+				display: block;
+			}
+		}
+		nav {
+			@media screen and (max-width: $screenMaxWidth4) {
+				display: block;
+				position: fixed;
+				right: -100%;
+				top: 0;
+				bottom: 0;
+				background-color: $bgHamburger;
+				transition: all $animateHamburger;
+			}
+			ul {
+				display: flex;
+				justify-content: stretch;
+				@media screen and (max-width: $screenMaxWidth4) {
+					display: block;
+					margin-top: 20px;
+				}
+				> li {
+					width: 100%;
+					> a {
+						text-align: center;
+						display: block;
+						color: $colorHeader;
+						font-weight: 400;
+						font-size: 18px;
+						padding: 10px 3px;
+						transition: color 0.15s ease-in;
+						&:hover {
+							color: $hoverColorHeader;
+						}
+						&.selected {
+							color: $hoverColorHeader;
+						}
+						@media screen and (max-width: $screenMaxWidth4) {
+							display: block;
+							color: $colorHamburgerNav;
+							padding-left: 50px;
+							padding-right: 30px;
+							padding: 20px 40px 20px 50px;
+							font-size: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

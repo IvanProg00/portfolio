@@ -4,8 +4,11 @@
   "description": "Portfolio of Ivan Gavrilov",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
-    "dev": "nodemon app"
+    "start": "node dist/app",
+    "build": "npm-run-all rm compile",
+    "compile": "tsc",
+    "rm": "rimraf dist",
+    "dev": "nodemon --watch server/ -e '*' --exec 'ts-node' server/app.ts"
   },
   "author": "Ivan Gavrilov <gavrilovivan2000@gmail.com>",
   "license": "ISC",
@@ -16,6 +19,15 @@
     "helmet": "^4.4.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "@types/compression": "^1.7.0",
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.37",
+    "copyfiles": "^2.4.1",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
   }
 }
