@@ -13,6 +13,9 @@ app.use(express.static(publicDir));
 app.get("/", (_, res) => {
     res.sendFile(path.join(publicDir, "index.html"));
 });
+app.all("*", (_, res) => {
+    res.redirect('/');
+});
 app.listen(PORT, () => {
     console.log(`Server is working on ${PORT}`);
 });

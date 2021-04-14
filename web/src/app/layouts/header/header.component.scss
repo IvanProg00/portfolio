@@ -4,7 +4,7 @@ $hamburgerSize: 30px;
 $lineHeight: $hamburgerSize / 5;
 $middleLine: (($hamburgerSize - $lineHeight) / 5) * 2.5;
 
-header {
+div.container {
 	background-color: $bgHeader;
 	position: fixed;
 	top: 0;

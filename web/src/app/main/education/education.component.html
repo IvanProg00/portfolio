@@ -1,12 +1,12 @@
 <section id="education">
 	<h2>Education</h2>
 	<div class="study">
-		<div class="overlay"></div>
+		<div class="overlay" ></div>
 		<div class="container">
-			<div class="card" *ngFor="let item of cards">
-				<h4>{{ item.title }}</h4>
-				<span class="school">{{ item.school }}</span>
-				<span class="date">{{ item.dateStart | date:'yyyy, MM' }} - {{ item.dateEnd | date:'yyyy, MM' }}</span>
+			<div class="card" *ngFor="let card of cards">
+				<h4>{{ card.title }}</h4>
+				<span class="school">{{ card.school }}</span>
+				<span class="date">{{ card.dateStart | date:'yyyy, MM' }} - {{ card.dateEnd | date:'yyyy, MM' }}</span>
 			</div>
 		</div>
 	</div>

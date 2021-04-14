@@ -17,14 +17,14 @@ export class HeaderComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit(): void {
-		this.headerElems = document.querySelectorAll('header div.nav a');
-		this.header = document.querySelector('header');
-		this.main = document.querySelector('main');
+		this.headerElems = document.querySelectorAll('.header div.nav a');
+		this.header = document.querySelector('.header');
+		this.main = document.querySelector('.main');
 		this.sections = document.querySelectorAll('section');
 		this.hamburger = document.querySelector(
-			'header > div.nav > div.hamburger'
+			'.header > div.nav > div.hamburger'
 		);
-		this.nav = document.querySelector('header > div.nav');
+		this.nav = document.querySelector('.header > div.nav');
 
 		this.setMainMargin();
 		this.hamburgerNavigation();
@@ -44,13 +44,15 @@ export class HeaderComponent implements OnInit {
 	}
 
 	navigation(): void {
+		// const headerSelector = document.querySelector('')
+
 		this.headerElems.forEach((item: HTMLElement) => {
 			item.addEventListener('click', (event: any) => {
 				event.preventDefault();
 				this.closeHamburger();
-				let idElement = event.target.getAttribute('href');
-				let elem = document.querySelector(idElement);
-				let pos = this.getPositionElement(elem);
+				const idElement = event.target.getAttribute('href');
+				const elem = document.querySelector(idElement);
+				const pos = this.getPositionElement(elem);
 
 				window.scrollTo({
 					behavior: 'smooth',

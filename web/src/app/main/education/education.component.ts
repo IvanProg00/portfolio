@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Card } from 'src/interfaces';
 
-interface Card {
-	title: string;
-	school: string;
-	dateStart: Date;
-	dateEnd: Date;
-}
 
 @Component({
 	selector: 'app-education',
@@ -13,10 +8,7 @@ interface Card {
 	styleUrls: ['./education.component.scss'],
 })
 export class EducationComponent implements OnInit {
-	public cards: Card[];
-
-	constructor() {
-		this.cards = [
+	public cards: Card[] = [
 			{
 				title: 'Development and Implementation of Web Applications',
 				school: 'Espai',
@@ -25,11 +17,13 @@ export class EducationComponent implements OnInit {
 			},
 			{
 				title: 'DAM - Development of Cross-platform Applications',
-				school: 'IFP - Innovation in Vocational Training',
+				school: 'IFP - Grupo Planeta',
 				dateStart: new Date(2019, 8),
 				dateEnd: new Date(2021, 5),
 			},
 		];
+
+	constructor() {
 	}
 
 	ngOnInit(): void {}
