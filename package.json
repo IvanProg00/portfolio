@@ -5,9 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "node dist/app",
-    "build": "npm-run-all rm compile",
+    "build": "npm run move; npm-run-all rm compile",
     "compile": "tsc",
     "rm": "rimraf dist",
+    "move": "move-file public/index.html pages/index.html",
     "dev": "nodemon --watch server/ -e '*' --exec 'ts-node' server/app.ts"
   },
   "author": "Ivan Gavrilov <gavrilovivan2000@gmail.com>",
@@ -24,6 +25,7 @@
     "@types/express": "^4.17.11",
     "@types/node": "^14.14.37",
     "copyfiles": "^2.4.1",
+    "move-file-cli": "^2.0.0",
     "nodemon": "^2.0.7",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
