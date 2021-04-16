@@ -82,12 +82,12 @@ export class HeaderComponent implements OnInit {
 		});
 	}
 	animatePos(): void {
-		let pos = this.getPosition();
+		const pos = this.getPosition();
 		this.clearHeaderElems();
 
 		this.sections.forEach((item: any) => {
-			let top = this.getPositionElement(item);
-			let bottom = top + item.offsetHeight;
+			const top = this.getPositionElement(item);
+			const bottom = top + item.offsetHeight;
 			if (top <= pos && bottom > pos) {
 				this.searchHeaderElems(item.id);
 			}

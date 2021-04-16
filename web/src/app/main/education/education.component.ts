@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from 'src/interfaces';
+import { CardEducation } from 'src/interfaces';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Card } from 'src/interfaces';
 	styleUrls: ['./education.component.scss'],
 })
 export class EducationComponent implements OnInit {
-	public cards: Card[] = [
+	public cards: CardEducation[] = [
 			{
 				title: 'Development and Implementation of Web Applications',
 				school: 'Espai',

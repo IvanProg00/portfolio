@@ -1,14 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Types {
-	name: string;
-	progress: number;
-}
-
-interface Skills {
-	title: string;
-	elems: Types[];
-}
+import { Skills } from 'src/interfaces';
 
 @Component({
 	selector: 'app-skills',
@@ -23,15 +14,91 @@ export class SkillsComponent {
 				title: 'Programming',
 				elems: [
 					{
-						name: 'HTML5 (Pug, Ejs)',
+						name: 'GoLang',
+						progress: 60,
+					},
+					{
+						name: 'Fiber',
+						progress: 40,
+					},
+					{
+						name: 'Echo',
+						progress: 40,
+					},
+					{
+						name: 'Python',
+						progress: 60,
+					},
+					{
+						name: 'Django Framework & Django REST',
+						progress: 50,
+					},
+					{
+						name: 'Flask',
+						progress: 40,
+					},
+					{
+						name: 'Linux',
+						progress: 25,
+					},
+					{
+						name: 'GIT',
+						progress: 55,
+					},
+					{
+						name: 'Docker',
+						progress: 35,
+					},
+					{
+						name: 'Kubernetes',
+						progress: 20,
+					},
+					{
+						name: 'Jenkins',
+						progress: 30,
+					},
+					{
+						name: 'Ansible',
+						progress: 45,
+					},
+					{
+						name: 'SQL/NoSQL',
+						progress: 50,
+					},
+					{
+						name: 'PostgreSQL',
+						progress: 40,
+					},
+					{
+						name: 'MySQL/MariaDB',
+						progress: 60,
+					},
+					{
+						name: 'MongoDB',
+						progress: 60,
+					},
+					{
+						name: 'Redis',
+						progress: 20,
+					},
+					{
+						name: 'Rest',
+						progress: 60,
+					},
+					{
+						name: 'GraphQL',
+						progress: 30,
+					},
+					{
+						name: 'HTML5/CSS3',
 						progress: 80,
 					},
 					{
-						name: 'CSS3 (Flexbox, Sass, Scss)',
-						progress: 80,
+						name: 'Bootstrap',
+						progress: 60,
 					},
 					{
-						name: 'JavaScript (ES6)',
+						name: 'JavaScript',
 						progress: 70,
 					},
 					{
@@ -40,7 +107,7 @@ export class SkillsComponent {
 					},
 					{
 						name: 'Angular',
-						progress: 45,
+						progress: 65,
 					},
 					{
 						name: 'Vue.js',
@@ -49,6 +116,18 @@ export class SkillsComponent {
 					{
 						name: 'React',
 						progress: 50,
+					},
+					{
+						name: 'Electron',
+						progress: 25,
+					},
+					{
+						name: 'React Native',
+						progress: 35,
+					},
+					{
+						name: 'Flutter',
+						progress: 25,
 					},
 					{
 						name: 'JQuery',
@@ -68,39 +147,27 @@ export class SkillsComponent {
 					},
 					{
 						name: 'Webpack',
-						progress: 30,
-					},
-					{
-						name: 'Electron',
-						progress: 25,
-					},
-					{
-						name: 'React Native',
 						progress: 20,
 					},
 					{
-						name: 'NPM',
-						progress: 60,
-					},
-					{
-						name: 'Python',
-						progress: 60,
-					},
-					{
-						name: 'Django',
-						progress: 50,
+						name: 'NPM/Yarn',
+						progress: 70,
 					},
 					{
 						name: 'Java',
 						progress: 15,
 					},
 					{
-						name: 'Spring',
+						name: 'VertX',
+						progress: 45,
+					},
+					{
+						name: 'Spring Boot',
 						progress: 10,
 					},
 					{
 						name: 'C#',
-						progress: 10
+						progress: 10,
 					},
 					{
 						name: 'PHP',
@@ -113,30 +180,6 @@ export class SkillsComponent {
 					{
 						name: 'WordPress',
 						progress: 15,
-					},
-					{
-						name: 'Linux',
-						progress: 25,
-					},
-					{
-						name: 'GIT',
-						progress: 55,
-					},
-					{
-						name: 'Docker',
-						progress: 35,
-					},
-					{
-						name: 'SQL',
-						progress: 40,
-					},
-					{
-						name: 'NoSQL (MongoDB)',
-						progress: 40,
-					},
-					{
-						name: 'XML, JSON',
-						progress: 40,
 					},
 				],
 			},
