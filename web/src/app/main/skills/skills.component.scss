@@ -24,16 +24,16 @@ section {
 				@media screen and (max-width: $screenMaxWidth2) {
 					grid-template-columns: 1fr;
 				}
-				div.elem {
+				.elem {
 					margin-bottom: 20px;
 					display: grid;
 					grid-template-rows: 1fr auto;
-					div.progress {
+					.progress {
 						height: 8px;
 						background-color: $skilsColorLine;
 						border-radius: 10px;
 						position: relative;
-						div.circle {
+						.circle {
 							position: absolute;
 							height: 18px;
 							width: 18px;
@@ -50,9 +50,10 @@ section {
 							}
 						}
 					}
-					h4 {
+					.progress-title {
 						margin-left: 8px;
-						margin-bottom: 25px;
+						margin-bottom: 22px;
+						line-height: 150%;
 					}
 				}
 			}

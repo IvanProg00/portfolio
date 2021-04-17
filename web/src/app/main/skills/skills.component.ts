@@ -54,12 +54,20 @@ export class SkillsComponent {
 						progress: 20,
 					},
 					{
+						name: 'Continuous Integration and Continuous Delivery (CI/CD)',
+						progress: 30,
+					},
+					{
 						name: 'Jenkins',
 						progress: 30,
 					},
 					{
 						name: 'Ansible',
 						progress: 45,
+					},
+					{
+						name: 'RabbitMQ',
+						progress: 20,
 					},
 					{
 						name: 'SQL/NoSQL',
